@@ -1303,7 +1303,7 @@
   },
   "analytics": {
     "totalVisitors": 84920,
-    "arInteractions": 52147,
+    "arInteractions": 52155,
     "audioToursCompleted": 39820,
     "passportsIssued": 19431,
     "averageSessionMins": 18.4,
@@ -1314,14 +1314,15 @@
       "route-cairo-pharaohs": 12410
     },
     "landmarkViews": {
-      "landmark-colosseum": 22100,
+      "landmark-colosseum": 22101,
       "landmark-taj-mahal": 20450,
       "landmark-pyramid-khufu": 16900,
       "landmark-kinkaku-ji": 15800,
       "landmark-pantheon": 14200,
       "landmark-red-fort": 12301,
       "landmark-fushimi-inari": 11400,
-      "landmark-great-sphinx": 9800
+      "landmark-great-sphinx": 9800,
+      "landmark-arch-titus-forum": 8
     },
     "devices": {
       "Mobile (iOS / Safari)": 58,
@@ -1337,6 +1338,97 @@
       "Français": 3
     },
     "recentEvents": [
+      {
+        "id": 1791654370038,
+        "type": "ar_interaction",
+        "landmark": "The Roman Forum & Arch of Titus",
+        "location": "Digital Stream",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1791654358824,
+        "type": "audio_play",
+        "landmark": "The Roman Forum & Arch of Titus",
+        "location": "Digital Stream",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1791654355295,
+        "type": "landmark_view",
+        "landmark": "The Roman Forum & Arch of Titus",
+        "location": "Digital Stream",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1791654354401,
+        "type": "landmark_view",
+        "landmark": "The Roman Forum & Arch of Titus",
+        "location": "Digital Stream",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1791654330331,
+        "type": "landmark_view",
+        "landmark": "The Roman Forum & Arch of Titus",
+        "location": "Digital Stream",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1791654324645,
+        "type": "ar_interaction",
+        "landmark": "The Roman Forum & Arch of Titus",
+        "location": "Digital Stream",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1791654253663,
+        "type": "landmark_view",
+        "landmark": "The Roman Forum & Arch of Titus",
+        "location": "Digital Stream",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1791654247378,
+        "type": "ar_interaction",
+        "landmark": "The Roman Forum & Arch of Titus",
+        "location": "Digital Stream",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1791654246557,
+        "type": "qr_triggered",
+        "landmark": "The Roman Forum & Arch of Titus",
+        "location": "route-rome-imperial",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1791654241747,
+        "type": "qr_triggered",
+        "landmark": "The Colosseum (Flavian Amphitheatre)",
+        "location": "route-rome-imperial",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1791654238914,
+        "type": "qr_triggered",
+        "landmark": "The Colosseum (Flavian Amphitheatre)",
+        "location": "route-rome-imperial",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1791654236049,
+        "type": "ar_interaction",
+        "landmark": "The Colosseum (Flavian Amphitheatre)",
+        "location": "Digital Stream",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1791654235217,
+        "type": "qr_triggered",
+        "landmark": "The Colosseum (Flavian Amphitheatre)",
+        "location": "route-rome-imperial",
+        "timestamp": "Just now"
+      },
       {
         "id": 1791654209584,
         "type": "ar_interaction",
@@ -1420,13 +1512,6 @@
         "landmark": "Kinkaku-ji",
         "location": "Kyoto, Japan",
         "timestamp": "12 mins ago"
-      },
-      {
-        "id": 5,
-        "type": "route_start",
-        "route": "Imperial Rome",
-        "location": "Rome, Italy",
-        "timestamp": "16 mins ago"
       }
     ]
   },
