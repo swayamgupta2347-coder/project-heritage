@@ -637,7 +637,14 @@ app.get('/api/qr/lookup/:code', (req, res) => {
 
 // Fallback to SPA index.html
 app.use((req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  if (req.path.startsWith('/api')) {
+    return res.status(404).json({ error: 'Endpoint not found' });
+  }
+  res.sendFile(path.join(__dirname, 'public', 'index.html'), (err) => {
+    if (err && !res.headersSent) {
+      res.status(err.status || 404).end();
+    }
+  });
 });
 
 module.exports = app;

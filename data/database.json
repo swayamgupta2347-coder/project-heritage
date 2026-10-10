@@ -1303,7 +1303,7 @@
   },
   "analytics": {
     "totalVisitors": 84920,
-    "arInteractions": 52146,
+    "arInteractions": 52147,
     "audioToursCompleted": 39820,
     "passportsIssued": 19431,
     "averageSessionMins": 18.4,
@@ -1319,7 +1319,7 @@
       "landmark-pyramid-khufu": 16900,
       "landmark-kinkaku-ji": 15800,
       "landmark-pantheon": 14200,
-      "landmark-red-fort": 12300,
+      "landmark-red-fort": 12301,
       "landmark-fushimi-inari": 11400,
       "landmark-great-sphinx": 9800
     },
@@ -1337,6 +1337,13 @@
       "Français": 3
     },
     "recentEvents": [
+      {
+        "id": 1791654209584,
+        "type": "ar_interaction",
+        "landmark": "Red Fort (Lal Qila)",
+        "location": "Digital Stream",
+        "timestamp": "Just now"
+      },
       {
         "id": 1791649955778,
         "type": "qr_triggered",
