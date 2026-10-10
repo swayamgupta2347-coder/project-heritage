@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Heritage Route Digital Guide | AR Storytelling & 3D Heritage</title>
+  <meta name="description" content="Web-based interactive heritage route digital guide with Augmented Reality storytelling, 3D monument visualization, interactive timelines, and spatial audio tours.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="theme-dark">
+  <!-- Top Navigation Bar -->
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="brand-group" onclick="App.navigate('routes')">
+        <div class="brand-emblem">
+          <span class="emblem-glyph">🏛️</span>
+          <span class="emblem-pulse"></span>
+        </div>
+        <div class="brand-text">
+          <h1 class="brand-title">HERITAGE ROUTE</h1>
+          <p class="brand-subtitle" data-i18n="subtitle">AR Storytelling & 3D Digital Guide</p>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="nav-links">
+        <button class="nav-btn" data-page="routes" onclick="App.navigate('routes')">
+          <span class="nav-icon">🗺️</span>
+          <span data-i18n="exploreRoutes">Explore Routes</span>
+        </button>
+        <button class="nav-btn" data-page="map" onclick="App.navigate('map')">
+          <span class="nav-icon">📍</span>
+          <span data-i18n="interactiveMap">Route Map</span>
+        </button>
+        <button class="nav-btn" data-page="ar" onclick="App.navigate('ar')">
+          <span class="nav-icon">✨</span>
+          <span data-i18n="arMode">WebAR & 3D</span>
+          <span class="badge-live">LIVE</span>
+        </button>
+        <button class="nav-btn" data-page="passport" onclick="App.navigate('passport')">
+          <span class="nav-icon">🛂</span>
+          <span data-i18n="passport">Passport</span>
+        </button>
+        <button class="nav-btn" data-page="analytics" onclick="App.navigate('analytics')">
+          <span class="nav-icon">📊</span>
+          <span data-i18n="analytics">Analytics</span>
+        </button>
+        <button class="nav-btn" data-page="admin" onclick="App.navigate('admin')">
+          <span class="nav-icon">⚙️</span>
+          <span data-i18n="adminPanel">Admin CMS</span>
+        </button>
+      </nav>
+
+      <!-- Right Action Controls -->
+      <div class="header-actions">
+        <!-- Language Switcher -->
+        <div class="lang-selector">
+          <button class="lang-trigger" id="lang-btn" onclick="App.toggleLangMenu(event)">
+            <span class="lang-globe">🌐</span>
+            <span id="current-lang-code">EN</span>
+            <span class="dropdown-chevron">▾</span>
+          </button>
+          <div class="lang-dropdown" id="lang-dropdown">
+            <button class="lang-option" onclick="App.changeLanguage('en')">🇬🇧 English (EN)</button>
+            <button class="lang-option" onclick="App.changeLanguage('es')">🇪🇸 Español (ES)</button>
+            <button class="lang-option" onclick="App.changeLanguage('fr')">🇫🇷 Français (FR)</button>
+            <button class="lang-option" onclick="App.changeLanguage('hi')">🇮🇳 हिन्दी (HI)</button>
+            <button class="lang-option" onclick="App.changeLanguage('it')">🇮🇹 Italiano (IT)</button>
+            <button class="lang-option" onclick="App.changeLanguage('ja')">🇯🇵 日本語 (JA)</button>
+          </div>
+        </div>
+
+        <!-- User / Auth Profile -->
+        <div class="user-profile-widget" id="user-profile-area">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="mobile-menu-btn" onclick="App.toggleMobileMenu()">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <div class="drawer-header">
+        <span class="drawer-title">Navigation</span>
+        <button class="drawer-close" onclick="App.toggleMobileMenu()">✕</button>
+      </div>
+      <div class="drawer-links">
+        <button class="drawer-btn" onclick="App.navigate('routes'); App.toggleMobileMenu();">
+          <span>🗺️</span> <span data-i18n="exploreRoutes">Explore Routes</span>
+        </button>
+        <button class="drawer-btn" onclick="App.navigate('map'); App.toggleMobileMenu();">
+          <span>📍</span> <span data-i18n="interactiveMap">Route Map</span>
+        </button>
+        <button class="drawer-btn" onclick="App.navigate('ar'); App.toggleMobileMenu();">
+          <span>✨</span> <span data-i18n="arMode">WebAR & 3D</span>
+        </button>
+        <button class="drawer-btn" onclick="App.navigate('passport'); App.toggleMobileMenu();">
+          <span>🛂</span> <span data-i18n="passport">Passport & Badges</span>
+        </button>
+        <button class="drawer-btn" onclick="App.navigate('analytics'); App.toggleMobileMenu();">
+          <span>📊</span> <span data-i18n="analytics">Analytics</span>
+        </button>
+        <button class="drawer-btn" onclick="App.navigate('admin'); App.toggleMobileMenu();">
+          <span>⚙️</span> <span data-i18n="adminPanel">Admin CMS</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main View Container (Dynamic Router) -->
+  <main id="app-content" class="main-content">
+    <div class="loading-state">
+      <div class="spinner"></div>
+      <p>Initializing Heritage Digital Guide...</p>
+    </div>
+  </main>
+
+  <!-- Global Persistent Audio Tour Dock (izi.TRAVEL inspired) -->
+  <aside class="audio-dock hidden" id="audio-dock">
+    <div class="audio-dock-inner">
+      <div class="dock-track-info" onclick="AudioGuide.expandModal()">
+        <div class="dock-thumb" id="dock-thumb">🏛️</div>
+        <div class="dock-meta">
+          <span class="dock-tag">AUDIO GUIDE • izi.TRAVEL</span>
+          <h4 class="dock-title" id="dock-title">Select a Landmark to Begin</h4>
+          <span class="dock-subtitle" id="dock-subtitle">Narration paused</span>
+        </div>
+      </div>
+
+      <div class="dock-controls">
+        <button class="dock-btn" onclick="AudioGuide.skipSeconds(-15)" title="Rewind 15s">⏪ 15s</button>
+        <button class="dock-btn play-circle" id="dock-play-btn" onclick="AudioGuide.togglePlay()" title="Play/Pause">▶</button>
+        <button class="dock-btn" onclick="AudioGuide.skipSeconds(15)" title="Forward 15s">15s ⏩</button>
+        <button class="dock-btn speed-btn" id="dock-speed-btn" onclick="AudioGuide.cycleSpeed()" title="Playback Speed">1.0x</button>
+      </div>
+
+      <div class="dock-progress-container">
+        <div class="dock-progress-bar" id="dock-progress-bar" onclick="AudioGuide.seekFromBar(event)">
+          <div class="dock-progress-fill" id="dock-progress-fill"></div>
+        </div>
+        <div class="dock-timestamps">
+          <span id="dock-current-time">00:00</span>
+          <span id="dock-total-time">02:25</span>
+        </div>
+      </div>
+
+      <div class="dock-actions">
+        <button class="dock-action-btn" onclick="AudioGuide.expandModal()" title="View Full Transcript & Quotes">📜 Transcript</button>
+        <button class="dock-close-btn" onclick="AudioGuide.closeDock()" title="Close Audio Dock">✕</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Audio Transcript Modal -->
+  <div class="modal-backdrop hidden" id="audio-modal-backdrop" onclick="AudioGuide.closeModal(event)">
+    <div class="modal-box audio-transcript-modal" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <div>
+          <span class="modal-badge">SPATIAL NARRATIVE & TRANSCRIPT</span>
+          <h3 id="transcript-modal-title">Echoes of Antiquity</h3>
+        </div>
+        <button class="modal-close" onclick="AudioGuide.closeModal()">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="character-voice-highlight" id="modal-character-voice">
+          <!-- Historical Character Bio -->
+        </div>
+        <div class="transcript-text" id="modal-transcript-text">
+          <!-- Synchronized narration sentences -->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="voice-selector-box">
+          <label>Narrator Accent / Synthesizer Voice:</label>
+          <select id="voice-select" onchange="AudioGuide.setVoice(this.value)">
+            <option value="default">Default Natural Voice</option>
+          </select>
+        </div>
+        <button class="btn btn-primary" onclick="AudioGuide.closeModal()">Close & Resume Tour</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Auth Modal (Tourist / Admin Login & Registration) -->
+  <div class="modal-backdrop hidden" id="auth-modal" onclick="App.closeAuthModal(event)">
+    <div class="modal-box auth-box" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <div>
+          <span class="modal-badge">HERITAGE GUIDE ACCESS</span>
+          <h3 id="auth-title">Welcome Back</h3>
+        </div>
+        <button class="modal-close" onclick="App.closeAuthModal()">✕</button>
+      </div>
+
+      <div class="auth-tabs">
+        <button class="auth-tab active" id="tab-login" onclick="App.setAuthTab('login')">Sign In</button>
+        <button class="auth-tab" id="tab-register" onclick="App.setAuthTab('register')">Create Passport Account</button>
+      </div>
+
+      <div class="modal-body auth-body">
+        <!-- Quick Demo Profiles Section -->
+        <div class="demo-profiles-box">
+          <span class="demo-label">⚡ One-Click Instant Sign-In:</span>
+          <div class="demo-btn-group">
+            <button class="demo-btn" onclick="App.quickDemoLogin('tourist')">
+              <span>🚶 Tourist Mode</span>
+              <small>Marco Rossi (Rome, Italy)</small>
+            </button>
+            <button class="demo-btn admin-demo" onclick="App.quickDemoLogin('admin')">
+              <span>🏛️ Curator / Admin</span>
+              <small>Dr. Alistair Finch (Lead Curator)</small>
+            </button>
+          </div>
+        </div>
+
+        <div class="auth-divider"><span>OR ENTER CREDENTIALS</span></div>
+
+        <!-- Auth Form -->
+        <form id="auth-form" onsubmit="App.handleAuthSubmit(event)">
+          <div class="form-group" id="group-name" style="display:none;">
+            <label>Full Name</label>
+            <input type="text" id="auth-name" placeholder="e.g. Elena Rostova" class="form-input">
+          </div>
+
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" id="auth-email" placeholder="you@domain.com" required class="form-input" value="tourist@heritage.org">
+          </div>
+
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" id="auth-password" placeholder="••••••••" required class="form-input" value="tourist123">
+          </div>
+
+          <div class="form-group" id="group-role" style="display:none;">
+            <label>Account Role</label>
+            <select id="auth-role" class="form-input">
+              <option value="tourist">Tourist / Visitor</option>
+              <option value="admin">Heritage Administrator / Curator</option>
+            </select>
+          </div>
+
+          <div class="form-error hidden" id="auth-error-msg"></div>
+
+          <button type="submit" class="btn btn-primary btn-block" id="auth-submit-btn">
+            Sign In to Guide
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Toast Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Core Scripts -->
+  <script src="/js/seed_cache.js"></script>
+  <script src="/js/audioguide.js"></script>
+  <script src="/js/webar.js"></script>
+  <script src="/js/map.js"></script>
+  <script src="/js/qrscanner.js"></script>
+  <script src="/js/analytics.js"></script>
+  <script src="/js/admin.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

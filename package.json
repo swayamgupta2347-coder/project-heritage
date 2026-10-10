@@ -1,0 +1,31 @@
+{
+  "name": "heritage-route-guide",
+  "version": "1.0.0",
+  "description": "Heritage Route Digital Guide Platform - WebAR Storytelling, 3D Monument LiDAR, GPS Routes & izi.TRAVEL Spatial Audio Tours",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node tests/in_memory_test.js"
+  },
+  "keywords": [
+    "heritage-tourism",
+    "web-ar",
+    "augmented-reality",
+    "cyark",
+    "izi-travel",
+    "digital-preservation",
+    "3d-lidar",
+    "spatial-audio",
+    "unesco"
+  ],
+  "author": "Unified Mentor & Heritage Route Initiative",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
