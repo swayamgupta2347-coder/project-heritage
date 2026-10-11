@@ -12,9 +12,12 @@ const Analytics = {
       const res = await fetch('/api/analytics');
       if (res.ok) {
         this.data = await res.json();
+      } else {
+        this.data = window.SEED_CACHE?.analytics || null;
       }
     } catch (err) {
       console.warn('Analytics fetch error, using client seed cache:', err);
+      this.data = window.SEED_CACHE?.analytics || null;
     }
     return this.data;
   },
