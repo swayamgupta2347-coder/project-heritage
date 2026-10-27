@@ -449,8 +449,8 @@
       "elevation": "216m above sea level",
       "qrCode": "HERITAGE-INDIA-REDFORT-1648AD",
       "modelType": "fortress",
-      "thumbnail": "https://images.unsplash.com/photo-1585135497273-1a86b09fe70e?auto=format&fit=crop&w=800&q=80",
-      "archivalImage": "https://images.unsplash.com/photo-1621847468516-1ed5d0df56fe?auto=format&fit=crop&w=800&q=80",
+      "thumbnail": "https://images.unsplash.com/photo-1705861144413-f02e38354648?auto=format&fit=crop&w=1200&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1768226942877-c45ecdd45d3a?auto=format&fit=crop&w=1200&q=80",
       "audioDurationSec": 150,
       "audioTitle": "Citadel of the Peacock Throne: Shah Jahan's Crimson Jewel",
       "audioScript": "Welcome to Lal Qila, the octagonal citadel of red sandstone that defined the zenith of Mughal sovereignty. When Emperor Shah Jahan relocated his imperial capital from Agra to Shahjahanabad in 1638, he commissioned master architects Ustad Hamid and Ustad Ahmad to construct an architectural paradise on earth. Enter the Lahori Gate to witness the blend of Persian, Timurid, and indigenous Hindu aesthetic traditions.",
@@ -1538,7 +1538,7 @@
       "landmark-pyramid-khufu": 16900,
       "landmark-kinkaku-ji": 15800,
       "landmark-pantheon": 14200,
-      "landmark-red-fort": 12301,
+      "landmark-red-fort": 12302,
       "landmark-fushimi-inari": 11400,
       "landmark-great-sphinx": 9800,
       "landmark-arch-titus-forum": 8,
@@ -1559,45 +1559,59 @@
     },
     "recentEvents": [
       {
-        "id": 1793117961800,
+        "id": 1793118413935,
         "type": "workflow_executed",
         "landmark": "Autonomous Monument Ingestion & LiDAR Enrichment",
         "location": "n8n Agentic Canvas",
         "timestamp": "Just now"
       },
       {
-        "id": 1793117961799,
+        "id": 1793118413934,
         "type": "openclaw_crawl",
         "landmark": "Taj Mahal",
         "location": "Open Claw Heritage Crawler",
         "timestamp": "Just now"
       },
       {
-        "id": 1793117961798,
+        "id": 1793118413933,
         "type": "ai_reasoning",
         "landmark": "Red Fort (Lal Qila)",
         "location": "Strawberry AI (reasoning)",
         "timestamp": "Just now"
       },
       {
-        "id": 1793117961796,
+        "id": 1793118413933,
         "type": "ai_reasoning",
         "landmark": "The Colosseum (Flavian Amphitheatre)",
         "location": "Strawberry AI (reasoning)",
         "timestamp": "Just now"
       },
       {
-        "id": 1793117961796,
+        "id": 1793118413932,
         "type": "ai_reasoning",
         "landmark": "The Colosseum (Flavian Amphitheatre)",
         "location": "Strawberry AI (strawberry)",
         "timestamp": "Just now"
       },
       {
-        "id": 1793117961790,
+        "id": 1793118413925,
         "type": "qr_triggered",
         "landmark": "The Colosseum (Flavian Amphitheatre)",
         "location": "route-rome-imperial",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793118376052,
+        "type": "landmark_view",
+        "landmark": "Red Fort (Lal Qila)",
+        "location": "Digital Stream",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793117981565,
+        "type": "ai_reasoning",
+        "landmark": "Red Fort (Lal Qila)",
+        "location": "Strawberry AI (strawberry)",
         "timestamp": "Just now"
       },
       {
@@ -1787,20 +1801,6 @@
         "type": "ai_reasoning",
         "landmark": "Red Fort (Lal Qila)",
         "location": "Strawberry AI (reasoning)",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1793106962256,
-        "type": "ai_reasoning",
-        "landmark": "The Colosseum (Flavian Amphitheatre)",
-        "location": "Strawberry AI (strawberry)",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1793106937232,
-        "type": "audio_play",
-        "landmark": "Humayun's Tomb",
-        "location": "Digital Stream",
         "timestamp": "Just now"
       }
     ]
