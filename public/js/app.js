@@ -452,7 +452,8 @@ const App = {
             </div>
             <div class="map-layer-controls">
               <button class="layer-btn active" data-style="m" onclick="RouteMap.setMapStyle('m')">🗺️ Google Map</button>
-              <button class="layer-btn" data-style="k" onclick="RouteMap.setMapStyle('k')">🛰️ Satellite (LiDAR)</button>
+              <button class="layer-btn" data-style="s" onclick="RouteMap.setMapStyle('s')">🛰️ Satellite (LiDAR)</button>
+              <button class="layer-btn" data-style="y" onclick="RouteMap.setMapStyle('y')">🌐 Hybrid</button>
               <button class="layer-btn" data-style="p" onclick="RouteMap.setMapStyle('p')">⛰️ Terrain</button>
               <button class="layer-btn" data-style="streetview" onclick="RouteMap.setMapStyle('streetview')">👁️ Street View 360°</button>
               <button class="layer-btn btn-agentic-glow" id="map-ai-optimize-btn" onclick="RouteMap.toggleAiOptimization()">
@@ -464,7 +465,8 @@ const App = {
           <div id="map-ai-banner" class="map-ai-banner hidden"></div>
           
           <div id="google-map-container" class="google-map-container">
-            <iframe id="google-map-iframe" class="google-map-frame" src="" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div id="google-map-leaflet" class="google-map-leaflet"></div>
+            <iframe id="google-map-iframe" class="google-map-frame hidden" src="" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <div id="google-map-pins-bar" class="google-map-pins-bar"></div>
           </div>
 
