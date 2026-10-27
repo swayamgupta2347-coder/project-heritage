@@ -131,122 +131,6 @@
       ]
     },
     {
-      "id": "route-1791649284399",
-      "title": "Classical Athens Acropolis Trail",
-      "city": "Athens",
-      "country": "Greece",
-      "region": "Athens, Greece",
-      "difficulty": "Easy Walk",
-      "durationMins": 140,
-      "distanceKm": 3.2,
-      "theme": "Classical Hellenic Antiquity",
-      "unescoStatus": "Protected Cultural Heritage",
-      "coverImage": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80",
-      "description": "Journey through the Parthenon, Erechtheion, and the Theatre of Dionysus on the sacred rock of Athens.",
-      "rating": 5,
-      "reviewCount": 1,
-      "tags": [
-        "Heritage",
-        "Audio Tour",
-        "3D LiDAR"
-      ],
-      "centerCoords": [
-        41.8902,
-        12.4922
-      ],
-      "zoomLevel": 13,
-      "landmarks": [
-        "landmark-1791649284400"
-      ]
-    },
-    {
-      "id": "route-1791649933357",
-      "title": "Classical Athens Acropolis Trail",
-      "city": "Athens",
-      "country": "Greece",
-      "region": "Athens, Greece",
-      "difficulty": "Easy Walk",
-      "durationMins": 140,
-      "distanceKm": 3.2,
-      "theme": "Classical Hellenic Antiquity",
-      "unescoStatus": "Protected Cultural Heritage",
-      "coverImage": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80",
-      "description": "Journey through the Parthenon, Erechtheion, and the Theatre of Dionysus on the sacred rock of Athens.",
-      "rating": 5,
-      "reviewCount": 1,
-      "tags": [
-        "Heritage",
-        "Audio Tour",
-        "3D LiDAR"
-      ],
-      "centerCoords": [
-        41.8902,
-        12.4922
-      ],
-      "zoomLevel": 13,
-      "landmarks": [
-        "landmark-1791649933358"
-      ]
-    },
-    {
-      "id": "route-1791649955782",
-      "title": "Classical Athens Acropolis Trail",
-      "city": "Athens",
-      "country": "Greece",
-      "region": "Athens, Greece",
-      "difficulty": "Easy Walk",
-      "durationMins": 140,
-      "distanceKm": 3.2,
-      "theme": "Classical Hellenic Antiquity",
-      "unescoStatus": "Protected Cultural Heritage",
-      "coverImage": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80",
-      "description": "Journey through the Parthenon, Erechtheion, and the Theatre of Dionysus on the sacred rock of Athens.",
-      "rating": 5,
-      "reviewCount": 1,
-      "tags": [
-        "Heritage",
-        "Audio Tour",
-        "3D LiDAR"
-      ],
-      "centerCoords": [
-        41.8902,
-        12.4922
-      ],
-      "zoomLevel": 13,
-      "landmarks": [
-        "landmark-1791649955783"
-      ]
-    },
-    {
-      "id": "route-1793100800243",
-      "title": "Classical Athens Acropolis Trail",
-      "city": "Athens",
-      "country": "Greece",
-      "region": "Athens, Greece",
-      "difficulty": "Easy Walk",
-      "durationMins": 140,
-      "distanceKm": 3.2,
-      "theme": "Classical Hellenic Antiquity",
-      "unescoStatus": "Protected Cultural Heritage",
-      "coverImage": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80",
-      "description": "Journey through the Parthenon, Erechtheion, and the Theatre of Dionysus on the sacred rock of Athens.",
-      "rating": 5,
-      "reviewCount": 1,
-      "tags": [
-        "Heritage",
-        "Audio Tour",
-        "3D LiDAR"
-      ],
-      "centerCoords": [
-        41.8902,
-        12.4922
-      ],
-      "zoomLevel": 13,
-      "landmarks": [
-        "landmark-1793100800243"
-      ]
-    },
-    {
       "id": "route-athens-acropolis",
       "title": "Classical Athens: Sacred Rock & Panathenaic Trail",
       "city": "Athens",
@@ -308,151 +192,6 @@
         "landmark-intihuatana",
         "landmark-temple-sun",
         "landmark-sacred-plaza"
-      ]
-    },
-    {
-      "id": "route-1793101187038",
-      "title": "Classical Athens Acropolis Trail",
-      "city": "Athens",
-      "country": "Greece",
-      "region": "Athens, Greece",
-      "difficulty": "Easy Walk",
-      "durationMins": 140,
-      "distanceKm": 3.2,
-      "theme": "Classical Hellenic Antiquity",
-      "unescoStatus": "Protected Cultural Heritage",
-      "coverImage": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80",
-      "description": "Journey through the Parthenon, Erechtheion, and the Theatre of Dionysus on the sacred rock of Athens.",
-      "rating": 5,
-      "reviewCount": 1,
-      "tags": [
-        "Heritage",
-        "Audio Tour",
-        "3D LiDAR"
-      ],
-      "centerCoords": [
-        41.8902,
-        12.4922
-      ],
-      "zoomLevel": 13,
-      "landmarks": [
-        "landmark-1793101187039"
-      ]
-    },
-    {
-      "id": "route-1793101208372",
-      "title": "Classical Athens Acropolis Trail",
-      "city": "Athens",
-      "country": "Greece",
-      "region": "Athens, Greece",
-      "difficulty": "Easy Walk",
-      "durationMins": 140,
-      "distanceKm": 3.2,
-      "theme": "Classical Hellenic Antiquity",
-      "unescoStatus": "Protected Cultural Heritage",
-      "coverImage": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80",
-      "description": "Journey through the Parthenon, Erechtheion, and the Theatre of Dionysus on the sacred rock of Athens.",
-      "rating": 5,
-      "reviewCount": 1,
-      "tags": [
-        "Heritage",
-        "Audio Tour",
-        "3D LiDAR"
-      ],
-      "centerCoords": [
-        41.8902,
-        12.4922
-      ],
-      "zoomLevel": 13,
-      "landmarks": [
-        "landmark-1793101208373"
-      ]
-    },
-    {
-      "id": "route-1793103700541",
-      "title": "Classical Athens Acropolis Trail",
-      "city": "Athens",
-      "country": "Greece",
-      "region": "Athens, Greece",
-      "difficulty": "Easy Walk",
-      "durationMins": 140,
-      "distanceKm": 3.2,
-      "theme": "Classical Hellenic Antiquity",
-      "unescoStatus": "Protected Cultural Heritage",
-      "coverImage": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80",
-      "description": "Journey through the Parthenon, Erechtheion, and the Theatre of Dionysus on the sacred rock of Athens.",
-      "rating": 5,
-      "reviewCount": 1,
-      "tags": [
-        "Heritage",
-        "Audio Tour",
-        "3D LiDAR"
-      ],
-      "centerCoords": [
-        41.8902,
-        12.4922
-      ],
-      "zoomLevel": 13,
-      "landmarks": [
-        "landmark-1793103700541"
-      ]
-    },
-    {
-      "id": "route-1793104473085",
-      "title": "Classical Athens Acropolis Trail",
-      "city": "Athens",
-      "country": "Greece",
-      "region": "Athens, Greece",
-      "difficulty": "Easy Walk",
-      "durationMins": 140,
-      "distanceKm": 3.2,
-      "theme": "Classical Hellenic Antiquity",
-      "unescoStatus": "Protected Cultural Heritage",
-      "coverImage": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80",
-      "description": "Journey through the Parthenon, Erechtheion, and the Theatre of Dionysus on the sacred rock of Athens.",
-      "rating": 5,
-      "reviewCount": 1,
-      "tags": [
-        "Heritage",
-        "Audio Tour",
-        "3D LiDAR"
-      ],
-      "centerCoords": [
-        41.8902,
-        12.4922
-      ],
-      "zoomLevel": 13,
-      "landmarks": [
-        "landmark-1793104473086"
-      ]
-    },
-    {
-      "id": "route-1793107786725",
-      "title": "Classical Athens Acropolis Trail",
-      "city": "Athens",
-      "country": "Greece",
-      "region": "Athens, Greece",
-      "difficulty": "Easy Walk",
-      "durationMins": 140,
-      "distanceKm": 3.2,
-      "theme": "Classical Hellenic Antiquity",
-      "unescoStatus": "Protected Cultural Heritage",
-      "coverImage": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80",
-      "description": "Journey through the Parthenon, Erechtheion, and the Theatre of Dionysus on the sacred rock of Athens.",
-      "rating": 5,
-      "reviewCount": 1,
-      "tags": [
-        "Heritage",
-        "Audio Tour",
-        "3D LiDAR"
-      ],
-      "centerCoords": [
-        41.8902,
-        12.4922
-      ],
-      "zoomLevel": 13,
-      "landmarks": [
-        "landmark-1793107786726"
       ]
     }
   ],
@@ -540,7 +279,7 @@
       "qrCode": "HERITAGE-ROME-TITUS-81AD",
       "modelType": "arch",
       "thumbnail": "https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=800&q=80",
-      "archivalImage": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1531572753322-ad063cecc140?auto=format&fit=crop&w=800&q=80",
       "audioDurationSec": 130,
       "audioTitle": "The Sacred Way: The Political Heartland of the Republic and Empire",
       "audioScript": "You are standing on the Via Sacra, the ceremonial avenue of Roman triumphal processions. Before you rises the Arch of Titus, erected by Emperor Domitian to deify his elder brother. Gaze upward at the inner relief panels: carved in deep Pentelic marble, Roman soldiers carry the golden Menorah and holy vessels captured from the Second Temple in Jerusalem, immortalizing the triumph of 71 AD.",
@@ -1234,178 +973,6 @@
       ]
     },
     {
-      "id": "landmark-1791649284400",
-      "routeId": "route-1791649284399",
-      "name": "The Parthenon",
-      "nativeName": "The Parthenon",
-      "yearBuilt": "447–432 BC",
-      "era": "Classical Greece (Periclean Golden Age)",
-      "coordinates": [
-        37.9715,
-        23.7267
-      ],
-      "elevation": "25m above sea level",
-      "qrCode": "HERITAGE-1791649284400",
-      "modelType": "colosseum",
-      "thumbnail": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80",
-      "archivalImage": "https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=800&q=80",
-      "audioDurationSec": 120,
-      "audioTitle": "The Parthenon Audio Guide",
-      "audioScript": "Perched upon the Acropolis, the Parthenon stands as the pinnacle of Doric architecture.",
-      "historicalNarrative": "Dedicated to Athena Parthenos, master sculptor Phidias and architects Ictinus and Callicrates engineered subtle optical corrections known as entasis.",
-      "timeline": [
-        {
-          "year": "447–432 BC",
-          "title": "Construction",
-          "description": "Monument erected."
-        }
-      ],
-      "character": {
-        "name": "Historical Guide",
-        "title": "Archaeological Chronicler",
-        "avatar": "🏛️",
-        "introQuote": "Welcome to this sacred monument of antiquity.",
-        "dialogues": [
-          {
-            "question": "Tell me about this monument",
-            "answer": "Dedicated to Athena Parthenos, master sculptor Phidias and architects Ictinus and Callicrates engineered subtle optical corrections known as entasis."
-          }
-        ]
-      },
-      "culturalInsights": [
-        "Documented for 3D preservation under international heritage conventions."
-      ]
-    },
-    {
-      "id": "landmark-1791649933358",
-      "routeId": "route-1791649933357",
-      "name": "The Parthenon",
-      "nativeName": "The Parthenon",
-      "yearBuilt": "447–432 BC",
-      "era": "Classical Greece (Periclean Golden Age)",
-      "coordinates": [
-        37.9715,
-        23.7267
-      ],
-      "elevation": "25m above sea level",
-      "qrCode": "HERITAGE-1791649933358",
-      "modelType": "colosseum",
-      "thumbnail": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80",
-      "archivalImage": "https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=800&q=80",
-      "audioDurationSec": 120,
-      "audioTitle": "The Parthenon Audio Guide",
-      "audioScript": "Perched upon the Acropolis, the Parthenon stands as the pinnacle of Doric architecture.",
-      "historicalNarrative": "Dedicated to Athena Parthenos, master sculptor Phidias and architects Ictinus and Callicrates engineered subtle optical corrections known as entasis.",
-      "timeline": [
-        {
-          "year": "447–432 BC",
-          "title": "Construction",
-          "description": "Monument erected."
-        }
-      ],
-      "character": {
-        "name": "Historical Guide",
-        "title": "Archaeological Chronicler",
-        "avatar": "🏛️",
-        "introQuote": "Welcome to this sacred monument of antiquity.",
-        "dialogues": [
-          {
-            "question": "Tell me about this monument",
-            "answer": "Dedicated to Athena Parthenos, master sculptor Phidias and architects Ictinus and Callicrates engineered subtle optical corrections known as entasis."
-          }
-        ]
-      },
-      "culturalInsights": [
-        "Documented for 3D preservation under international heritage conventions."
-      ]
-    },
-    {
-      "id": "landmark-1791649955783",
-      "routeId": "route-1791649955782",
-      "name": "The Parthenon",
-      "nativeName": "The Parthenon",
-      "yearBuilt": "447–432 BC",
-      "era": "Classical Greece (Periclean Golden Age)",
-      "coordinates": [
-        37.9715,
-        23.7267
-      ],
-      "elevation": "25m above sea level",
-      "qrCode": "HERITAGE-1791649955783",
-      "modelType": "colosseum",
-      "thumbnail": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80",
-      "archivalImage": "https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=800&q=80",
-      "audioDurationSec": 120,
-      "audioTitle": "The Parthenon Audio Guide",
-      "audioScript": "Perched upon the Acropolis, the Parthenon stands as the pinnacle of Doric architecture.",
-      "historicalNarrative": "Dedicated to Athena Parthenos, master sculptor Phidias and architects Ictinus and Callicrates engineered subtle optical corrections known as entasis.",
-      "timeline": [
-        {
-          "year": "447–432 BC",
-          "title": "Construction",
-          "description": "Monument erected."
-        }
-      ],
-      "character": {
-        "name": "Historical Guide",
-        "title": "Archaeological Chronicler",
-        "avatar": "🏛️",
-        "introQuote": "Welcome to this sacred monument of antiquity.",
-        "dialogues": [
-          {
-            "question": "Tell me about this monument",
-            "answer": "Dedicated to Athena Parthenos, master sculptor Phidias and architects Ictinus and Callicrates engineered subtle optical corrections known as entasis."
-          }
-        ]
-      },
-      "culturalInsights": [
-        "Documented for 3D preservation under international heritage conventions."
-      ]
-    },
-    {
-      "id": "landmark-1793100800243",
-      "routeId": "route-1793100800243",
-      "name": "The Parthenon",
-      "nativeName": "The Parthenon",
-      "yearBuilt": "447–432 BC",
-      "era": "Classical Greece (Periclean Golden Age)",
-      "coordinates": [
-        37.9715,
-        23.7267
-      ],
-      "elevation": "25m above sea level",
-      "qrCode": "HERITAGE-1793100800243",
-      "modelType": "colosseum",
-      "thumbnail": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80",
-      "archivalImage": "https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=800&q=80",
-      "audioDurationSec": 120,
-      "audioTitle": "The Parthenon Audio Guide",
-      "audioScript": "Perched upon the Acropolis, the Parthenon stands as the pinnacle of Doric architecture.",
-      "historicalNarrative": "Dedicated to Athena Parthenos, master sculptor Phidias and architects Ictinus and Callicrates engineered subtle optical corrections known as entasis.",
-      "timeline": [
-        {
-          "year": "447–432 BC",
-          "title": "Construction",
-          "description": "Monument erected."
-        }
-      ],
-      "character": {
-        "name": "Historical Guide",
-        "title": "Archaeological Chronicler",
-        "avatar": "🏛️",
-        "introQuote": "Welcome to this sacred monument of antiquity.",
-        "dialogues": [
-          {
-            "question": "Tell me about this monument",
-            "answer": "Dedicated to Athena Parthenos, master sculptor Phidias and architects Ictinus and Callicrates engineered subtle optical corrections known as entasis."
-          }
-        ]
-      },
-      "culturalInsights": [
-        "Documented for 3D preservation under international heritage conventions."
-      ]
-    },
-    {
       "id": "landmark-parthenon",
       "routeId": "route-athens-acropolis",
       "name": "The Parthenon",
@@ -1727,221 +1294,6 @@
         "Machu Picchu features over 700 agricultural terraces that prevent soil erosion and absorb rain runoff.",
         "A sophisticated underground canal system still funnels fresh spring water from a mountain spring through 16 ceremonial fountains."
       ]
-    },
-    {
-      "id": "landmark-1793101187039",
-      "routeId": "route-1793101187038",
-      "name": "The Parthenon",
-      "nativeName": "The Parthenon",
-      "yearBuilt": "447–432 BC",
-      "era": "Classical Greece (Periclean Golden Age)",
-      "coordinates": [
-        37.9715,
-        23.7267
-      ],
-      "elevation": "25m above sea level",
-      "qrCode": "HERITAGE-1793101187039",
-      "modelType": "colosseum",
-      "thumbnail": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80",
-      "archivalImage": "https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=800&q=80",
-      "audioDurationSec": 120,
-      "audioTitle": "The Parthenon Audio Guide",
-      "audioScript": "Perched upon the Acropolis, the Parthenon stands as the pinnacle of Doric architecture.",
-      "historicalNarrative": "Dedicated to Athena Parthenos, master sculptor Phidias and architects Ictinus and Callicrates engineered subtle optical corrections known as entasis.",
-      "timeline": [
-        {
-          "year": "447–432 BC",
-          "title": "Construction",
-          "description": "Monument erected."
-        }
-      ],
-      "character": {
-        "name": "Historical Guide",
-        "title": "Archaeological Chronicler",
-        "avatar": "🏛️",
-        "introQuote": "Welcome to this sacred monument of antiquity.",
-        "dialogues": [
-          {
-            "question": "Tell me about this monument",
-            "answer": "Dedicated to Athena Parthenos, master sculptor Phidias and architects Ictinus and Callicrates engineered subtle optical corrections known as entasis."
-          }
-        ]
-      },
-      "culturalInsights": [
-        "Documented for 3D preservation under international heritage conventions."
-      ]
-    },
-    {
-      "id": "landmark-1793101208373",
-      "routeId": "route-1793101208372",
-      "name": "The Parthenon",
-      "nativeName": "The Parthenon",
-      "yearBuilt": "447–432 BC",
-      "era": "Classical Greece (Periclean Golden Age)",
-      "coordinates": [
-        37.9715,
-        23.7267
-      ],
-      "elevation": "25m above sea level",
-      "qrCode": "HERITAGE-1793101208373",
-      "modelType": "colosseum",
-      "thumbnail": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80",
-      "archivalImage": "https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=800&q=80",
-      "audioDurationSec": 120,
-      "audioTitle": "The Parthenon Audio Guide",
-      "audioScript": "Perched upon the Acropolis, the Parthenon stands as the pinnacle of Doric architecture.",
-      "historicalNarrative": "Dedicated to Athena Parthenos, master sculptor Phidias and architects Ictinus and Callicrates engineered subtle optical corrections known as entasis.",
-      "timeline": [
-        {
-          "year": "447–432 BC",
-          "title": "Construction",
-          "description": "Monument erected."
-        }
-      ],
-      "character": {
-        "name": "Historical Guide",
-        "title": "Archaeological Chronicler",
-        "avatar": "🏛️",
-        "introQuote": "Welcome to this sacred monument of antiquity.",
-        "dialogues": [
-          {
-            "question": "Tell me about this monument",
-            "answer": "Dedicated to Athena Parthenos, master sculptor Phidias and architects Ictinus and Callicrates engineered subtle optical corrections known as entasis."
-          }
-        ]
-      },
-      "culturalInsights": [
-        "Documented for 3D preservation under international heritage conventions."
-      ]
-    },
-    {
-      "id": "landmark-1793103700541",
-      "routeId": "route-1793103700541",
-      "name": "The Parthenon",
-      "nativeName": "The Parthenon",
-      "yearBuilt": "447–432 BC",
-      "era": "Classical Greece (Periclean Golden Age)",
-      "coordinates": [
-        37.9715,
-        23.7267
-      ],
-      "elevation": "25m above sea level",
-      "qrCode": "HERITAGE-1793103700541",
-      "modelType": "colosseum",
-      "thumbnail": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80",
-      "archivalImage": "https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=800&q=80",
-      "audioDurationSec": 120,
-      "audioTitle": "The Parthenon Audio Guide",
-      "audioScript": "Perched upon the Acropolis, the Parthenon stands as the pinnacle of Doric architecture.",
-      "historicalNarrative": "Dedicated to Athena Parthenos, master sculptor Phidias and architects Ictinus and Callicrates engineered subtle optical corrections known as entasis.",
-      "timeline": [
-        {
-          "year": "447–432 BC",
-          "title": "Construction",
-          "description": "Monument erected."
-        }
-      ],
-      "character": {
-        "name": "Historical Guide",
-        "title": "Archaeological Chronicler",
-        "avatar": "🏛️",
-        "introQuote": "Welcome to this sacred monument of antiquity.",
-        "dialogues": [
-          {
-            "question": "Tell me about this monument",
-            "answer": "Dedicated to Athena Parthenos, master sculptor Phidias and architects Ictinus and Callicrates engineered subtle optical corrections known as entasis."
-          }
-        ]
-      },
-      "culturalInsights": [
-        "Documented for 3D preservation under international heritage conventions."
-      ]
-    },
-    {
-      "id": "landmark-1793104473086",
-      "routeId": "route-1793104473085",
-      "name": "The Parthenon",
-      "nativeName": "The Parthenon",
-      "yearBuilt": "447–432 BC",
-      "era": "Classical Greece (Periclean Golden Age)",
-      "coordinates": [
-        37.9715,
-        23.7267
-      ],
-      "elevation": "25m above sea level",
-      "qrCode": "HERITAGE-1793104473086",
-      "modelType": "colosseum",
-      "thumbnail": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80",
-      "archivalImage": "https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=800&q=80",
-      "audioDurationSec": 120,
-      "audioTitle": "The Parthenon Audio Guide",
-      "audioScript": "Perched upon the Acropolis, the Parthenon stands as the pinnacle of Doric architecture.",
-      "historicalNarrative": "Dedicated to Athena Parthenos, master sculptor Phidias and architects Ictinus and Callicrates engineered subtle optical corrections known as entasis.",
-      "timeline": [
-        {
-          "year": "447–432 BC",
-          "title": "Construction",
-          "description": "Monument erected."
-        }
-      ],
-      "character": {
-        "name": "Historical Guide",
-        "title": "Archaeological Chronicler",
-        "avatar": "🏛️",
-        "introQuote": "Welcome to this sacred monument of antiquity.",
-        "dialogues": [
-          {
-            "question": "Tell me about this monument",
-            "answer": "Dedicated to Athena Parthenos, master sculptor Phidias and architects Ictinus and Callicrates engineered subtle optical corrections known as entasis."
-          }
-        ]
-      },
-      "culturalInsights": [
-        "Documented for 3D preservation under international heritage conventions."
-      ]
-    },
-    {
-      "id": "landmark-1793107786726",
-      "routeId": "route-1793107786725",
-      "name": "The Parthenon",
-      "nativeName": "The Parthenon",
-      "yearBuilt": "447–432 BC",
-      "era": "Classical Greece (Periclean Golden Age)",
-      "coordinates": [
-        37.9715,
-        23.7267
-      ],
-      "elevation": "25m above sea level",
-      "qrCode": "HERITAGE-1793107786726",
-      "modelType": "colosseum",
-      "thumbnail": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80",
-      "archivalImage": "https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=800&q=80",
-      "audioDurationSec": 120,
-      "audioTitle": "The Parthenon Audio Guide",
-      "audioScript": "Perched upon the Acropolis, the Parthenon stands as the pinnacle of Doric architecture.",
-      "historicalNarrative": "Dedicated to Athena Parthenos, master sculptor Phidias and architects Ictinus and Callicrates engineered subtle optical corrections known as entasis.",
-      "timeline": [
-        {
-          "year": "447–432 BC",
-          "title": "Construction",
-          "description": "Monument erected."
-        }
-      ],
-      "character": {
-        "name": "Historical Guide",
-        "title": "Archaeological Chronicler",
-        "avatar": "🏛️",
-        "introQuote": "Welcome to this sacred monument of antiquity.",
-        "dialogues": [
-          {
-            "question": "Tell me about this monument",
-            "answer": "Dedicated to Athena Parthenos, master sculptor Phidias and architects Ictinus and Callicrates engineered subtle optical corrections known as entasis."
-          }
-        ]
-      },
-      "culturalInsights": [
-        "Documented for 3D preservation under international heritage conventions."
-      ]
     }
   ],
   "translations": {
@@ -2170,7 +1522,7 @@
   },
   "analytics": {
     "totalVisitors": 84920,
-    "arInteractions": 52161,
+    "arInteractions": 52163,
     "audioToursCompleted": 39820,
     "passportsIssued": 19431,
     "averageSessionMins": 18.4,
@@ -2206,6 +1558,90 @@
       "Français": 3
     },
     "recentEvents": [
+      {
+        "id": 1793117272944,
+        "type": "workflow_executed",
+        "landmark": "Autonomous Monument Ingestion & LiDAR Enrichment",
+        "location": "n8n Agentic Canvas",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793117272944,
+        "type": "openclaw_crawl",
+        "landmark": "Taj Mahal",
+        "location": "Open Claw Heritage Crawler",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793117272943,
+        "type": "ai_reasoning",
+        "landmark": "Red Fort (Lal Qila)",
+        "location": "Strawberry AI (reasoning)",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793117272943,
+        "type": "ai_reasoning",
+        "landmark": "The Colosseum (Flavian Amphitheatre)",
+        "location": "Strawberry AI (reasoning)",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793117272943,
+        "type": "ai_reasoning",
+        "landmark": "The Colosseum (Flavian Amphitheatre)",
+        "location": "Strawberry AI (strawberry)",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793117272938,
+        "type": "qr_triggered",
+        "landmark": "The Colosseum (Flavian Amphitheatre)",
+        "location": "route-rome-imperial",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793117086897,
+        "type": "workflow_executed",
+        "landmark": "Autonomous Monument Ingestion & LiDAR Enrichment",
+        "location": "n8n Agentic Canvas",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793117086897,
+        "type": "openclaw_crawl",
+        "landmark": "Taj Mahal",
+        "location": "Open Claw Heritage Crawler",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793117086896,
+        "type": "ai_reasoning",
+        "landmark": "Red Fort (Lal Qila)",
+        "location": "Strawberry AI (reasoning)",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793117086896,
+        "type": "ai_reasoning",
+        "landmark": "The Colosseum (Flavian Amphitheatre)",
+        "location": "Strawberry AI (reasoning)",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793117086895,
+        "type": "ai_reasoning",
+        "landmark": "The Colosseum (Flavian Amphitheatre)",
+        "location": "Strawberry AI (strawberry)",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793117086891,
+        "type": "qr_triggered",
+        "landmark": "The Colosseum (Flavian Amphitheatre)",
+        "location": "route-rome-imperial",
+        "timestamp": "Just now"
+      },
       {
         "id": 1793107786731,
         "type": "workflow_executed",
@@ -2351,76 +1787,6 @@
         "type": "openclaw_crawl",
         "landmark": "Taj Mahal",
         "location": "Open Claw Heritage Crawler",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1793103700542,
-        "type": "ai_reasoning",
-        "landmark": "The Colosseum (Flavian Amphitheatre)",
-        "location": "Strawberry AI (strawberry)",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1793103700536,
-        "type": "qr_triggered",
-        "landmark": "The Colosseum (Flavian Amphitheatre)",
-        "location": "route-rome-imperial",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1793101208376,
-        "type": "workflow_executed",
-        "landmark": "Autonomous Monument Ingestion & LiDAR Enrichment",
-        "location": "n8n Agentic Canvas",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1793101208375,
-        "type": "openclaw_crawl",
-        "landmark": "Taj Mahal",
-        "location": "Open Claw Heritage Crawler",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1793101208374,
-        "type": "ai_reasoning",
-        "landmark": "The Colosseum (Flavian Amphitheatre)",
-        "location": "Strawberry AI (strawberry)",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1793101208368,
-        "type": "qr_triggered",
-        "landmark": "The Colosseum (Flavian Amphitheatre)",
-        "location": "route-rome-imperial",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1793101187034,
-        "type": "qr_triggered",
-        "landmark": "The Colosseum (Flavian Amphitheatre)",
-        "location": "route-rome-imperial",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1793100800238,
-        "type": "qr_triggered",
-        "landmark": "The Colosseum (Flavian Amphitheatre)",
-        "location": "route-rome-imperial",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1791654370038,
-        "type": "ar_interaction",
-        "landmark": "The Roman Forum & Arch of Titus",
-        "location": "Digital Stream",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1791654358824,
-        "type": "audio_play",
-        "landmark": "The Roman Forum & Arch of Titus",
-        "location": "Digital Stream",
         "timestamp": "Just now"
       }
     ]

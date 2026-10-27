@@ -284,7 +284,7 @@ const seedData = {
       "qrCode": "HERITAGE-ROME-TITUS-81AD",
       "modelType": "arch",
       "thumbnail": "https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=800&q=80",
-      "archivalImage": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1531572753322-ad063cecc140?auto=format&fit=crop&w=800&q=80",
       "audioDurationSec": 130,
       "audioTitle": "The Sacred Way: The Political Heartland of the Republic and Empire",
       "audioScript": "You are standing on the Via Sacra, the ceremonial avenue of Roman triumphal processions. Before you rises the Arch of Titus, erected by Emperor Domitian to deify his elder brother. Gaze upward at the inner relief panels: carved in deep Pentelic marble, Roman soldiers carry the golden Menorah and holy vessels captured from the Second Temple in Jerusalem, immortalizing the triumph of 71 AD.",

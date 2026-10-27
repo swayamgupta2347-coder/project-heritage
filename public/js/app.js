@@ -435,17 +435,18 @@ const App = {
       </div>
 
       <div class="map-view-container">
-        <!-- Interactive Vector Map Canvas -->
+        <!-- Google Maps Interactive Viewport -->
         <div class="map-canvas-wrapper">
           <div class="map-hud-top">
             <div class="hud-route-badge">
-              <span>📍</span>
-              <span class="hud-route-name">${route.city}: ${route.landmarks?.length || 0} Historical Stops</span>
+              <span>🗺️</span>
+              <span class="hud-route-name">${route.city}: ${route.landmarks?.length || 0} Historical Stops (Google Maps)</span>
             </div>
             <div class="map-layer-controls">
-              <button class="layer-btn active" data-style="antique" onclick="RouteMap.setMapStyle('antique')">Antique</button>
-              <button class="layer-btn" data-style="dark" onclick="RouteMap.setMapStyle('dark')">LiDAR Dark</button>
-              <button class="layer-btn" data-style="satellite" onclick="RouteMap.setMapStyle('satellite')">Terrain</button>
+              <button class="layer-btn active" data-style="m" onclick="RouteMap.setMapStyle('m')">🗺️ Google Map</button>
+              <button class="layer-btn" data-style="k" onclick="RouteMap.setMapStyle('k')">🛰️ Satellite (LiDAR)</button>
+              <button class="layer-btn" data-style="p" onclick="RouteMap.setMapStyle('p')">⛰️ Terrain</button>
+              <button class="layer-btn" data-style="streetview" onclick="RouteMap.setMapStyle('streetview')">👁️ Street View 360°</button>
               <button class="layer-btn btn-agentic-glow" id="map-ai-optimize-btn" onclick="RouteMap.toggleAiOptimization()">
                 <span>🍓</span> Strawberry Smart Path
               </button>
@@ -453,7 +454,11 @@ const App = {
           </div>
 
           <div id="map-ai-banner" class="map-ai-banner hidden"></div>
-          <canvas id="route-map-canvas" class="map-canvas"></canvas>
+          
+          <div id="google-map-container" class="google-map-container">
+            <iframe id="google-map-iframe" class="google-map-frame" src="" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div id="google-map-pins-bar" class="google-map-pins-bar"></div>
+          </div>
 
           <!-- Telemetry HUD Bottom -->
           <div class="map-telemetry-bottom">
@@ -468,6 +473,9 @@ const App = {
             </div>
 
             <div style="pointer-events:auto; display:flex; gap:8px;">
+              <button class="btn btn-primary btn-sm" onclick="RouteMap.openInGoogleMaps()">
+                🚶 Google Maps Directions
+              </button>
               <button class="btn btn-secondary btn-sm" onclick="RouteMap.fitRouteBounds()">Reset View</button>
             </div>
           </div>
@@ -513,7 +521,7 @@ const App = {
     `;
 
     setTimeout(() => {
-      RouteMap.init('route-map-canvas', route, routeLandmarks);
+      RouteMap.init('google-map-container', route, routeLandmarks);
     }, 50);
   },
 

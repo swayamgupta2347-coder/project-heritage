@@ -153,13 +153,21 @@ async function runTests() {
       name: 'The Parthenon',
       routeId: createRouteRes.body.id,
       yearBuilt: '447–432 BC',
-      era: 'Classical Greece (Periclean Golden Age)',
-      modelType: 'colosseum',
+      thumbnail: 'https://images.unsplash.com/photo-1555993539-1732916b8235?auto=format&fit=crop&w=800&q=80',
+      modelType: 'temple',
       coordinates: [37.9715, 23.7267],
       audioScript: 'Perched upon the Acropolis, the Parthenon stands as the pinnacle of Doric architecture.',
       historicalNarrative: 'Dedicated to Athena Parthenos, master sculptor Phidias and architects Ictinus and Callicrates engineered subtle optical corrections known as entasis.'
     });
     assert(createLmRes.status === 201 && createLmRes.body.id, 'Admin POST /api/landmarks registers monument with 3D model configuration');
+
+    // Clean up test entities so database stays clean and canonical
+    if (createLmRes.body.id) {
+      await dispatch('DELETE', `/api/landmarks/${createLmRes.body.id}`, { 'authorization': `Bearer ${adminToken}` });
+    }
+    if (createRouteRes.body.id) {
+      await dispatch('DELETE', `/api/routes/${createRouteRes.body.id}`, { 'authorization': `Bearer ${adminToken}` });
+    }
 
     // 16. Agentic AI: Strawberry Deep-Reasoning Engine (o-series CoT)
     const strawberryRes = await dispatch('POST', '/api/agent/strawberry', { 'content-type': 'application/json' }, {
