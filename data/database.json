@@ -216,6 +216,186 @@
       "landmarks": [
         "landmark-1791649955783"
       ]
+    },
+    {
+      "id": "route-1793100800243",
+      "title": "Classical Athens Acropolis Trail",
+      "city": "Athens",
+      "country": "Greece",
+      "region": "Athens, Greece",
+      "difficulty": "Easy Walk",
+      "durationMins": 140,
+      "distanceKm": 3.2,
+      "theme": "Classical Hellenic Antiquity",
+      "unescoStatus": "Protected Cultural Heritage",
+      "coverImage": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80",
+      "description": "Journey through the Parthenon, Erechtheion, and the Theatre of Dionysus on the sacred rock of Athens.",
+      "rating": 5,
+      "reviewCount": 1,
+      "tags": [
+        "Heritage",
+        "Audio Tour",
+        "3D LiDAR"
+      ],
+      "centerCoords": [
+        41.8902,
+        12.4922
+      ],
+      "zoomLevel": 13,
+      "landmarks": [
+        "landmark-1793100800243"
+      ]
+    },
+    {
+      "id": "route-athens-acropolis",
+      "title": "Classical Athens: Sacred Rock & Panathenaic Trail",
+      "city": "Athens",
+      "country": "Greece",
+      "region": "Attica",
+      "difficulty": "Easy Walk",
+      "durationMins": 150,
+      "distanceKm": 3.5,
+      "theme": "Classical Hellenic Antiquity & Philosophy",
+      "unescoStatus": "Acropolis, Athens (UNESCO World Heritage 1987)",
+      "coverImage": "https://images.unsplash.com/photo-1555993539-1732916b8235?auto=format&fit=crop&w=1200&q=80",
+      "description": "Ascend the sacred limestone outcrop of Athens through the Doric colonnades of the Parthenon, the elegant Caryatid porch of the Erechtheion, and down to the colossal columns of the Temple of Olympian Zeus.",
+      "rating": 4.96,
+      "reviewCount": 2150,
+      "tags": [
+        "UNESCO",
+        "Classical Greece",
+        "Periclean Golden Age",
+        "3D Reconstruction"
+      ],
+      "centerCoords": [
+        37.9715,
+        23.7267
+      ],
+      "zoomLevel": 14,
+      "landmarks": [
+        "landmark-parthenon",
+        "landmark-erechtheion",
+        "landmark-temple-zeus"
+      ]
+    },
+    {
+      "id": "route-machu-picchu",
+      "title": "Inca Cloud Sanctuary: Machu Picchu & Sun Gate Trail",
+      "city": "Cusco & Sacred Valley",
+      "country": "Peru",
+      "region": "Andes",
+      "difficulty": "Challenging Hike",
+      "durationMins": 240,
+      "distanceKm": 5.8,
+      "theme": "Inca Imperial Masonry & Astronomical Alignment",
+      "unescoStatus": "Historic Sanctuary of Machu Picchu (UNESCO 1983)",
+      "coverImage": "https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=1200&q=80",
+      "description": "Explore the cloud-shrouded 15th-century imperial estate of Inca Emperor Pachacuti, featuring precision dry-stone ashlar masonry, the Intihuatana solar hitching post, and sacred sun temples.",
+      "rating": 4.98,
+      "reviewCount": 3410,
+      "tags": [
+        "UNESCO",
+        "Inca Empire",
+        "High Altitude",
+        "Ashlar Masonry"
+      ],
+      "centerCoords": [
+        -13.1631,
+        -72.545
+      ],
+      "zoomLevel": 15,
+      "landmarks": [
+        "landmark-intihuatana",
+        "landmark-temple-sun",
+        "landmark-sacred-plaza"
+      ]
+    },
+    {
+      "id": "route-1793101187038",
+      "title": "Classical Athens Acropolis Trail",
+      "city": "Athens",
+      "country": "Greece",
+      "region": "Athens, Greece",
+      "difficulty": "Easy Walk",
+      "durationMins": 140,
+      "distanceKm": 3.2,
+      "theme": "Classical Hellenic Antiquity",
+      "unescoStatus": "Protected Cultural Heritage",
+      "coverImage": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80",
+      "description": "Journey through the Parthenon, Erechtheion, and the Theatre of Dionysus on the sacred rock of Athens.",
+      "rating": 5,
+      "reviewCount": 1,
+      "tags": [
+        "Heritage",
+        "Audio Tour",
+        "3D LiDAR"
+      ],
+      "centerCoords": [
+        41.8902,
+        12.4922
+      ],
+      "zoomLevel": 13,
+      "landmarks": [
+        "landmark-1793101187039"
+      ]
+    },
+    {
+      "id": "route-1793101208372",
+      "title": "Classical Athens Acropolis Trail",
+      "city": "Athens",
+      "country": "Greece",
+      "region": "Athens, Greece",
+      "difficulty": "Easy Walk",
+      "durationMins": 140,
+      "distanceKm": 3.2,
+      "theme": "Classical Hellenic Antiquity",
+      "unescoStatus": "Protected Cultural Heritage",
+      "coverImage": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80",
+      "description": "Journey through the Parthenon, Erechtheion, and the Theatre of Dionysus on the sacred rock of Athens.",
+      "rating": 5,
+      "reviewCount": 1,
+      "tags": [
+        "Heritage",
+        "Audio Tour",
+        "3D LiDAR"
+      ],
+      "centerCoords": [
+        41.8902,
+        12.4922
+      ],
+      "zoomLevel": 13,
+      "landmarks": [
+        "landmark-1793101208373"
+      ]
+    },
+    {
+      "id": "route-1793103700541",
+      "title": "Classical Athens Acropolis Trail",
+      "city": "Athens",
+      "country": "Greece",
+      "region": "Athens, Greece",
+      "difficulty": "Easy Walk",
+      "durationMins": 140,
+      "distanceKm": 3.2,
+      "theme": "Classical Hellenic Antiquity",
+      "unescoStatus": "Protected Cultural Heritage",
+      "coverImage": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80",
+      "description": "Journey through the Parthenon, Erechtheion, and the Theatre of Dionysus on the sacred rock of Athens.",
+      "rating": 5,
+      "reviewCount": 1,
+      "tags": [
+        "Heritage",
+        "Audio Tour",
+        "3D LiDAR"
+      ],
+      "centerCoords": [
+        41.8902,
+        12.4922
+      ],
+      "zoomLevel": 13,
+      "landmarks": [
+        "landmark-1793103700541"
+      ]
     }
   ],
   "landmarks": [
@@ -1123,6 +1303,501 @@
       "culturalInsights": [
         "Documented for 3D preservation under international heritage conventions."
       ]
+    },
+    {
+      "id": "landmark-1793100800243",
+      "routeId": "route-1793100800243",
+      "name": "The Parthenon",
+      "nativeName": "The Parthenon",
+      "yearBuilt": "447–432 BC",
+      "era": "Classical Greece (Periclean Golden Age)",
+      "coordinates": [
+        37.9715,
+        23.7267
+      ],
+      "elevation": "25m above sea level",
+      "qrCode": "HERITAGE-1793100800243",
+      "modelType": "colosseum",
+      "thumbnail": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=800&q=80",
+      "audioDurationSec": 120,
+      "audioTitle": "The Parthenon Audio Guide",
+      "audioScript": "Perched upon the Acropolis, the Parthenon stands as the pinnacle of Doric architecture.",
+      "historicalNarrative": "Dedicated to Athena Parthenos, master sculptor Phidias and architects Ictinus and Callicrates engineered subtle optical corrections known as entasis.",
+      "timeline": [
+        {
+          "year": "447–432 BC",
+          "title": "Construction",
+          "description": "Monument erected."
+        }
+      ],
+      "character": {
+        "name": "Historical Guide",
+        "title": "Archaeological Chronicler",
+        "avatar": "🏛️",
+        "introQuote": "Welcome to this sacred monument of antiquity.",
+        "dialogues": [
+          {
+            "question": "Tell me about this monument",
+            "answer": "Dedicated to Athena Parthenos, master sculptor Phidias and architects Ictinus and Callicrates engineered subtle optical corrections known as entasis."
+          }
+        ]
+      },
+      "culturalInsights": [
+        "Documented for 3D preservation under international heritage conventions."
+      ]
+    },
+    {
+      "id": "landmark-parthenon",
+      "routeId": "route-athens-acropolis",
+      "name": "The Parthenon",
+      "nativeName": "Παρθενών",
+      "yearBuilt": "447–432 BC",
+      "era": "Classical Golden Age of Pericles",
+      "coordinates": [
+        37.9715,
+        23.7267
+      ],
+      "elevation": "156m above sea level",
+      "qrCode": "HERITAGE-GREECE-PARTHENON-447BC",
+      "modelType": "parthenon",
+      "thumbnail": "https://images.unsplash.com/photo-1555993539-1732916b8235?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80",
+      "audioDurationSec": 155,
+      "audioTitle": "The Crown of Athens: Entasis & The Golden Ratio",
+      "audioScript": "Rising above the sacred rock of Athens, the Parthenon is universally revered as the supreme monument of Classical Greek architecture. Commissioned by Pericles and sculpted under the master Phidias, not a single line of this temple is truly straight. The Doric columns lean imperceptibly inward by seven centimeters, the stylobate floor swells upward in a gentle convex arc, and the column shafts swell with subtle entasis, counteracting optical illusions to create an aura of divine organic perfection.",
+      "historicalNarrative": "Built from 20,000 tons of translucent white Pentelic marble hauled from Mount Pentelikon, the temple was adorned with 92 carved metopes showing mythic battles of civilization against chaos. Inside stood the monumental 12-meter tall chryselephantine (gold and ivory) statue of Athena Parthenos.",
+      "timeline": [
+        {
+          "year": "447 BC",
+          "title": "Construction Inaugurated",
+          "description": "Pericles initiates construction using Delian League treasury funds, led by architects Ictinus and Callicrates."
+        },
+        {
+          "year": "438 BC",
+          "title": "Athena Chryselephantine Dedicated",
+          "description": "Phidias installs the colossal gold-and-ivory statue inside the inner cella."
+        },
+        {
+          "year": "1687 AD",
+          "title": "Venetian Bombardment",
+          "description": "A Venetian mortar round ignites Ottoman gunpowder stored within, blowing out the central colonnade."
+        },
+        {
+          "year": "1975–Present",
+          "title": "Acropolis Restoration & 3D LiDAR",
+          "description": "The Committee for the Conservation of the Acropolis Monuments employs titanium dowels and CyArk laser scanners for precision structural preservation."
+        }
+      ],
+      "character": {
+        "name": "Pericles",
+        "title": "Strategos & Statesman of Democratic Athens",
+        "avatar": "🏛️",
+        "introQuote": "Future ages will wonder at us, even as the present age wonders at us now. We have left imperishable monuments behind us.",
+        "dialogues": [
+          {
+            "question": "Why did you build optical curves into every column?",
+            "answer": "Because strict geometric straightness appears sunken and weak to human eyes! By curving the floor and columns with entasis, the temple appears upright, majestic, and alive."
+          },
+          {
+            "question": "What did the Parthenon symbolize for your citizens?",
+            "answer": "It was a living testament to Athenian democracy, maritime prowess, and devotion to wisdom over tyrannical brute force."
+          }
+        ]
+      },
+      "culturalInsights": [
+        "The Parthenon was brilliantly painted in antiquity with vibrant vermilion red, Egyptian blue, and gold leaf on its friezes.",
+        "The columns lean inward so precisely that if projected into the sky, their central axes would converge into a single apex 2,400 meters above the Acropolis."
+      ]
+    },
+    {
+      "id": "landmark-erechtheion",
+      "routeId": "route-athens-acropolis",
+      "name": "The Erechtheion & Porch of the Caryatids",
+      "nativeName": "Ἐρέχθειον",
+      "yearBuilt": "421–406 BC",
+      "era": "High Classical Ionic Period",
+      "coordinates": [
+        37.9722,
+        23.7265
+      ],
+      "elevation": "154m above sea level",
+      "qrCode": "HERITAGE-GREECE-ERECHTHEION-406BC",
+      "modelType": "parthenon",
+      "thumbnail": "https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80",
+      "audioDurationSec": 130,
+      "audioTitle": "Maidens of Stone: The Sacred Spring and Olive Tree",
+      "audioScript": "On the northern edge of the Acropolis stands the Erechtheion, celebrated for the world-famous Porch of the Caryatids. Here, six sculpted maidens of Pentelic marble bear the massive entablature weight gracefully upon their heads, their draped peplos garments folding like the fluting of columns. This complex multi-level sanctuary housed Athens' most sacred archaic relic: the olive-wood statue of Athena Polias.",
+      "historicalNarrative": "Built on sharply sloping terrain, the Erechtheion ingeniously accommodates four separate chambers at two distinct ground levels. It marks the legendary spot where Poseidon struck the rock with his trident, bringing forth a saltwater spring, and Athena planted the first sacred olive tree.",
+      "timeline": [
+        {
+          "year": "421 BC",
+          "title": "Peace of Nicias Groundbreaking",
+          "description": "Construction begins during a temporary truce in the Peloponnesian War under architect Mnesikles."
+        },
+        {
+          "year": "406 BC",
+          "title": "Caryatids Unveiled",
+          "description": "The six sculpted korai are unveiled, standing in poised contrapposto stance."
+        },
+        {
+          "year": "1979 AD",
+          "title": "Caryatid Conservation",
+          "description": "The original Caryatids are safely moved to the Acropolis Museum to protect against acid rain, replaced by exact replicas on-site."
+        }
+      ],
+      "character": {
+        "name": "Athena Polias",
+        "title": "Guardian of the Sacred Olive Tree & Acropolis",
+        "avatar": "🕊️",
+        "introQuote": "Here on this living bedrock, the contest was decided. Not by the salt waves of Poseidon, but by the peaceful fruit of the olive branch.",
+        "dialogues": [
+          {
+            "question": "How do the Caryatids support such heavy stone roofs?",
+            "answer": "Observe their thick braided tresses cascading down their necks! The sculptors thickened their hair to reinforce the structural load without sacrificing feminine grace."
+          }
+        ]
+      },
+      "culturalInsights": [
+        "The sacred olive tree still grows beside the western facade, planted as a living descendant of the original tree.",
+        "The Caryatid figures rest their weight on their outside leg with the inner knee bent, creating rhythmic symmetry across the facade."
+      ]
+    },
+    {
+      "id": "landmark-temple-zeus",
+      "routeId": "route-athens-acropolis",
+      "name": "Temple of Olympian Zeus (Olympieion)",
+      "nativeName": "Ναὸς τοῦ Ὀλυμπίου Διός",
+      "yearBuilt": "174 BC–131 AD",
+      "era": "Hellenistic & Greco-Roman Period",
+      "coordinates": [
+        37.9693,
+        23.7331
+      ],
+      "elevation": "85m above sea level",
+      "qrCode": "HERITAGE-GREECE-ZEUSTEMPLE-131AD",
+      "modelType": "parthenon",
+      "thumbnail": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1555993539-1732916b8235?auto=format&fit=crop&w=800&q=80",
+      "audioDurationSec": 125,
+      "audioTitle": "Colossus of the Plain: 600 Years to Complete",
+      "audioScript": "Spanning six centuries from inception under Athenian tyrants to dedication by Roman Emperor Hadrian in 131 AD, the Olympieion was among the largest temples in the ancient Mediterranean. 104 monumental Corinthian columns rose seventeen meters into the sky, arranged in a double row of twenty along the flanks and a triple row of eight across the fronts.",
+      "historicalNarrative": "Today, sixteen colossal columns survive, with one lying dramatically toppled by an 1852 gale, displaying its sliced marble drums like fallen coins. Hadrian dedicated the temple alongside a colossal chryselephantine statue of Zeus and an equally grand statue of himself.",
+      "timeline": [
+        {
+          "year": "520 BC",
+          "title": "Pisistratid Tyrants Begin Work",
+          "description": "Peisistratos begins work on a colossal Doric temple, abandoned after his sons are expelled."
+        },
+        {
+          "year": "174 BC",
+          "title": "Antiochus IV Resumes in Corinthian",
+          "description": "Seleucid king Antiochus IV Epiphanes hires Roman architect Cossutius to redesign in Corinthian marble."
+        },
+        {
+          "year": "131 AD",
+          "title": "Dedicated by Emperor Hadrian",
+          "description": "Hadrian completes the temple as part of his Panhellenic league revival."
+        }
+      ],
+      "character": {
+        "name": "Emperor Hadrian",
+        "title": "Philhellene Roman Emperor",
+        "avatar": "👑",
+        "introQuote": "I united the grandeur of Rome with the divine aesthetic soul of Greece. Here at the Olympieion, I finished what Athens began six hundred years before me.",
+        "dialogues": [
+          {
+            "question": "Why did you build the Arch of Hadrian right beside this temple?",
+            "answer": "To mark the eternal boundary between the ancient city of Theseus and my new Greek capital, the city of Hadrian!"
+          }
+        ]
+      },
+      "culturalInsights": [
+        "In the medieval era, a Christian stylite hermit lived for years atop the architrave of two of the temple's surviving columns.",
+        "The Corinthian capitals were carved from single blocks of marble weighing over twelve tons each."
+      ]
+    },
+    {
+      "id": "landmark-intihuatana",
+      "routeId": "route-machu-picchu",
+      "name": "The Intihuatana Solar Observatory",
+      "nativeName": "Intiwatana (Solar Hitching Post)",
+      "yearBuilt": "1450 AD",
+      "era": "Inca Imperial Period (Tawantinsuyu)",
+      "coordinates": [
+        -13.1631,
+        -72.545
+      ],
+      "elevation": "2,430m above sea level",
+      "qrCode": "HERITAGE-PERU-INTIHUATANA-1450AD",
+      "modelType": "machu-picchu",
+      "thumbnail": "https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1509299349698-dd22323b5963?auto=format&fit=crop&w=800&q=80",
+      "audioDurationSec": 140,
+      "audioTitle": "Tethering the Sun: Astronomy on the Andean Cloud Summit",
+      "audioScript": "Crowning a stepped pyramid at the highest point of Machu Picchu's urban sector, the Intihuatana is the spiritual and astronomical anchor of the citadel. Carved from a single outcrop of granite bedrock, this sculpted monolith features an upright polygonal prism inclined at thirteen degrees. During the equinoxes on March 21 and September 23, the sun stands directly overhead at noon, casting virtually zero shadow, symbolically tethering the sun god Inti to ensure the return of agricultural warmth.",
+      "historicalNarrative": "When the Spanish conquistadors invaded the Inca heartland, they methodically shattered every Intihuatana they discovered to eradicate indigenous religion. Because Machu Picchu remained hidden from the Spanish, this is one of the few pristine Intihuatana stones surviving in South America.",
+      "timeline": [
+        {
+          "year": "1450 AD",
+          "title": "Carved Under Emperor Pachacuti",
+          "description": "Inca imperial stonemasons carve the granite outcrop in precise alignment with the four cardinal directions and sacred Apus (mountain peaks)."
+        },
+        {
+          "year": "1572 AD",
+          "title": "City Safely Concealed",
+          "description": "Machu Picchu is abandoned during the Spanish conquest, preserving the sacred stone unblemished."
+        },
+        {
+          "year": "1911 AD",
+          "title": "Scientific Rediscovery",
+          "description": "Hiram Bingham of Yale University is guided to the ruins by local Quechua farmer Melchor Arteaga."
+        }
+      ],
+      "character": {
+        "name": "Emperor Pachacuti",
+        "title": "Earth-Shaker & Sovereign of Tawantinsuyu",
+        "avatar": "☀️",
+        "introQuote": "I built this royal sanctuary in the clouds so that our priests could converse with the Sun God Inti and bind the celestial light to the earth.",
+        "dialogues": [
+          {
+            "question": "How did your masons cut granite without iron or wheels?",
+            "answer": "We used hematite hammerstones, sand abrasives, and bronze chisels, polishing the seams until not even a blade of grass could pass between the stones!"
+          }
+        ]
+      },
+      "culturalInsights": [
+        "The four corners of the Intihuatana point precisely to the four sacred peaks (Apus): Huayna Picchu to the north, Salcantay to the south, Veronica to the east, and San Miguel to the west.",
+        "Touching the stone was believed to transmit ancestral vitality (Kallpa) from the earth's granite bones."
+      ]
+    },
+    {
+      "id": "landmark-temple-sun",
+      "routeId": "route-machu-picchu",
+      "name": "Temple of the Sun (Torreón)",
+      "nativeName": "Quri Kancha Sanctuario",
+      "yearBuilt": "1450–1470 AD",
+      "era": "Inca Imperial Period",
+      "coordinates": [
+        -13.1635,
+        -72.5455
+      ],
+      "elevation": "2,425m above sea level",
+      "qrCode": "HERITAGE-PERU-TEMPLESUN-1450AD",
+      "modelType": "machu-picchu",
+      "thumbnail": "https://images.unsplash.com/photo-1509299349698-dd22323b5963?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=800&q=80",
+      "audioDurationSec": 135,
+      "audioTitle": "The Curved Tower: Solstice Alignment and the Royal Tomb",
+      "audioScript": "The Temple of the Sun, or Torreón, features the only semicircular curved wall in all of Machu Picchu, displaying the pinnacle of imperial ashlar stonework. Built over an organic cave known as the Royal Tomb, its eastern trapezoidal window captures the winter solstice sunrise on June 21, projecting a beam of sunlight directly onto a carved altar stone in the center of the chamber.",
+      "historicalNarrative": "The subterranean cave beneath contains stepped Andean cross (chakana) carvings and served as a crypt for mummified Inca royalty. The exterior stones are carved with small exterior relief knobs used for hoisting and celestial sighting lines.",
+      "timeline": [
+        {
+          "year": "1450 AD",
+          "title": "Construction Over Sacred Cavern",
+          "description": "Built seamlessly into the natural bedrock boulder."
+        },
+        {
+          "year": "1470 AD",
+          "title": "Solstice Window Calibrated",
+          "description": "Astronomers verify the illumination of the winter solstice alignment with the Pleiades constellation."
+        }
+      ],
+      "character": {
+        "name": "High Priest of Inti",
+        "title": "Guardian of Solstice Rites",
+        "avatar": "🔥",
+        "introQuote": "When the June solstice sun pierces the eastern window, we know our father Inti has renewed his covenant with the children of the Andes.",
+        "dialogues": [
+          {
+            "question": "What lies inside the cave beneath the temple?",
+            "answer": "The Royal Tomb—a sacred pacarina portal where the spirits of our ancestors transition into the Hanan Pacha (upper world)."
+          }
+        ]
+      },
+      "culturalInsights": [
+        "The walls are tilted inward at a five-degree angle, making them impervious to high-magnitude Andean earthquakes.",
+        "During earthquakes, the mortarless dry stones literally 'dance' in place and resettle perfectly into their interlocking seats."
+      ]
+    },
+    {
+      "id": "landmark-sacred-plaza",
+      "routeId": "route-machu-picchu",
+      "name": "The Principal Temple & Sacred Plaza",
+      "nativeName": "Hatun Kancha",
+      "yearBuilt": "1450 AD",
+      "era": "Inca Imperial Period",
+      "coordinates": [
+        -13.1628,
+        -72.5448
+      ],
+      "elevation": "2,432m above sea level",
+      "qrCode": "HERITAGE-PERU-SACREDPLAZA-1450AD",
+      "modelType": "machu-picchu",
+      "thumbnail": "https://images.unsplash.com/photo-1589802829985-817e51171b92?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=800&q=80",
+      "audioDurationSec": 120,
+      "audioTitle": "Monuments of Cyclopean Granite: The Three-Walled Temple",
+      "audioScript": "The Principal Temple is an imposing three-walled structure overlooking the Sacred Plaza, constructed from colossal blocks of white granite weighing up to ten tons each. Because the building was deliberately left open on the southern side, rituals conducted inside were visible to hundreds of assembled pilgrims gathered across the central green plaza.",
+      "historicalNarrative": "Its eastern wall has slightly settled due to geological ground creep over five hundred years, offering structural archaeologists an invaluable cross-section into Inca foundation engineering. Beside it stands the Temple of the Three Windows, symbolizing the mythic origin caves of the Ayar brothers.",
+      "timeline": [
+        {
+          "year": "1450 AD",
+          "title": "Cyclopean Blocks Hauled",
+          "description": "Quarried directly on-site using gravity ramps and wooden rollers."
+        },
+        {
+          "year": "1983 AD",
+          "title": "UNESCO Inscription",
+          "description": "Declared a UNESCO World Heritage site for dual cultural and natural significance."
+        }
+      ],
+      "character": {
+        "name": "Master Stonemason Huamán",
+        "title": "Royal Architect of Machu Picchu",
+        "avatar": "⚒️",
+        "introQuote": "We did not conquer nature; we conversed with the mountain. Every stone was shaped so the wall became one living body with the Andean ridge.",
+        "dialogues": [
+          {
+            "question": "Why did you build only three walls instead of four?",
+            "answer": "The fourth wall was the living sky! Sacred energy flows freely between the altar and the holy peaks of the sacred Apus."
+          }
+        ]
+      },
+      "culturalInsights": [
+        "Machu Picchu features over 700 agricultural terraces that prevent soil erosion and absorb rain runoff.",
+        "A sophisticated underground canal system still funnels fresh spring water from a mountain spring through 16 ceremonial fountains."
+      ]
+    },
+    {
+      "id": "landmark-1793101187039",
+      "routeId": "route-1793101187038",
+      "name": "The Parthenon",
+      "nativeName": "The Parthenon",
+      "yearBuilt": "447–432 BC",
+      "era": "Classical Greece (Periclean Golden Age)",
+      "coordinates": [
+        37.9715,
+        23.7267
+      ],
+      "elevation": "25m above sea level",
+      "qrCode": "HERITAGE-1793101187039",
+      "modelType": "colosseum",
+      "thumbnail": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=800&q=80",
+      "audioDurationSec": 120,
+      "audioTitle": "The Parthenon Audio Guide",
+      "audioScript": "Perched upon the Acropolis, the Parthenon stands as the pinnacle of Doric architecture.",
+      "historicalNarrative": "Dedicated to Athena Parthenos, master sculptor Phidias and architects Ictinus and Callicrates engineered subtle optical corrections known as entasis.",
+      "timeline": [
+        {
+          "year": "447–432 BC",
+          "title": "Construction",
+          "description": "Monument erected."
+        }
+      ],
+      "character": {
+        "name": "Historical Guide",
+        "title": "Archaeological Chronicler",
+        "avatar": "🏛️",
+        "introQuote": "Welcome to this sacred monument of antiquity.",
+        "dialogues": [
+          {
+            "question": "Tell me about this monument",
+            "answer": "Dedicated to Athena Parthenos, master sculptor Phidias and architects Ictinus and Callicrates engineered subtle optical corrections known as entasis."
+          }
+        ]
+      },
+      "culturalInsights": [
+        "Documented for 3D preservation under international heritage conventions."
+      ]
+    },
+    {
+      "id": "landmark-1793101208373",
+      "routeId": "route-1793101208372",
+      "name": "The Parthenon",
+      "nativeName": "The Parthenon",
+      "yearBuilt": "447–432 BC",
+      "era": "Classical Greece (Periclean Golden Age)",
+      "coordinates": [
+        37.9715,
+        23.7267
+      ],
+      "elevation": "25m above sea level",
+      "qrCode": "HERITAGE-1793101208373",
+      "modelType": "colosseum",
+      "thumbnail": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=800&q=80",
+      "audioDurationSec": 120,
+      "audioTitle": "The Parthenon Audio Guide",
+      "audioScript": "Perched upon the Acropolis, the Parthenon stands as the pinnacle of Doric architecture.",
+      "historicalNarrative": "Dedicated to Athena Parthenos, master sculptor Phidias and architects Ictinus and Callicrates engineered subtle optical corrections known as entasis.",
+      "timeline": [
+        {
+          "year": "447–432 BC",
+          "title": "Construction",
+          "description": "Monument erected."
+        }
+      ],
+      "character": {
+        "name": "Historical Guide",
+        "title": "Archaeological Chronicler",
+        "avatar": "🏛️",
+        "introQuote": "Welcome to this sacred monument of antiquity.",
+        "dialogues": [
+          {
+            "question": "Tell me about this monument",
+            "answer": "Dedicated to Athena Parthenos, master sculptor Phidias and architects Ictinus and Callicrates engineered subtle optical corrections known as entasis."
+          }
+        ]
+      },
+      "culturalInsights": [
+        "Documented for 3D preservation under international heritage conventions."
+      ]
+    },
+    {
+      "id": "landmark-1793103700541",
+      "routeId": "route-1793103700541",
+      "name": "The Parthenon",
+      "nativeName": "The Parthenon",
+      "yearBuilt": "447–432 BC",
+      "era": "Classical Greece (Periclean Golden Age)",
+      "coordinates": [
+        37.9715,
+        23.7267
+      ],
+      "elevation": "25m above sea level",
+      "qrCode": "HERITAGE-1793103700541",
+      "modelType": "colosseum",
+      "thumbnail": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=800&q=80",
+      "audioDurationSec": 120,
+      "audioTitle": "The Parthenon Audio Guide",
+      "audioScript": "Perched upon the Acropolis, the Parthenon stands as the pinnacle of Doric architecture.",
+      "historicalNarrative": "Dedicated to Athena Parthenos, master sculptor Phidias and architects Ictinus and Callicrates engineered subtle optical corrections known as entasis.",
+      "timeline": [
+        {
+          "year": "447–432 BC",
+          "title": "Construction",
+          "description": "Monument erected."
+        }
+      ],
+      "character": {
+        "name": "Historical Guide",
+        "title": "Archaeological Chronicler",
+        "avatar": "🏛️",
+        "introQuote": "Welcome to this sacred monument of antiquity.",
+        "dialogues": [
+          {
+            "question": "Tell me about this monument",
+            "answer": "Dedicated to Athena Parthenos, master sculptor Phidias and architects Ictinus and Callicrates engineered subtle optical corrections known as entasis."
+          }
+        ]
+      },
+      "culturalInsights": [
+        "Documented for 3D preservation under international heritage conventions."
+      ]
     }
   ],
   "translations": {
@@ -1153,7 +1828,15 @@
       "locked": "Visit within 200m to unlock",
       "simulateGps": "Simulate GPS Walker",
       "elevationProfile": "Elevation Profile",
-      "thenAndNow": "Then & Now Reconstruction"
+      "thenAndNow": "Then & Now Reconstruction",
+      "agenticAi": "Agentic AI Studio",
+      "strawberryMode": "Strawberry Deep Thinking",
+      "openClaw": "Open Claw Research Crawler",
+      "n8nWorkflows": "n8n Autonomous Workflows",
+      "askStrawberry": "Ask Strawberry Scholar",
+      "chronoSlider": "Epoch Reconstruction Slider",
+      "lidarDensity": "LiDAR Point Density",
+      "aiRouteOptimize": "Strawberry Smart Path"
     },
     "es": {
       "appTitle": "Guía Digital de Rutas Patrimoniales",
@@ -1182,7 +1865,15 @@
       "locked": "Visita dentro de 200m para desbloquear",
       "simulateGps": "Simular Caminata GPS",
       "elevationProfile": "Perfil de Elevación",
-      "thenAndNow": "Reconstrucción Antes y Después"
+      "thenAndNow": "Reconstrucción Antes y Después",
+      "agenticAi": "Estudio IA Agéntica",
+      "strawberryMode": "Pensamiento Profundo Strawberry",
+      "openClaw": "Rastreador Open Claw",
+      "n8nWorkflows": "Flujos Autónomos n8n",
+      "askStrawberry": "Consultar a Strawberry",
+      "chronoSlider": "Control Deslizante de Época",
+      "lidarDensity": "Densidad de Puntos LiDAR",
+      "aiRouteOptimize": "Ruta Óptima Strawberry"
     },
     "fr": {
       "appTitle": "Guide Numérique des Routes du Patrimoine",
@@ -1211,7 +1902,15 @@
       "locked": "Visitez à moins de 200m pour débloquer",
       "simulateGps": "Simuler Marcheur GPS",
       "elevationProfile": "Profil d'Élévation",
-      "thenAndNow": "Reconstruction Hier et Aujourd'hui"
+      "thenAndNow": "Reconstruction Hier et Aujourd'hui",
+      "agenticAi": "Studio IA Agentique",
+      "strawberryMode": "Raisonnement Strawberry",
+      "openClaw": "Crawler de Recherche Open Claw",
+      "n8nWorkflows": "Workflows Autonomes n8n",
+      "askStrawberry": "Consulter l'Érudit Strawberry",
+      "chronoSlider": "Curseur de Reconstruction Temporelle",
+      "lidarDensity": "Densité de Points LiDAR",
+      "aiRouteOptimize": "Trajet Optimal Strawberry"
     },
     "hi": {
       "appTitle": "धरोहर मार्ग डिजिटल गाइड प्लेटफॉर्म",
@@ -1240,7 +1939,15 @@
       "locked": "अनलॉक करने हेतु 200 मी के भीतर आएं",
       "simulateGps": "GPS वॉक का अनुकरण करें",
       "elevationProfile": "ऊंचाई प्रोफ़ाइल",
-      "thenAndNow": "पुनर्निर्माण तुलना (तब और अब)"
+      "thenAndNow": "पुनर्निर्माण तुलना (तब और अब)",
+      "agenticAi": "एजेंटिक एआई स्टूडियो",
+      "strawberryMode": "स्ट्रॉबेरी डीप थिंकिंग",
+      "openClaw": "ओपन क्लॉ रिसर्च क्रॉलर",
+      "n8nWorkflows": "n8n स्वायत्त वर्कफ़्लो",
+      "askStrawberry": "स्ट्रॉबेरी विद्वान से पूछें",
+      "chronoSlider": "पुनर्निर्माण स्लाइडर",
+      "lidarDensity": "LiDAR बिंदु घनत्व",
+      "aiRouteOptimize": "स्मार्ट स्ट्रॉबेरी पथ"
     },
     "it": {
       "appTitle": "Piattaforma Guida Digitale Itinerari del Patrimonio",
@@ -1269,7 +1976,15 @@
       "locked": "Avvicinati entro 200m per sbloccare",
       "simulateGps": "Simula Camminatore GPS",
       "elevationProfile": "Profilo Altimetrico",
-      "thenAndNow": "Ricostruzione Ieri e Oggi"
+      "thenAndNow": "Ricostruzione Ieri e Oggi",
+      "agenticAi": "Studio IA Agentica",
+      "strawberryMode": "Ragionamento Strawberry",
+      "openClaw": "Crawler di Ricerca Open Claw",
+      "n8nWorkflows": "Flussi di Lavoro n8n",
+      "askStrawberry": "Chiedi allo Studioso Strawberry",
+      "chronoSlider": "Cursore di Ricostruzione Storica",
+      "lidarDensity": "Densità Punti LiDAR",
+      "aiRouteOptimize": "Percorso Ottimale Strawberry"
     },
     "ja": {
       "appTitle": "遺産ルート デジタルガイド プラットフォーム",
@@ -1298,12 +2013,20 @@
       "locked": "200m以内に接近して解放",
       "simulateGps": "GPS歩行シミュレート",
       "elevationProfile": "高低差プロファイル",
-      "thenAndNow": "過去と現代の復元比較"
+      "thenAndNow": "過去と現代の復元比較",
+      "agenticAi": "エージェントAIスタジオ",
+      "strawberryMode": "ストロベリー深層推論",
+      "openClaw": "オープンクロー調査クローラー",
+      "n8nWorkflows": "n8n自律ワークフロー",
+      "askStrawberry": "ストロベリー学者に質問",
+      "chronoSlider": "時代復元スライダー",
+      "lidarDensity": "LiDAR点群密度",
+      "aiRouteOptimize": "ストロベリー最適経路"
     }
   },
   "analytics": {
     "totalVisitors": 84920,
-    "arInteractions": 52155,
+    "arInteractions": 52159,
     "audioToursCompleted": 39820,
     "passportsIssued": 19431,
     "averageSessionMins": 18.4,
@@ -1338,6 +2061,76 @@
       "Français": 3
     },
     "recentEvents": [
+      {
+        "id": 1793103700544,
+        "type": "workflow_executed",
+        "landmark": "Autonomous Monument Ingestion & LiDAR Enrichment",
+        "location": "n8n Agentic Canvas",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793103700543,
+        "type": "openclaw_crawl",
+        "landmark": "Taj Mahal",
+        "location": "Open Claw Heritage Crawler",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793103700542,
+        "type": "ai_reasoning",
+        "landmark": "The Colosseum (Flavian Amphitheatre)",
+        "location": "Strawberry AI (strawberry)",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793103700536,
+        "type": "qr_triggered",
+        "landmark": "The Colosseum (Flavian Amphitheatre)",
+        "location": "route-rome-imperial",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793101208376,
+        "type": "workflow_executed",
+        "landmark": "Autonomous Monument Ingestion & LiDAR Enrichment",
+        "location": "n8n Agentic Canvas",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793101208375,
+        "type": "openclaw_crawl",
+        "landmark": "Taj Mahal",
+        "location": "Open Claw Heritage Crawler",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793101208374,
+        "type": "ai_reasoning",
+        "landmark": "The Colosseum (Flavian Amphitheatre)",
+        "location": "Strawberry AI (strawberry)",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793101208368,
+        "type": "qr_triggered",
+        "landmark": "The Colosseum (Flavian Amphitheatre)",
+        "location": "route-rome-imperial",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793101187034,
+        "type": "qr_triggered",
+        "landmark": "The Colosseum (Flavian Amphitheatre)",
+        "location": "route-rome-imperial",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793100800238,
+        "type": "qr_triggered",
+        "landmark": "The Colosseum (Flavian Amphitheatre)",
+        "location": "route-rome-imperial",
+        "timestamp": "Just now"
+      },
       {
         "id": 1791654370038,
         "type": "ar_interaction",
@@ -1470,48 +2263,6 @@
         "landmark": "The Colosseum (Flavian Amphitheatre)",
         "location": "route-rome-imperial",
         "timestamp": "Just now"
-      },
-      {
-        "id": 1791649143333,
-        "type": "qr_triggered",
-        "landmark": "The Colosseum (Flavian Amphitheatre)",
-        "location": "route-rome-imperial",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1791649107994,
-        "type": "qr_triggered",
-        "landmark": "The Colosseum (Flavian Amphitheatre)",
-        "location": "route-rome-imperial",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1,
-        "type": "ar_scan",
-        "landmark": "The Colosseum",
-        "location": "Rome, Italy",
-        "timestamp": "2 mins ago"
-      },
-      {
-        "id": 2,
-        "type": "passport_stamp",
-        "landmark": "Taj Mahal",
-        "location": "Agra, India",
-        "timestamp": "5 mins ago"
-      },
-      {
-        "id": 3,
-        "type": "audio_complete",
-        "landmark": "The Great Pyramid of Giza",
-        "location": "Cairo, Egypt",
-        "timestamp": "9 mins ago"
-      },
-      {
-        "id": 4,
-        "type": "qr_triggered",
-        "landmark": "Kinkaku-ji",
-        "location": "Kyoto, Japan",
-        "timestamp": "12 mins ago"
       }
     ]
   },

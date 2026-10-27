@@ -4,26 +4,34 @@
 // Audio Storytelling Reference: izi.TRAVEL
 
 const seedData = {
-  routes: [
+  "routes": [
     {
-      id: "route-rome-imperial",
-      title: "Imperial Rome: The Flavian & Forum Antiquity Trail",
-      city: "Rome",
-      country: "Italy",
-      region: "Lazio",
-      difficulty: "Moderate Walk",
-      durationMins: 180,
-      distanceKm: 4.8,
-      theme: "Classical Antiquity & Architecture",
-      unescoStatus: "World Heritage Site (Historic Centre of Rome, 1980)",
-      coverImage: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80",
-      description: "Walk the historic axis of the Roman Empire, spanning the gladiatorial Colosseum, the Senate chambers of the Roman Forum, the monumental dome of the Pantheon, and Hadrian's imperial mausoleum along the Tiber River.",
-      rating: 4.9,
-      reviewCount: 1420,
-      tags: ["UNESCO", "Roman Empire", "3D LiDAR", "Audio Guide"],
-      centerCoords: [41.8902, 12.4922],
-      zoomLevel: 14,
-      landmarks: [
+      "id": "route-rome-imperial",
+      "title": "Imperial Rome: The Flavian & Forum Antiquity Trail",
+      "city": "Rome",
+      "country": "Italy",
+      "region": "Lazio",
+      "difficulty": "Moderate Walk",
+      "durationMins": 180,
+      "distanceKm": 4.8,
+      "theme": "Classical Antiquity & Architecture",
+      "unescoStatus": "World Heritage Site (Historic Centre of Rome, 1980)",
+      "coverImage": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80",
+      "description": "Walk the historic axis of the Roman Empire, spanning the gladiatorial Colosseum, the Senate chambers of the Roman Forum, the monumental dome of the Pantheon, and Hadrian's imperial mausoleum along the Tiber River.",
+      "rating": 4.9,
+      "reviewCount": 1420,
+      "tags": [
+        "UNESCO",
+        "Roman Empire",
+        "3D LiDAR",
+        "Audio Guide"
+      ],
+      "centerCoords": [
+        41.8902,
+        12.4922
+      ],
+      "zoomLevel": 14,
+      "landmarks": [
         "landmark-colosseum",
         "landmark-arch-titus-forum",
         "landmark-pantheon",
@@ -31,24 +39,32 @@ const seedData = {
       ]
     },
     {
-      id: "route-delhi-mughal",
-      title: "The Golden Triangle: Mughal & Rajput Dynastic Path",
-      city: "Delhi & Agra",
-      country: "India",
-      region: "Northern India",
-      difficulty: "Easy Walk",
-      durationMins: 240,
-      distanceKm: 6.2,
-      theme: "Mughal Architecture & Sacred Gardens",
-      unescoStatus: "World Heritage Sites (1983, 1993, 2007)",
-      coverImage: "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80",
-      description: "Trace the architectural flowering of the Mughal Dynasty from the imposing red sandstone bastions of Lal Qila (Red Fort) in Shahjahanabad, to the serene Charbagh gardens of Humayun's Tomb, and the peerless white marble masterpiece of the Taj Mahal.",
-      rating: 4.95,
-      reviewCount: 2310,
-      tags: ["UNESCO", "Mughal Empire", "Symmetric Gardens", "AR Reconstruction"],
-      centerCoords: [28.6562, 77.2410],
-      zoomLevel: 12,
-      landmarks: [
+      "id": "route-delhi-mughal",
+      "title": "The Golden Triangle: Mughal & Rajput Dynastic Path",
+      "city": "Delhi & Agra",
+      "country": "India",
+      "region": "Northern India",
+      "difficulty": "Easy Walk",
+      "durationMins": 240,
+      "distanceKm": 6.2,
+      "theme": "Mughal Architecture & Sacred Gardens",
+      "unescoStatus": "World Heritage Sites (1983, 1993, 2007)",
+      "coverImage": "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80",
+      "description": "Trace the architectural flowering of the Mughal Dynasty from the imposing red sandstone bastions of Lal Qila (Red Fort) in Shahjahanabad, to the serene Charbagh gardens of Humayun's Tomb, and the peerless white marble masterpiece of the Taj Mahal.",
+      "rating": 4.95,
+      "reviewCount": 2310,
+      "tags": [
+        "UNESCO",
+        "Mughal Empire",
+        "Symmetric Gardens",
+        "AR Reconstruction"
+      ],
+      "centerCoords": [
+        28.6562,
+        77.241
+      ],
+      "zoomLevel": 12,
+      "landmarks": [
         "landmark-red-fort",
         "landmark-humayun-tomb",
         "landmark-qutb-minar",
@@ -56,985 +72,1472 @@ const seedData = {
       ]
     },
     {
-      id: "route-kyoto-zen",
-      title: "The Ancient Capital: Kyoto Imperial & Zen Temple Trail",
-      city: "Kyoto",
-      country: "Japan",
-      region: "Kansai",
-      difficulty: "Moderate Walk",
-      durationMins: 210,
-      distanceKm: 5.5,
-      theme: "Zen Buddhism & Heian Court Heritage",
-      unescoStatus: "Historic Monuments of Ancient Kyoto (UNESCO 1994)",
-      coverImage: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80",
-      description: "Immerse in Japan's thousand-year imperial capital through sacred cedar forests, the shimmering gold leaf pavilion of Kinkaku-ji, the endless vermilion torii gates of Fushimi Inari, and the cantilevered wooden temple veranda of Kiyomizu-dera.",
-      rating: 4.92,
-      reviewCount: 1890,
-      tags: ["UNESCO", "Zen Gardens", "Heian Period", "Spatial Audio"],
-      centerCoords: [35.0394, 135.7292],
-      zoomLevel: 13,
-      landmarks: [
+      "id": "route-kyoto-zen",
+      "title": "The Ancient Capital: Kyoto Imperial & Zen Temple Trail",
+      "city": "Kyoto",
+      "country": "Japan",
+      "region": "Kansai",
+      "difficulty": "Moderate Walk",
+      "durationMins": 210,
+      "distanceKm": 5.5,
+      "theme": "Zen Buddhism & Heian Court Heritage",
+      "unescoStatus": "Historic Monuments of Ancient Kyoto (UNESCO 1994)",
+      "coverImage": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80",
+      "description": "Immerse in Japan's thousand-year imperial capital through sacred cedar forests, the shimmering gold leaf pavilion of Kinkaku-ji, the endless vermilion torii gates of Fushimi Inari, and the cantilevered wooden temple veranda of Kiyomizu-dera.",
+      "rating": 4.92,
+      "reviewCount": 1890,
+      "tags": [
+        "UNESCO",
+        "Zen Gardens",
+        "Heian Period",
+        "Spatial Audio"
+      ],
+      "centerCoords": [
+        35.0394,
+        135.7292
+      ],
+      "zoomLevel": 13,
+      "landmarks": [
         "landmark-kinkaku-ji",
         "landmark-fushimi-inari",
         "landmark-kiyomizu-dera"
       ]
     },
     {
-      id: "route-cairo-pharaohs",
-      title: "The Pharaohs & Islamic Cairo Trail",
-      city: "Cairo & Giza",
-      country: "Egypt",
-      region: "Nile Valley",
-      difficulty: "Full Day Exploration",
-      durationMins: 300,
-      distanceKm: 8.0,
-      theme: "Ancient Dynasties & Mamluk Architecture",
-      unescoStatus: "Memphis and its Necropolis & Islamic Cairo (UNESCO 1979)",
-      coverImage: "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=1200&q=80",
-      description: "Marvel at monumental human engineering across four millennia: from the astronomical precision of Khufu's Great Pyramid and the enigmatic Great Sphinx on the Giza Plateau, to the towering four-iwan courtyard of the 14th-century Sultan Hassan Mosque.",
-      rating: 4.88,
-      reviewCount: 1650,
-      tags: ["UNESCO", "7 Wonders", "LiDAR Orthophoto", "Voice Narrated"],
-      centerCoords: [29.9792, 31.1342],
-      zoomLevel: 13,
-      landmarks: [
+      "id": "route-cairo-pharaohs",
+      "title": "The Pharaohs & Islamic Cairo Trail",
+      "city": "Cairo & Giza",
+      "country": "Egypt",
+      "region": "Nile Valley",
+      "difficulty": "Full Day Exploration",
+      "durationMins": 300,
+      "distanceKm": 8,
+      "theme": "Ancient Dynasties & Mamluk Architecture",
+      "unescoStatus": "Memphis and its Necropolis & Islamic Cairo (UNESCO 1979)",
+      "coverImage": "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=1200&q=80",
+      "description": "Marvel at monumental human engineering across four millennia: from the astronomical precision of Khufu's Great Pyramid and the enigmatic Great Sphinx on the Giza Plateau, to the towering four-iwan courtyard of the 14th-century Sultan Hassan Mosque.",
+      "rating": 4.88,
+      "reviewCount": 1650,
+      "tags": [
+        "UNESCO",
+        "7 Wonders",
+        "LiDAR Orthophoto",
+        "Voice Narrated"
+      ],
+      "centerCoords": [
+        29.9792,
+        31.1342
+      ],
+      "zoomLevel": 13,
+      "landmarks": [
         "landmark-pyramid-khufu",
         "landmark-great-sphinx",
         "landmark-sultan-hassan"
       ]
+    },
+    {
+      "id": "route-athens-acropolis",
+      "title": "Classical Athens: Sacred Rock & Panathenaic Trail",
+      "city": "Athens",
+      "country": "Greece",
+      "region": "Attica",
+      "difficulty": "Easy Walk",
+      "durationMins": 150,
+      "distanceKm": 3.5,
+      "theme": "Classical Hellenic Antiquity & Philosophy",
+      "unescoStatus": "Acropolis, Athens (UNESCO World Heritage 1987)",
+      "coverImage": "https://images.unsplash.com/photo-1555993539-1732916b8235?auto=format&fit=crop&w=1200&q=80",
+      "description": "Ascend the sacred limestone outcrop of Athens through the Doric colonnades of the Parthenon, the elegant Caryatid porch of the Erechtheion, and down to the colossal columns of the Temple of Olympian Zeus.",
+      "rating": 4.96,
+      "reviewCount": 2150,
+      "tags": [
+        "UNESCO",
+        "Classical Greece",
+        "Periclean Golden Age",
+        "3D Reconstruction"
+      ],
+      "centerCoords": [
+        37.9715,
+        23.7267
+      ],
+      "zoomLevel": 14,
+      "landmarks": [
+        "landmark-parthenon",
+        "landmark-erechtheion",
+        "landmark-temple-zeus"
+      ]
+    },
+    {
+      "id": "route-machu-picchu",
+      "title": "Inca Cloud Sanctuary: Machu Picchu & Sun Gate Trail",
+      "city": "Cusco & Sacred Valley",
+      "country": "Peru",
+      "region": "Andes",
+      "difficulty": "Challenging Hike",
+      "durationMins": 240,
+      "distanceKm": 5.8,
+      "theme": "Inca Imperial Masonry & Astronomical Alignment",
+      "unescoStatus": "Historic Sanctuary of Machu Picchu (UNESCO 1983)",
+      "coverImage": "https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=1200&q=80",
+      "description": "Explore the cloud-shrouded 15th-century imperial estate of Inca Emperor Pachacuti, featuring precision dry-stone ashlar masonry, the Intihuatana solar hitching post, and sacred sun temples.",
+      "rating": 4.98,
+      "reviewCount": 3410,
+      "tags": [
+        "UNESCO",
+        "Inca Empire",
+        "High Altitude",
+        "Ashlar Masonry"
+      ],
+      "centerCoords": [
+        -13.1631,
+        -72.545
+      ],
+      "zoomLevel": 15,
+      "landmarks": [
+        "landmark-intihuatana",
+        "landmark-temple-sun",
+        "landmark-sacred-plaza"
+      ]
     }
   ],
-
-  landmarks: [
+  "landmarks": [
     {
-      id: "landmark-colosseum",
-      routeId: "route-rome-imperial",
-      name: "The Colosseum (Flavian Amphitheatre)",
-      nativeName: "Amphitheatrum Flavium",
-      yearBuilt: "72–80 AD",
-      era: "Flavian Dynasty, Imperial Rome",
-      coordinates: [41.8902, 12.4922],
-      elevation: "24m above sea level",
-      qrCode: "HERITAGE-ROME-COLOSSEUM-72AD",
-      modelType: "colosseum",
-      thumbnail: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80",
-      archivalImage: "https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=800&q=80",
-      audioDurationSec: 145,
-      audioTitle: "Echoes of the Arena: Engineering Rome's Monumental Spectacle",
-      audioScript: "Welcome before the Flavian Amphitheatre, commissioned by Emperor Vespasian in 72 AD on the drained lake of Nero's Golden House. Rising nearly fifty meters tall, this triumph of Roman concrete and travertine limestone accommodated over fifty thousand spectators through eighty numbered vomitoria exits. Beneath the wooden arena floor lay the subterranean hypogeum—a complex two-level labyrinth of cages, pulleys, and counterweighted trapdoors engineered to hoist gladiators and wild beasts directly into combat.",
-      historicalNarrative: "Constructed using over 100,000 cubic meters of travertine quarried from Tivoli, the Colosseum stands as a testament to hydraulic engineering and Roman vaulting techniques. Its four tiers combine the classic Greek architectural orders: Doric arches on the ground level, Ionic on the second, and Corinthian on the third and attic stories. During peak summer games, sailors from the Roman imperial fleet manned the massive retractable canvas awning, the velarium, protecting spectators from the Mediterranean sun.",
-      timeline: [
+      "id": "landmark-colosseum",
+      "routeId": "route-rome-imperial",
+      "name": "The Colosseum (Flavian Amphitheatre)",
+      "nativeName": "Amphitheatrum Flavium",
+      "yearBuilt": "72–80 AD",
+      "era": "Flavian Dynasty, Imperial Rome",
+      "coordinates": [
+        41.8902,
+        12.4922
+      ],
+      "elevation": "24m above sea level",
+      "qrCode": "HERITAGE-ROME-COLOSSEUM-72AD",
+      "modelType": "colosseum",
+      "thumbnail": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=800&q=80",
+      "audioDurationSec": 145,
+      "audioTitle": "Echoes of the Arena: Engineering Rome's Monumental Spectacle",
+      "audioScript": "Welcome before the Flavian Amphitheatre, commissioned by Emperor Vespasian in 72 AD on the drained lake of Nero's Golden House. Rising nearly fifty meters tall, this triumph of Roman concrete and travertine limestone accommodated over fifty thousand spectators through eighty numbered vomitoria exits. Beneath the wooden arena floor lay the subterranean hypogeum—a complex two-level labyrinth of cages, pulleys, and counterweighted trapdoors engineered to hoist gladiators and wild beasts directly into combat.",
+      "historicalNarrative": "Constructed using over 100,000 cubic meters of travertine quarried from Tivoli, the Colosseum stands as a testament to hydraulic engineering and Roman vaulting techniques. Its four tiers combine the classic Greek architectural orders: Doric arches on the ground level, Ionic on the second, and Corinthian on the third and attic stories. During peak summer games, sailors from the Roman imperial fleet manned the massive retractable canvas awning, the velarium, protecting spectators from the Mediterranean sun.",
+      "timeline": [
         {
-          year: "72 AD",
-          title: "Groundbreaking by Vespasian",
-          description: "Construction commences following the Jewish War, funded by imperial war spoils and utilizing advanced pozzolanic concrete foundations."
+          "year": "72 AD",
+          "title": "Groundbreaking by Vespasian",
+          "description": "Construction commences following the Jewish War, funded by imperial war spoils and utilizing advanced pozzolanic concrete foundations."
         },
         {
-          year: "80 AD",
-          title: "Inaugural 100-Day Games",
-          description: "Titus inaugurates the amphitheatre with 100 consecutive days of gladiatorial combats, wild animal hunts, and simulated naval battles."
+          "year": "80 AD",
+          "title": "Inaugural 100-Day Games",
+          "description": "Titus inaugurates the amphitheatre with 100 consecutive days of gladiatorial combats, wild animal hunts, and simulated naval battles."
         },
         {
-          year: "1349 AD",
-          title: "Great Earthquake Damage",
-          description: "A catastrophic earthquake causes the outer south wall to collapse; fallen travertine is subsequently repurposed across medieval Rome."
+          "year": "1349 AD",
+          "title": "Great Earthquake Damage",
+          "description": "A catastrophic earthquake causes the outer south wall to collapse; fallen travertine is subsequently repurposed across medieval Rome."
         },
         {
-          year: "2016–Present",
-          title: "CyArk 3D Laser Documentation",
-          description: "Sub-millimeter terrestrial LiDAR and photogrammetry scanning captures 4.2 billion 3D coordinates for digital preservation and structural monitoring."
+          "year": "2016–Present",
+          "title": "CyArk 3D Laser Documentation",
+          "description": "Sub-millimeter terrestrial LiDAR and photogrammetry scanning captures 4.2 billion 3D coordinates for digital preservation and structural monitoring."
         }
       ],
-      character: {
-        name: "Emperor Vespasian",
-        title: "Founder of the Flavian Dynasty",
-        avatar: "🏛️",
-        introQuote: "I returned the land stolen by Nero's golden tyranny back to the citizens of Rome. This arena was built for the people.",
-        dialogues: [
+      "character": {
+        "name": "Emperor Vespasian",
+        "title": "Founder of the Flavian Dynasty",
+        "avatar": "🏛️",
+        "introQuote": "I returned the land stolen by Nero's golden tyranny back to the citizens of Rome. This arena was built for the people.",
+        "dialogues": [
           {
-            question: "Why did you choose the site of Nero's private lake for the amphitheatre?",
-            answer: "Nero had consumed the heart of Rome for his selfish pleasure. By draining his artificial lake and erecting an arena for 50,000 Romans, we symbolized the return of public dignity to the Senate and the populace."
+            "question": "Why did you choose the site of Nero's private lake for the amphitheatre?",
+            "answer": "Nero had consumed the heart of Rome for his selfish pleasure. By draining his artificial lake and erecting an arena for 50,000 Romans, we symbolized the return of public dignity to the Senate and the populace."
           },
           {
-            question: "How did Roman engineering evacuate 50,000 people in just minutes?",
-            answer: "Through mathematical proportion. Our eighty arched entrances—the vomitoria—channeled crowds through vaulted corridors separated by social rank, allowing rapid entry and total evacuation within ten minutes."
+            "question": "How did Roman engineering evacuate 50,000 people in just minutes?",
+            "answer": "Through mathematical proportion. Our eighty arched entrances—the vomitoria—channeled crowds through vaulted corridors separated by social rank, allowing rapid entry and total evacuation within ten minutes."
           },
           {
-            question: "What secrets were hidden beneath the arena sand?",
-            answer: "The hypogeum! A subterranean city of thirty-two mechanical elevators powered by counterweights and hundreds of enslaved laborers, capable of springing lions and scenery through trapdoors without warning."
+            "question": "What secrets were hidden beneath the arena sand?",
+            "answer": "The hypogeum! A subterranean city of thirty-two mechanical elevators powered by counterweights and hundreds of enslaved laborers, capable of springing lions and scenery through trapdoors without warning."
           }
         ]
       },
-      culturalInsights: [
+      "culturalInsights": [
         "Travertine stone blocks were secured using 300 tons of iron clamps, many later extracted in the Middle Ages leaving distinct pockmarks.",
         "Social hierarchy was strictly observed: senators in marble front-row seats, soldiers and plebeians above, and women and slaves on the top wooden benches.",
         "The amphitheatre hosted mock sea battles (naumachiae) in its earliest years before the underground hypogeum masonry was permanently installed."
       ]
     },
     {
-      id: "landmark-arch-titus-forum",
-      routeId: "route-rome-imperial",
-      name: "The Roman Forum & Arch of Titus",
-      nativeName: "Forum Romanum & Arcus Titi",
-      yearBuilt: "81 AD",
-      era: "Flavian Era",
-      coordinates: [41.8907, 12.4886],
-      elevation: "21m above sea level",
-      qrCode: "HERITAGE-ROME-TITUS-81AD",
-      modelType: "arch",
-      thumbnail: "https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=800&q=80",
-      archivalImage: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80",
-      audioDurationSec: 130,
-      audioTitle: "The Sacred Way: The Political Heartland of the Republic and Empire",
-      audioScript: "You are standing on the Via Sacra, the ceremonial avenue of Roman triumphal processions. Before you rises the Arch of Titus, erected by Emperor Domitian to deify his elder brother. Gaze upward at the inner relief panels: carved in deep Pentelic marble, Roman soldiers carry the golden Menorah and holy vessels captured from the Second Temple in Jerusalem, immortalizing the triumph of 71 AD.",
-      historicalNarrative: "The Roman Forum served as the vibrant epicentre of constitutional, judicial, and commercial affairs for more than a millennium. Surrounded by the Senate House (Curia Julia), the Rostra orator's platform, and the eternal hearth in the Temple of Vesta, every victory and transition of power reverberated through these paved stones. The Arch of Titus pioneered composite Corinthian-Ionic capitals and served as the architectural inspiration for Paris's Arc de Triomphe.",
-      timeline: [
+      "id": "landmark-arch-titus-forum",
+      "routeId": "route-rome-imperial",
+      "name": "The Roman Forum & Arch of Titus",
+      "nativeName": "Forum Romanum & Arcus Titi",
+      "yearBuilt": "81 AD",
+      "era": "Flavian Era",
+      "coordinates": [
+        41.8907,
+        12.4886
+      ],
+      "elevation": "21m above sea level",
+      "qrCode": "HERITAGE-ROME-TITUS-81AD",
+      "modelType": "arch",
+      "thumbnail": "https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80",
+      "audioDurationSec": 130,
+      "audioTitle": "The Sacred Way: The Political Heartland of the Republic and Empire",
+      "audioScript": "You are standing on the Via Sacra, the ceremonial avenue of Roman triumphal processions. Before you rises the Arch of Titus, erected by Emperor Domitian to deify his elder brother. Gaze upward at the inner relief panels: carved in deep Pentelic marble, Roman soldiers carry the golden Menorah and holy vessels captured from the Second Temple in Jerusalem, immortalizing the triumph of 71 AD.",
+      "historicalNarrative": "The Roman Forum served as the vibrant epicentre of constitutional, judicial, and commercial affairs for more than a millennium. Surrounded by the Senate House (Curia Julia), the Rostra orator's platform, and the eternal hearth in the Temple of Vesta, every victory and transition of power reverberated through these paved stones. The Arch of Titus pioneered composite Corinthian-Ionic capitals and served as the architectural inspiration for Paris's Arc de Triomphe.",
+      "timeline": [
         {
-          year: "509 BC",
-          title: "Republican Marsh Draining",
-          description: "Construction of the Cloaca Maxima transforms the marshy valley into Rome's civic heart."
+          "year": "509 BC",
+          "title": "Republican Marsh Draining",
+          "description": "Construction of the Cloaca Maxima transforms the marshy valley into Rome's civic heart."
         },
         {
-          year: "81 AD",
-          title: "Arch of Titus Dedicated",
-          description: "Commissioned by Domitian with apotheosis relief showing Titus carried to the heavens by an eagle."
+          "year": "81 AD",
+          "title": "Arch of Titus Dedicated",
+          "description": "Commissioned by Domitian with apotheosis relief showing Titus carried to the heavens by an eagle."
         },
         {
-          year: "1821 AD",
-          title: "Stern & Valadier Conservation",
-          description: "Giuseppe Valadier undertakes the world's first modern scientific architectural restoration using travertine to distinguish modern repairs from ancient marble."
+          "year": "1821 AD",
+          "title": "Stern & Valadier Conservation",
+          "description": "Giuseppe Valadier undertakes the world's first modern scientific architectural restoration using travertine to distinguish modern repairs from ancient marble."
         }
       ],
-      character: {
-        name: "Senator Gaius Licinius",
-        title: "Roman Jurist & Orator",
-        avatar: "📜",
-        introQuote: "In this Forum, laws were argued that shaped Western civilization for two thousand years.",
-        dialogues: [
+      "character": {
+        "name": "Senator Gaius Licinius",
+        "title": "Roman Jurist & Orator",
+        "avatar": "📜",
+        "introQuote": "In this Forum, laws were argued that shaped Western civilization for two thousand years.",
+        "dialogues": [
           {
-            question: "What did a Roman Triumph look like moving down the Via Sacra?",
-            answer: "It was a sensory deluge: trumpets sounding, captive generals paraded in chains, floats of gold, and the victorious Imperator riding a gilded chariot, his face painted red like Jupiter."
+            "question": "What did a Roman Triumph look like moving down the Via Sacra?",
+            "answer": "It was a sensory deluge: trumpets sounding, captive generals paraded in chains, floats of gold, and the victorious Imperator riding a gilded chariot, his face painted red like Jupiter."
           },
           {
-            question: "Why was Valadier's restoration of the Arch in 1821 so historically important?",
-            answer: "Rather than forging faux antiquity, he pioneered modern conservation ethics: original Pentelic marble was preserved, while reconstructed piers used uncarved travertine so future historians could clearly discern fact from restoration."
+            "question": "Why was Valadier's restoration of the Arch in 1821 so historically important?",
+            "answer": "Rather than forging faux antiquity, he pioneered modern conservation ethics: original Pentelic marble was preserved, while reconstructed piers used uncarved travertine so future historians could clearly discern fact from restoration."
           }
         ]
       },
-      culturalInsights: [
+      "culturalInsights": [
         "The relief on the Arch of Titus contains one of the most historically significant contemporary depictions of Second Temple artifacts.",
         "The Forum was buried under twenty feet of soil during the Middle Ages, known as 'Campo Vaccino' (the Cow Pasture), until 19th-century excavations."
       ]
     },
     {
-      id: "landmark-pantheon",
-      routeId: "route-rome-imperial",
-      name: "The Pantheon",
-      nativeName: "Pantheon (Temple of All Gods)",
-      yearBuilt: "118–125 AD",
-      era: "Hadrianic Era, High Empire",
-      coordinates: [41.8986, 12.4769],
-      elevation: "18m above sea level",
-      qrCode: "HERITAGE-ROME-PANTHEON-125AD",
-      modelType: "pantheon",
-      thumbnail: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80",
-      archivalImage: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?auto=format&fit=crop&w=800&q=80",
-      audioDurationSec: 155,
-      audioTitle: "The Unconquered Dome: Concrete Alchemy and Solar Harmony",
-      audioScript: "Enter the Pantheon, the best preserved architectural triumph of ancient Rome. Conceived under Emperor Hadrian, this spherical sanctuary is capped by the world's largest unreinforced concrete dome, measuring exactly 43.3 meters in internal diameter and height. Look directly up into the 9-meter oculus: sunlight streams down like a cosmic sundial, connecting the terrestrial empire with the celestial gods.",
-      historicalNarrative: "Hadrian's engineers achieved this marvel through revolutionary material gradation. Heavy travertine aggregate was utilized in the 6-meter-thick lower foundation walls, transitioning progressively to porous tufa, fractured bricks, and ultimately feather-light volcanic pumice at the dome's crown. The 28 coffered ceiling rings diminish upward to reduce deadweight, while twenty-two discreet drainage holes in the convex porphyry marble floor channel rainwater out during Rome's stormy winters.",
-      timeline: [
+      "id": "landmark-pantheon",
+      "routeId": "route-rome-imperial",
+      "name": "The Pantheon",
+      "nativeName": "Pantheon (Temple of All Gods)",
+      "yearBuilt": "118–125 AD",
+      "era": "Hadrianic Era, High Empire",
+      "coordinates": [
+        41.8986,
+        12.4769
+      ],
+      "elevation": "18m above sea level",
+      "qrCode": "HERITAGE-ROME-PANTHEON-125AD",
+      "modelType": "pantheon",
+      "thumbnail": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?auto=format&fit=crop&w=800&q=80",
+      "audioDurationSec": 155,
+      "audioTitle": "The Unconquered Dome: Concrete Alchemy and Solar Harmony",
+      "audioScript": "Enter the Pantheon, the best preserved architectural triumph of ancient Rome. Conceived under Emperor Hadrian, this spherical sanctuary is capped by the world's largest unreinforced concrete dome, measuring exactly 43.3 meters in internal diameter and height. Look directly up into the 9-meter oculus: sunlight streams down like a cosmic sundial, connecting the terrestrial empire with the celestial gods.",
+      "historicalNarrative": "Hadrian's engineers achieved this marvel through revolutionary material gradation. Heavy travertine aggregate was utilized in the 6-meter-thick lower foundation walls, transitioning progressively to porous tufa, fractured bricks, and ultimately feather-light volcanic pumice at the dome's crown. The 28 coffered ceiling rings diminish upward to reduce deadweight, while twenty-two discreet drainage holes in the convex porphyry marble floor channel rainwater out during Rome's stormy winters.",
+      "timeline": [
         {
-          year: "27 BC",
-          title: "Original Temple by Marcus Agrippa",
-          description: "Marcus Agrippa constructs the original rectangular temple; his dedicatory inscription remains proudly etched on the facade."
+          "year": "27 BC",
+          "title": "Original Temple by Marcus Agrippa",
+          "description": "Marcus Agrippa constructs the original rectangular temple; his dedicatory inscription remains proudly etched on the facade."
         },
         {
-          year: "125 AD",
-          title: "Hadrian Rebuilds the Rotunda",
-          description: "Hadrian completes the revolutionary spherical rotunda, concealing the monumental dome behind an austere classical portico."
+          "year": "125 AD",
+          "title": "Hadrian Rebuilds the Rotunda",
+          "description": "Hadrian completes the revolutionary spherical rotunda, concealing the monumental dome behind an austere classical portico."
         },
         {
-          year: "609 AD",
-          title: "Consecration as Santa Maria ad Martyres",
-          description: "Byzantine Emperor Phocas gifts the building to Pope Boniface IV, safeguarding it from medieval stone salvaging."
+          "year": "609 AD",
+          "title": "Consecration as Santa Maria ad Martyres",
+          "description": "Byzantine Emperor Phocas gifts the building to Pope Boniface IV, safeguarding it from medieval stone salvaging."
         }
       ],
-      character: {
-        name: "Emperor Hadrian",
-        title: "Philosopher-Architect & Princeps",
-        avatar: "👑",
-        introQuote: "My intent was that this sanctuary should evoke the globe of the earth and the celestial sphere.",
-        dialogues: [
+      "character": {
+        "name": "Emperor Hadrian",
+        "title": "Philosopher-Architect & Princeps",
+        "avatar": "👑",
+        "introQuote": "My intent was that this sanctuary should evoke the globe of the earth and the celestial sphere.",
+        "dialogues": [
           {
-            question: "Why does the inscription still credit Marcus Agrippa rather than yourself?",
-            answer: "A true master builder seeks eternal harmony, not vainglory. Agrippa founded the sacred ground; I honored his memory while reimagining the cosmos in pozzolanic concrete."
+            "question": "Why does the inscription still credit Marcus Agrippa rather than yourself?",
+            "answer": "A true master builder seeks eternal harmony, not vainglory. Agrippa founded the sacred ground; I honored his memory while reimagining the cosmos in pozzolanic concrete."
           },
           {
-            question: "Doesn't the interior flood when it rains through the open oculus?",
-            answer: "Indeed, the rain falls straight to our polished marble floor! But notice the floor's gentle convex curve: twenty-two hidden drains siphon the waters away immediately into subterranean Roman aqueducts."
+            "question": "Doesn't the interior flood when it rains through the open oculus?",
+            "answer": "Indeed, the rain falls straight to our polished marble floor! But notice the floor's gentle convex curve: twenty-two hidden drains siphon the waters away immediately into subterranean Roman aqueducts."
           }
         ]
       },
-      culturalInsights: [
+      "culturalInsights": [
         "The interior volume is an exact perfect sphere: a 43.3m sphere fits seamlessly from floor to ceiling.",
         "Renowned Renaissance master Raphael is entombed here under the inscription: 'Living, great Nature feared he might outvie her art; dying, she feared herself might die.'",
         "The bronze roof tiles were stripped by Byzantine Emperor Constans II in 663 AD and later melted into cannons for Castel Sant'Angelo."
       ]
     },
     {
-      id: "landmark-castel-santangelo",
-      routeId: "route-rome-imperial",
-      name: "Castel Sant'Angelo (Mausoleum of Hadrian)",
-      nativeName: "Mausoleum Hadriani",
-      yearBuilt: "134–139 AD",
-      era: "Antonine Era & Papal Fortress",
-      coordinates: [41.9031, 12.4663],
-      elevation: "22m above sea level",
-      qrCode: "HERITAGE-ROME-HADRIAN-139AD",
-      modelType: "rotunda",
-      thumbnail: "https://images.unsplash.com/photo-1525874684015-58379d421a52?auto=format&fit=crop&w=800&q=80",
-      archivalImage: "https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=800&q=80",
-      audioDurationSec: 120,
-      audioTitle: "From Imperial Tomb to Papal Citadel",
-      audioScript: "Perched on the right bank of the Tiber River stands Hadrian's cylindrical mausoleum, linked to Campus Martius across the marble-bridged Pons Aelius. Over nearly two millennia, this monumental tomb morphed into a formidable medieval fortress, connected to the Vatican by the Passetto di Borgo—an elevated secret escape corridor traversed by embattled Popes.",
-      historicalNarrative: "Originally adorned with gardens, cypress trees, and a bronze quadriga driven by Hadrian, the mausoleum once guarded the ashes of Roman emperors from Hadrian to Caracalla. In 590 AD, during a devastating plague, Pope Gregory the Great had a vision of the Archangel Michael sheathing his sword atop the fortress, signaling the cessation of the epidemic and bequeathing the castle its present name.",
-      timeline: [
+      "id": "landmark-castel-santangelo",
+      "routeId": "route-rome-imperial",
+      "name": "Castel Sant'Angelo (Mausoleum of Hadrian)",
+      "nativeName": "Mausoleum Hadriani",
+      "yearBuilt": "134–139 AD",
+      "era": "Antonine Era & Papal Fortress",
+      "coordinates": [
+        41.9031,
+        12.4663
+      ],
+      "elevation": "22m above sea level",
+      "qrCode": "HERITAGE-ROME-HADRIAN-139AD",
+      "modelType": "rotunda",
+      "thumbnail": "https://images.unsplash.com/photo-1525874684015-58379d421a52?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=800&q=80",
+      "audioDurationSec": 120,
+      "audioTitle": "From Imperial Tomb to Papal Citadel",
+      "audioScript": "Perched on the right bank of the Tiber River stands Hadrian's cylindrical mausoleum, linked to Campus Martius across the marble-bridged Pons Aelius. Over nearly two millennia, this monumental tomb morphed into a formidable medieval fortress, connected to the Vatican by the Passetto di Borgo—an elevated secret escape corridor traversed by embattled Popes.",
+      "historicalNarrative": "Originally adorned with gardens, cypress trees, and a bronze quadriga driven by Hadrian, the mausoleum once guarded the ashes of Roman emperors from Hadrian to Caracalla. In 590 AD, during a devastating plague, Pope Gregory the Great had a vision of the Archangel Michael sheathing his sword atop the fortress, signaling the cessation of the epidemic and bequeathing the castle its present name.",
+      "timeline": [
         {
-          year: "139 AD",
-          title: "Antoninus Pius Dedicates Mausoleum",
-          description: "Hadrian's cinerary urn is interred in the central porphyry vault."
+          "year": "139 AD",
+          "title": "Antoninus Pius Dedicates Mausoleum",
+          "description": "Hadrian's cinerary urn is interred in the central porphyry vault."
         },
         {
-          year: "410 AD",
-          title: "Visigoth Siege & Bronze Statues Cast",
-          description: "Defenders defend the tomb from Alaric's invaders by hurling ancient marble statues down upon the besiegers."
+          "year": "410 AD",
+          "title": "Visigoth Siege & Bronze Statues Cast",
+          "description": "Defenders defend the tomb from Alaric's invaders by hurling ancient marble statues down upon the besiegers."
         },
         {
-          year: "1277 AD",
-          title: "Passetto di Borgo Fortified",
-          description: "An 800-meter elevated stone corridor is built connecting the Apostolic Palace to the fortress."
+          "year": "1277 AD",
+          "title": "Passetto di Borgo Fortified",
+          "description": "An 800-meter elevated stone corridor is built connecting the Apostolic Palace to the fortress."
         }
       ],
-      character: {
-        name: "Archangel Michael Hologram",
-        title: "Celestial Sentinel of Rome",
-        avatar: "⚔️",
-        introQuote: "I sheathed my blade above this fortress in 590 AD when the great pestilence receded.",
-        dialogues: [
+      "character": {
+        "name": "Archangel Michael Hologram",
+        "title": "Celestial Sentinel of Rome",
+        "avatar": "⚔️",
+        "introQuote": "I sheathed my blade above this fortress in 590 AD when the great pestilence receded.",
+        "dialogues": [
           {
-            question: "How did a tranquil garden tomb become an impenetrable fortress?",
-            answer: "Rome's survival demanded it. Surrounded by barbarian hordes, the Aurelian Wall incorporated the mausoleum's massive travertine bastion, transforming emperor's resting place into the city's key citadel."
+            "question": "How did a tranquil garden tomb become an impenetrable fortress?",
+            "answer": "Rome's survival demanded it. Surrounded by barbarian hordes, the Aurelian Wall incorporated the mausoleum's massive travertine bastion, transforming emperor's resting place into the city's key citadel."
           }
         ]
       },
-      culturalInsights: [
+      "culturalInsights": [
         "In 1527, during the Sack of Rome, Pope Clement VII escaped along the Passetto under Swiss Guard gunfire to take refuge within these bastions.",
         "The rooftop offers a 360-degree panoramic sightline spanning the Tiber, St. Peter's Basilica, and Rome's Seven Hills."
       ]
     },
-    // Delhi & Agra Route Landmarks
     {
-      id: "landmark-red-fort",
-      routeId: "route-delhi-mughal",
-      name: "Red Fort (Lal Qila)",
-      nativeName: "Lal Qal'ah (Shahjahanabad)",
-      yearBuilt: "1638–1648 AD",
-      era: "Mughal Empire, Reign of Shah Jahan",
-      coordinates: [28.6562, 77.2410],
-      elevation: "216m above sea level",
-      qrCode: "HERITAGE-INDIA-REDFORT-1648AD",
-      modelType: "fortress",
-      thumbnail: "https://images.unsplash.com/photo-1598324789736-4861fadd3a4c?auto=format&fit=crop&w=800&q=80",
-      archivalImage: "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=80",
-      audioDurationSec: 150,
-      audioTitle: "Citadel of the Peacock Throne: Shah Jahan's Crimson Jewel",
-      audioScript: "Welcome to Lal Qila, the octagonal citadel of red sandstone that defined the zenith of Mughal sovereignty. When Emperor Shah Jahan relocated his imperial capital from Agra to Shahjahanabad in 1638, he commissioned master architects Ustad Hamid and Ustad Ahmad to construct an architectural paradise on earth. Enter the Lahori Gate to witness the blend of Persian, Timurid, and indigenous Hindu aesthetic traditions.",
-      historicalNarrative: "Enclosed within 2.41 kilometers of monumental ramparts rising up to 33 meters, the Red Fort was designed according to sacred geometry. A stream of water known as the Nahr-i-Bihisht (Canal of Paradise) flowed through the private marble pavilions, cooling the royal chambers. In the Diwan-i-Khas (Hall of Private Audiences), beneath an inlaid silver ceiling, stood the legendary Peacock Throne, beside the immortal Persian inscription: 'Agar firdaus bar roo-e zameen ast, hameen ast-o hameen ast-o hameen ast' (If there is a paradise on earth, it is this, it is this, it is this).",
-      timeline: [
+      "id": "landmark-red-fort",
+      "routeId": "route-delhi-mughal",
+      "name": "Red Fort (Lal Qila)",
+      "nativeName": "Lal Qal'ah (Shahjahanabad)",
+      "yearBuilt": "1638–1648 AD",
+      "era": "Mughal Empire, Reign of Shah Jahan",
+      "coordinates": [
+        28.6562,
+        77.241
+      ],
+      "elevation": "216m above sea level",
+      "qrCode": "HERITAGE-INDIA-REDFORT-1648AD",
+      "modelType": "fortress",
+      "thumbnail": "https://images.unsplash.com/photo-1598324789736-4861fadd3a4c?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=80",
+      "audioDurationSec": 150,
+      "audioTitle": "Citadel of the Peacock Throne: Shah Jahan's Crimson Jewel",
+      "audioScript": "Welcome to Lal Qila, the octagonal citadel of red sandstone that defined the zenith of Mughal sovereignty. When Emperor Shah Jahan relocated his imperial capital from Agra to Shahjahanabad in 1638, he commissioned master architects Ustad Hamid and Ustad Ahmad to construct an architectural paradise on earth. Enter the Lahori Gate to witness the blend of Persian, Timurid, and indigenous Hindu aesthetic traditions.",
+      "historicalNarrative": "Enclosed within 2.41 kilometers of monumental ramparts rising up to 33 meters, the Red Fort was designed according to sacred geometry. A stream of water known as the Nahr-i-Bihisht (Canal of Paradise) flowed through the private marble pavilions, cooling the royal chambers. In the Diwan-i-Khas (Hall of Private Audiences), beneath an inlaid silver ceiling, stood the legendary Peacock Throne, beside the immortal Persian inscription: 'Agar firdaus bar roo-e zameen ast, hameen ast-o hameen ast-o hameen ast' (If there is a paradise on earth, it is this, it is this, it is this).",
+      "timeline": [
         {
-          year: "1638 AD",
-          title: "Foundation Stone Laid",
-          description: "Shah Jahan initiates construction along the sacred banks of the Yamuna River."
+          "year": "1638 AD",
+          "title": "Foundation Stone Laid",
+          "description": "Shah Jahan initiates construction along the sacred banks of the Yamuna River."
         },
         {
-          year: "1648 AD",
-          title: "Imperial Inauguration",
-          description: "Court poet Abu Talib Kalim recites inaugural odes as the emperor enters through golden tapestries."
+          "year": "1648 AD",
+          "title": "Imperial Inauguration",
+          "description": "Court poet Abu Talib Kalim recites inaugural odes as the emperor enters through golden tapestries."
         },
         {
-          year: "1739 AD",
-          title: "Nader Shah's Plunder",
-          description: "Persian conqueror Nader Shah seizes the Koh-i-Noor diamond and the bejeweled Peacock Throne."
+          "year": "1739 AD",
+          "title": "Nader Shah's Plunder",
+          "description": "Persian conqueror Nader Shah seizes the Koh-i-Noor diamond and the bejeweled Peacock Throne."
         },
         {
-          year: "1947–Present",
-          title: "Independence Day Bastion",
-          description: "India's Prime Ministers unfurl the national flag annually from the ramparts of Lahori Gate."
+          "year": "1947–Present",
+          "title": "Independence Day Bastion",
+          "description": "India's Prime Ministers unfurl the national flag annually from the ramparts of Lahori Gate."
         }
       ],
-      character: {
-        name: "Emperor Shah Jahan",
-        title: "Builder of the Taj Mahal & Shahjahanabad",
-        avatar: "👑",
-        introQuote: "We shaped red stone and translucent marble so that generations would gaze upon the splendour of Hind.",
-        dialogues: [
+      "character": {
+        "name": "Emperor Shah Jahan",
+        "title": "Builder of the Taj Mahal & Shahjahanabad",
+        "avatar": "👑",
+        "introQuote": "We shaped red stone and translucent marble so that generations would gaze upon the splendour of Hind.",
+        "dialogues": [
           {
-            question: "Why did you choose red sandstone and white marble together?",
-            answer: "Red sandstone embodies imperial might and Rajput strength; white marble reflects celestial purity and spiritual tranquility. Together, they create cosmic balance."
+            "question": "Why did you choose red sandstone and white marble together?",
+            "answer": "Red sandstone embodies imperial might and Rajput strength; white marble reflects celestial purity and spiritual tranquility. Together, they create cosmic balance."
           },
           {
-            question: "How did the Canal of Paradise cool the living quarters in the Delhi heat?",
-            answer: "The Nahr-i-Bihisht diverted living waters from the Yamuna, flowing through marble channels in the floors of our pavilions with subterranean fountains and fragrant lotus ponds."
+            "question": "How did the Canal of Paradise cool the living quarters in the Delhi heat?",
+            "answer": "The Nahr-i-Bihisht diverted living waters from the Yamuna, flowing through marble channels in the floors of our pavilions with subterranean fountains and fragrant lotus ponds."
           }
         ]
       },
-      culturalInsights: [
+      "culturalInsights": [
         "The fort's innovative octagonal plan influenced subsequent Indian, Rajasthani, and British colonial administrative architecture.",
         "Over four-fifths of the fort's inner residential structures were demolished following the 1857 uprising, leaving the surviving marble pavilions as rare gems."
       ]
     },
     {
-      id: "landmark-taj-mahal",
-      routeId: "route-delhi-mughal",
-      name: "Taj Mahal",
-      nativeName: "Rauza-i-Munawwara (The Illumined Tomb)",
-      yearBuilt: "1632–1653 AD",
-      era: "Mughal Empire (Agra)",
-      coordinates: [27.1751, 78.0421],
-      elevation: "171m above sea level",
-      qrCode: "HERITAGE-INDIA-TAJMAHAL-1653AD",
-      modelType: "tajmahal",
-      thumbnail: "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80",
-      archivalImage: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80",
-      audioDurationSec: 160,
-      audioTitle: "Poem in Translucent Marble: The Pinnacle of Bilateral Symmetry",
-      audioScript: "Before you stands the Taj Mahal, an elegy in pure white Makrana marble commissioned by Emperor Shah Jahan in memory of his beloved empress Mumtaz Mahal. Over twenty-two years, twenty thousand master stonemasons, calligraphers, and lapidaries from Persia, the Ottoman Empire, and across Hindustan brought this vision of paradise to life on the southern bank of the Yamuna River.",
-      historicalNarrative: "The architectural genius of chief architect Ustad Ahmad Lahori rests on absolute bilateral symmetry about a central axis—broken only by Shah Jahan's own cenotaph placed beside Mumtaz's decades later. Four 40-meter minarets lean outward at an imperceptible 2-degree incline, designed so that in an earthquake they would fall away from the sacred onion dome. The exterior is adorned with intricate pietra dura (parchin kari) inlays of twenty-eight varieties of semi-precious stones, including lapis lazuli, turquoise, and carnelian.",
-      timeline: [
+      "id": "landmark-taj-mahal",
+      "routeId": "route-delhi-mughal",
+      "name": "Taj Mahal",
+      "nativeName": "Rauza-i-Munawwara (The Illumined Tomb)",
+      "yearBuilt": "1632–1653 AD",
+      "era": "Mughal Empire (Agra)",
+      "coordinates": [
+        27.1751,
+        78.0421
+      ],
+      "elevation": "171m above sea level",
+      "qrCode": "HERITAGE-INDIA-TAJMAHAL-1653AD",
+      "modelType": "tajmahal",
+      "thumbnail": "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80",
+      "audioDurationSec": 160,
+      "audioTitle": "Poem in Translucent Marble: The Pinnacle of Bilateral Symmetry",
+      "audioScript": "Before you stands the Taj Mahal, an elegy in pure white Makrana marble commissioned by Emperor Shah Jahan in memory of his beloved empress Mumtaz Mahal. Over twenty-two years, twenty thousand master stonemasons, calligraphers, and lapidaries from Persia, the Ottoman Empire, and across Hindustan brought this vision of paradise to life on the southern bank of the Yamuna River.",
+      "historicalNarrative": "The architectural genius of chief architect Ustad Ahmad Lahori rests on absolute bilateral symmetry about a central axis—broken only by Shah Jahan's own cenotaph placed beside Mumtaz's decades later. Four 40-meter minarets lean outward at an imperceptible 2-degree incline, designed so that in an earthquake they would fall away from the sacred onion dome. The exterior is adorned with intricate pietra dura (parchin kari) inlays of twenty-eight varieties of semi-precious stones, including lapis lazuli, turquoise, and carnelian.",
+      "timeline": [
         {
-          year: "1631 AD",
-          title: "Passing of Mumtaz Mahal",
-          description: "Empress Mumtaz Mahal passes away in Burhanpur; Shah Jahan resolves to build an incomparable memorial."
+          "year": "1631 AD",
+          "title": "Passing of Mumtaz Mahal",
+          "description": "Empress Mumtaz Mahal passes away in Burhanpur; Shah Jahan resolves to build an incomparable memorial."
         },
         {
-          year: "1648 AD",
-          title: "Main Mausoleum Completed",
-          description: "The bulbous double-dome and inner octagonal cenotaph chamber are completed."
+          "year": "1648 AD",
+          "title": "Main Mausoleum Completed",
+          "description": "The bulbous double-dome and inner octagonal cenotaph chamber are completed."
         },
         {
-          year: "1653 AD",
-          title: "Charbagh Garden & Mosque Finished",
-          description: "The surrounding red sandstone complex, guest house, and quadripartite Persian gardens reach completion."
+          "year": "1653 AD",
+          "title": "Charbagh Garden & Mosque Finished",
+          "description": "The surrounding red sandstone complex, guest house, and quadripartite Persian gardens reach completion."
         },
         {
-          year: "1983 AD",
-          title: "UNESCO World Heritage Inscription",
-          description: "Recognized as 'the jewel of Muslim art in India and one of the universally admired masterpieces of the world's heritage'."
+          "year": "1983 AD",
+          "title": "UNESCO World Heritage Inscription",
+          "description": "Recognized as 'the jewel of Muslim art in India and one of the universally admired masterpieces of the world's heritage'."
         }
       ],
-      character: {
-        name: "Ustad Ahmad Lahori",
-        title: "Chief Imperial Architect",
-        avatar: "📐",
-        introQuote: "Every proportion—from the double dome to the floral carnelian petals—was calculated according to Euclidean geometry and divine symmetry.",
-        dialogues: [
+      "character": {
+        "name": "Ustad Ahmad Lahori",
+        "title": "Chief Imperial Architect",
+        "avatar": "📐",
+        "introQuote": "Every proportion—from the double dome to the floral carnelian petals—was calculated according to Euclidean geometry and divine symmetry.",
+        "dialogues": [
           {
-            question: "Why do the four corner minarets lean slightly outwards?",
-            answer: "An engineer must anticipate disaster! By inclining the minarets two degrees away from the dome, we ensured that should a severe earthquake strike, the masonry would fall outward, sparing the sacred burial chamber."
+            "question": "Why do the four corner minarets lean slightly outwards?",
+            "answer": "An engineer must anticipate disaster! By inclining the minarets two degrees away from the dome, we ensured that should a severe earthquake strike, the masonry would fall outward, sparing the sacred burial chamber."
           },
           {
-            question: "What makes the Makrana marble change color throughout the day?",
-            answer: "Makrana marble has high crystalline translucency. In the misty dawn it reflects pale rosy hues; under noon sunlight it gleams blinding pearl white; and beneath the full moon it radiates like gold."
+            "question": "What makes the Makrana marble change color throughout the day?",
+            "answer": "Makrana marble has high crystalline translucency. In the misty dawn it reflects pale rosy hues; under noon sunlight it gleams blinding pearl white; and beneath the full moon it radiates like gold."
           }
         ]
       },
-      culturalInsights: [
+      "culturalInsights": [
         "The calligraphy adorning the great vaulted pishtaq arches is subtly scaled larger toward the top, creating the optical illusion of uniform letter size from ground view.",
         "The deep foundation is built upon timber wells sunk into the riverbed, reliant on the moisture of the Yamuna River to maintain wooden structural elasticity."
       ]
     },
     {
-      id: "landmark-humayun-tomb",
-      routeId: "route-delhi-mughal",
-      name: "Humayun's Tomb",
-      nativeName: "Maqbara-i Humayun",
-      yearBuilt: "1565–1572 AD",
-      era: "Early Mughal Dynasty",
-      coordinates: [28.5933, 77.2507],
-      elevation: "215m above sea level",
-      qrCode: "HERITAGE-INDIA-HUMAYUN-1572AD",
-      modelType: "dome-tomb",
-      thumbnail: "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=80",
-      archivalImage: "https://images.unsplash.com/photo-1598324789736-4861fadd3a4c?auto=format&fit=crop&w=800&q=80",
-      audioDurationSec: 135,
-      audioTitle: "The Garden Tomb that Breathed Life into Mughal Architecture",
-      audioScript: "Commissioned by Humayun's chief consort, Empress Bega Begum, and designed by Persian architect Mirak Mirza Ghiyas, this monument introduced the grand Charbagh four-quadrant garden tomb typology to the Indian subcontinent, directly foreshadowing the design of the Taj Mahal sixty years later.",
-      historicalNarrative: "Set within a walled 30-acre quadrilateral paradise garden, the tomb sits on a monumental raised plinth with fifty-six vaulted arcades. It was the first Indian structure to feature a high double dome—an outer marble shell for external monumental scale and an inner ceiling calibrated for human proportion.",
-      timeline: [
+      "id": "landmark-humayun-tomb",
+      "routeId": "route-delhi-mughal",
+      "name": "Humayun's Tomb",
+      "nativeName": "Maqbara-i Humayun",
+      "yearBuilt": "1565–1572 AD",
+      "era": "Early Mughal Dynasty",
+      "coordinates": [
+        28.5933,
+        77.2507
+      ],
+      "elevation": "215m above sea level",
+      "qrCode": "HERITAGE-INDIA-HUMAYUN-1572AD",
+      "modelType": "dome-tomb",
+      "thumbnail": "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1598324789736-4861fadd3a4c?auto=format&fit=crop&w=800&q=80",
+      "audioDurationSec": 135,
+      "audioTitle": "The Garden Tomb that Breathed Life into Mughal Architecture",
+      "audioScript": "Commissioned by Humayun's chief consort, Empress Bega Begum, and designed by Persian architect Mirak Mirza Ghiyas, this monument introduced the grand Charbagh four-quadrant garden tomb typology to the Indian subcontinent, directly foreshadowing the design of the Taj Mahal sixty years later.",
+      "historicalNarrative": "Set within a walled 30-acre quadrilateral paradise garden, the tomb sits on a monumental raised plinth with fifty-six vaulted arcades. It was the first Indian structure to feature a high double dome—an outer marble shell for external monumental scale and an inner ceiling calibrated for human proportion.",
+      "timeline": [
         {
-          year: "1565 AD",
-          title: "Commission by Bega Begum",
-          description: "Construction begins nine years after Humayun's demise, utilizing craftsmen from Herat, Samarkand, and Delhi."
+          "year": "1565 AD",
+          "title": "Commission by Bega Begum",
+          "description": "Construction begins nine years after Humayun's demise, utilizing craftsmen from Herat, Samarkand, and Delhi."
         },
         {
-          year: "1993 AD",
-          title: "UNESCO Inscription",
-          description: "Designated as a World Heritage Site, followed by the historic Aga Khan Trust for Culture restoration."
+          "year": "1993 AD",
+          "title": "UNESCO Inscription",
+          "description": "Designated as a World Heritage Site, followed by the historic Aga Khan Trust for Culture restoration."
         }
       ],
-      character: {
-        name: "Empress Bega Begum",
-        title: "Imperial Consort & Patron of Arts",
-        avatar: "🧕",
-        introQuote: "My devotion to the Emperor was eternalized not in words, but in stone, water channels, and cypress trees.",
-        dialogues: [
+      "character": {
+        "name": "Empress Bega Begum",
+        "title": "Imperial Consort & Patron of Arts",
+        "avatar": "🧕",
+        "introQuote": "My devotion to the Emperor was eternalized not in words, but in stone, water channels, and cypress trees.",
+        "dialogues": [
           {
-            question: "How does the Charbagh garden symbolize paradise?",
-            answer: "The Quran describes Eden with four rivers of water, milk, honey, and wine. Our four quadripartite channels mirror those heavenly waterways, meeting at the central tomb."
+            "question": "How does the Charbagh garden symbolize paradise?",
+            "answer": "The Quran describes Eden with four rivers of water, milk, honey, and wine. Our four quadripartite channels mirror those heavenly waterways, meeting at the central tomb."
           }
         ]
       },
-      culturalInsights: [
+      "culturalInsights": [
         "Over 150 members of the Mughal royal family are interred in the crypt vaults, earning it the moniker 'Dormitory of the Mughals.'",
         "The monumental restoration completed in 2013 revived sixty acres of historic gardens and historic waterworks."
       ]
     },
     {
-      id: "landmark-qutb-minar",
-      routeId: "route-delhi-mughal",
-      name: "Qutb Minar & Iron Pillar Complex",
-      nativeName: "Qutb Minar (Mehrauli)",
-      yearBuilt: "1192–1220 AD",
-      era: "Delhi Sultanate (Mamluk Dynasty)",
-      coordinates: [28.5245, 77.1855],
-      elevation: "230m above sea level",
-      qrCode: "HERITAGE-INDIA-QUTB-1199AD",
-      modelType: "tower",
-      thumbnail: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80",
-      archivalImage: "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=80",
-      audioDurationSec: 140,
-      audioTitle: "Tower of Victory: 800 Years of Fluted Red Sandstone",
-      audioScript: "Towering 72.5 meters above Mehrauli, Qutb Minar is the world's tallest brick minaret. Initiated by Qutb ud-Din Aibak in 1199, its five distinct tapering storeys alternate between angular and rounded flutings, encircled by balconies supported by intricate honeycomb stalactite corbels. Standing nearby in the courtyard is the 1,600-year-old rust-resistant Gupta Iron Pillar.",
-      historicalNarrative: "The complex encapsulates the dawn of Indo-Islamic architecture. Inscriptions in intricate Naskh and Kufic calligraphy narrate the additions made by successive sultans Iltutmish and Alauddin Khilji. The metallurgical marvel of the 7-meter-tall Gupta Iron Pillar, forged around 400 AD, demonstrates ancient Indian mastery of high phosphorus slag-protective forge welding.",
-      timeline: [
+      "id": "landmark-qutb-minar",
+      "routeId": "route-delhi-mughal",
+      "name": "Qutb Minar & Iron Pillar Complex",
+      "nativeName": "Qutb Minar (Mehrauli)",
+      "yearBuilt": "1192–1220 AD",
+      "era": "Delhi Sultanate (Mamluk Dynasty)",
+      "coordinates": [
+        28.5245,
+        77.1855
+      ],
+      "elevation": "230m above sea level",
+      "qrCode": "HERITAGE-INDIA-QUTB-1199AD",
+      "modelType": "tower",
+      "thumbnail": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=80",
+      "audioDurationSec": 140,
+      "audioTitle": "Tower of Victory: 800 Years of Fluted Red Sandstone",
+      "audioScript": "Towering 72.5 meters above Mehrauli, Qutb Minar is the world's tallest brick minaret. Initiated by Qutb ud-Din Aibak in 1199, its five distinct tapering storeys alternate between angular and rounded flutings, encircled by balconies supported by intricate honeycomb stalactite corbels. Standing nearby in the courtyard is the 1,600-year-old rust-resistant Gupta Iron Pillar.",
+      "historicalNarrative": "The complex encapsulates the dawn of Indo-Islamic architecture. Inscriptions in intricate Naskh and Kufic calligraphy narrate the additions made by successive sultans Iltutmish and Alauddin Khilji. The metallurgical marvel of the 7-meter-tall Gupta Iron Pillar, forged around 400 AD, demonstrates ancient Indian mastery of high phosphorus slag-protective forge welding.",
+      "timeline": [
         {
-          year: "1199 AD",
-          title: "Base Storey Built by Aibak",
-          description: "First storey completed as a victory tower and minaret for the adjacent Quwwat-ul-Islam mosque."
+          "year": "1199 AD",
+          "title": "Base Storey Built by Aibak",
+          "description": "First storey completed as a victory tower and minaret for the adjacent Quwwat-ul-Islam mosque."
         },
         {
-          year: "1220 AD",
-          title: "Iltutmish Adds Three Storeys",
-          description: "Shams ud-Din Iltutmish extends the tower to four storeys in red sandstone."
+          "year": "1220 AD",
+          "title": "Iltutmish Adds Three Storeys",
+          "description": "Shams ud-Din Iltutmish extends the tower to four storeys in red sandstone."
         },
         {
-          year: "1368 AD",
-          title: "Firuz Shah Tughlaq Repairs",
-          description: "Lightning damages top tier; restored using white marble and sandstone creating the distinct two-tone summit."
+          "year": "1368 AD",
+          "title": "Firuz Shah Tughlaq Repairs",
+          "description": "Lightning damages top tier; restored using white marble and sandstone creating the distinct two-tone summit."
         }
       ],
-      character: {
-        name: "Sultan Shams ud-Din Iltutmish",
-        title: "Architect of the Delhi Sultanate",
-        avatar: "🗡️",
-        introQuote: "From the sands of Central Asia to the plains of Hindustan, our minaret stands as an unshakeable pillar between earth and sky.",
-        dialogues: [
+      "character": {
+        "name": "Sultan Shams ud-Din Iltutmish",
+        "title": "Architect of the Delhi Sultanate",
+        "avatar": "🗡️",
+        "introQuote": "From the sands of Central Asia to the plains of Hindustan, our minaret stands as an unshakeable pillar between earth and sky.",
+        "dialogues": [
           {
-            question: "Why do the patterns on each storey change as you ascend?",
-            answer: "Look closely: the first level alternates round and angular flanges; the second features gentle circular curves; the third is sharp angular wedges. Each storey expresses a distinct geometric cadence."
+            "question": "Why do the patterns on each storey change as you ascend?",
+            "answer": "Look closely: the first level alternates round and angular flanges; the second features gentle circular curves; the third is sharp angular wedges. Each storey expresses a distinct geometric cadence."
           }
         ]
       },
-      culturalInsights: [
+      "culturalInsights": [
         "A spiral staircase of 379 steps leads to the top balcony, closed to the public since 1981 to preserve structural stability.",
         "The ancient Iron Pillar carries an ancient Sanskrit inscription in Brahmi script honoring King Chandra (Chandragupta II)."
       ]
     },
-    // Kyoto Zen Trail Landmarks
     {
-      id: "landmark-kinkaku-ji",
-      routeId: "route-kyoto-zen",
-      name: "Kinkaku-ji (The Golden Pavilion)",
-      nativeName: "Rokuon-ji (Deer Park Temple)",
-      yearBuilt: "1397 AD",
-      era: "Muromachi Period (Ashikaga Shogunate)",
-      coordinates: [35.0394, 135.7292],
-      elevation: "110m above sea level",
-      qrCode: "HERITAGE-JAPAN-KINKAKUJI-1397AD",
-      modelType: "pagoda-gold",
-      thumbnail: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80",
-      archivalImage: "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=800&q=80",
-      audioDurationSec: 140,
-      audioTitle: "The Gilded Vision: Zen Harmony and Pure Gold Leaf",
-      audioScript: "Gaze across Kyoko-chi, the Mirror Pond, toward Kinkaku-ji. Built in 1397 as the retirement villa of Shogun Ashikaga Yoshimitsu, the top two storeys are covered in pure 24-karat gold leaf. Each tier embodies a distinct Japanese architectural tradition: the ground level reflects aristocratic Heian palace style, the middle storey samurai residences, and the upper sanctuary Zen Buddhist temple design.",
-      historicalNarrative: "Surmounted by a golden Chinese phoenix (Hō-ō) on its thatched piramidal roof, Kinkaku-ji embodies the concept of Amitabha's Pure Land paradise. The surrounding strolling garden (Kaiyu-shiki-teien) frames distant Mount Kinugasa via borrowed scenery (shakkei), integrating human craftsmanship with nature.",
-      timeline: [
+      "id": "landmark-kinkaku-ji",
+      "routeId": "route-kyoto-zen",
+      "name": "Kinkaku-ji (The Golden Pavilion)",
+      "nativeName": "Rokuon-ji (Deer Park Temple)",
+      "yearBuilt": "1397 AD",
+      "era": "Muromachi Period (Ashikaga Shogunate)",
+      "coordinates": [
+        35.0394,
+        135.7292
+      ],
+      "elevation": "110m above sea level",
+      "qrCode": "HERITAGE-JAPAN-KINKAKUJI-1397AD",
+      "modelType": "pagoda-gold",
+      "thumbnail": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=800&q=80",
+      "audioDurationSec": 140,
+      "audioTitle": "The Gilded Vision: Zen Harmony and Pure Gold Leaf",
+      "audioScript": "Gaze across Kyoko-chi, the Mirror Pond, toward Kinkaku-ji. Built in 1397 as the retirement villa of Shogun Ashikaga Yoshimitsu, the top two storeys are covered in pure 24-karat gold leaf. Each tier embodies a distinct Japanese architectural tradition: the ground level reflects aristocratic Heian palace style, the middle storey samurai residences, and the upper sanctuary Zen Buddhist temple design.",
+      "historicalNarrative": "Surmounted by a golden Chinese phoenix (Hō-ō) on its thatched piramidal roof, Kinkaku-ji embodies the concept of Amitabha's Pure Land paradise. The surrounding strolling garden (Kaiyu-shiki-teien) frames distant Mount Kinugasa via borrowed scenery (shakkei), integrating human craftsmanship with nature.",
+      "timeline": [
         {
-          year: "1397 AD",
-          title: "Ashikaga Yoshimitsu's Villa",
-          description: "Acquired by the third Ashikaga Shogun and converted upon his death into a Rinzai Zen temple."
+          "year": "1397 AD",
+          "title": "Ashikaga Yoshimitsu's Villa",
+          "description": "Acquired by the third Ashikaga Shogun and converted upon his death into a Rinzai Zen temple."
         },
         {
-          year: "1950 AD",
-          title: "The Tragic Temple Fire",
-          description: "Destroyed by a novitiate monk; immortalized in Yukio Mishima's famous literary masterpiece 'The Temple of the Golden Pavilion'."
+          "year": "1950 AD",
+          "title": "The Tragic Temple Fire",
+          "description": "Destroyed by a novitiate monk; immortalized in Yukio Mishima's famous literary masterpiece 'The Temple of the Golden Pavilion'."
         },
         {
-          year: "1955–1987 AD",
-          title: "Painstaking Authentic Rebuilding",
-          description: "Reconstructed using five times thicker gold leaf (0.5 micrometers) and traditional Urushi natural lacquer."
+          "year": "1955–1987 AD",
+          "title": "Painstaking Authentic Rebuilding",
+          "description": "Reconstructed using five times thicker gold leaf (0.5 micrometers) and traditional Urushi natural lacquer."
         }
       ],
-      character: {
-        name: "Shogun Ashikaga Yoshimitsu",
-        title: "Third Muromachi Shogun & Cultural Patron",
-        avatar: "⛩️",
-        introQuote: "I united the Northern and Southern Courts and built this golden sanctuary to reflect tranquility in stormy times.",
-        dialogues: [
+      "character": {
+        "name": "Shogun Ashikaga Yoshimitsu",
+        "title": "Third Muromachi Shogun & Cultural Patron",
+        "avatar": "⛩️",
+        "introQuote": "I united the Northern and Southern Courts and built this golden sanctuary to reflect tranquility in stormy times.",
+        "dialogues": [
           {
-            question: "Why do the three floors have completely different architectural styles?",
-            answer: "The ground floor (Shinden-zukuri) represents court nobility; the second (Buke-zukuri) represents our samurai warrior class; the top (Zen-shu-butsuden) represents Buddhist enlightenment. It symbolizes the spiritual ascent of the soul."
+            "question": "Why do the three floors have completely different architectural styles?",
+            "answer": "The ground floor (Shinden-zukuri) represents court nobility; the second (Buke-zukuri) represents our samurai warrior class; the top (Zen-shu-butsuden) represents Buddhist enlightenment. It symbolizes the spiritual ascent of the soul."
           }
         ]
       },
-      culturalInsights: [
+      "culturalInsights": [
         "Over 20 kilograms of pure gold leaf were applied during the 1987 restoration.",
         "The surrounding pond contains stone islands representing the mythical crane and turtle (symbols of longevity)."
       ]
     },
     {
-      id: "landmark-fushimi-inari",
-      routeId: "route-kyoto-zen",
-      name: "Fushimi Inari Taisha",
-      nativeName: "Fushimi Inari Grand Shrine",
-      yearBuilt: "711 AD",
-      era: "Nara Period to Present",
-      coordinates: [34.9671, 135.7727],
-      elevation: "85m above sea level",
-      qrCode: "HERITAGE-JAPAN-INARI-711AD",
-      modelType: "torii-gate",
-      thumbnail: "https://images.unsplash.com/photo-1478436127897-769e00d73232?auto=format&fit=crop&w=800&q=80",
-      archivalImage: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80",
-      audioDurationSec: 130,
-      audioTitle: "Path of 10,000 Torii: Mountain Spirits of the Red Fox",
-      audioScript: "Step beneath the Senbon Torii, a crimson colonnade winding up sacred Mount Inari. Founded in 711 AD before Kyoto was even named the imperial capital, this Shinto shrine honors Inari Okami, deity of rice, commerce, and prosperity. Stone foxes (kitsune) guard the trail, holding the key to the rice granary in their mouths.",
-      historicalNarrative: "The vibrant vermilion-orange hue of the gates, known as tan-nuri, was historically formulated with cinnabar and mercury, functioning as a preservative against rot while spiritually repelling negative energies. Each of the over 10,000 wooden gates was donated by a business or merchant, inscribed with the donor's name and date of blessing.",
-      timeline: [
+      "id": "landmark-fushimi-inari",
+      "routeId": "route-kyoto-zen",
+      "name": "Fushimi Inari Taisha",
+      "nativeName": "Fushimi Inari Grand Shrine",
+      "yearBuilt": "711 AD",
+      "era": "Nara Period to Present",
+      "coordinates": [
+        34.9671,
+        135.7727
+      ],
+      "elevation": "85m above sea level",
+      "qrCode": "HERITAGE-JAPAN-INARI-711AD",
+      "modelType": "torii-gate",
+      "thumbnail": "https://images.unsplash.com/photo-1478436127897-769e00d73232?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80",
+      "audioDurationSec": 130,
+      "audioTitle": "Path of 10,000 Torii: Mountain Spirits of the Red Fox",
+      "audioScript": "Step beneath the Senbon Torii, a crimson colonnade winding up sacred Mount Inari. Founded in 711 AD before Kyoto was even named the imperial capital, this Shinto shrine honors Inari Okami, deity of rice, commerce, and prosperity. Stone foxes (kitsune) guard the trail, holding the key to the rice granary in their mouths.",
+      "historicalNarrative": "The vibrant vermilion-orange hue of the gates, known as tan-nuri, was historically formulated with cinnabar and mercury, functioning as a preservative against rot while spiritually repelling negative energies. Each of the over 10,000 wooden gates was donated by a business or merchant, inscribed with the donor's name and date of blessing.",
+      "timeline": [
         {
-          year: "711 AD",
-          title: "Hata Clan Dedication",
-          description: "Enshrined on the first Day of the Horse in the second month by Hata no Irogu."
+          "year": "711 AD",
+          "title": "Hata Clan Dedication",
+          "description": "Enshrined on the first Day of the Horse in the second month by Hata no Irogu."
         },
         {
-          year: "1589 AD",
-          title: "Toyotomi Hideyoshi's Main Gate",
-          description: "Great unifier Hideyoshi donates the two-storey Romon Gate praying for his mother's recovery."
+          "year": "1589 AD",
+          "title": "Toyotomi Hideyoshi's Main Gate",
+          "description": "Great unifier Hideyoshi donates the two-storey Romon Gate praying for his mother's recovery."
         }
       ],
-      character: {
-        name: "Kitsune Guardian Spirit",
-        title: "Celestial Messenger of Inari Okami",
-        avatar: "🦊",
-        introQuote: "I carry the jewel of celestial wisdom and the key to abundance. Walk softly through our crimson grove.",
-        dialogues: [
+      "character": {
+        "name": "Kitsune Guardian Spirit",
+        "title": "Celestial Messenger of Inari Okami",
+        "avatar": "🦊",
+        "introQuote": "I carry the jewel of celestial wisdom and the key to abundance. Walk softly through our crimson grove.",
+        "dialogues": [
           {
-            question: "Why do you foxes hold keys and jewels in your teeth?",
-            answer: "The key unlocks the sacred grain storehouses of prosperity; the jewel embodies the soul of divine virtue and creative bounty."
+            "question": "Why do you foxes hold keys and jewels in your teeth?",
+            "answer": "The key unlocks the sacred grain storehouses of prosperity; the jewel embodies the soul of divine virtue and creative bounty."
           }
         ]
       },
-      culturalInsights: [
+      "culturalInsights": [
         "The 4-kilometer mountain pilgrimage takes approximately two hours to summit the 233-meter peak.",
         "Tourists often leave ema wishing tablets shaped like fox faces, drawing personalized expressions."
       ]
     },
     {
-      id: "landmark-kiyomizu-dera",
-      routeId: "route-kyoto-zen",
-      name: "Kiyomizu-dera (Pure Water Temple)",
-      nativeName: "Otowasan Kiyomizu-dera",
-      yearBuilt: "778 AD (Current Hall 1633)",
-      era: "Heian Period & Tokugawa Rebuild",
-      coordinates: [34.9949, 135.7850],
-      elevation: "190m above sea level",
-      qrCode: "HERITAGE-JAPAN-KIYOMIZU-778AD",
-      modelType: "wooden-stage",
-      thumbnail: "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=800&q=80",
-      archivalImage: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80",
-      audioDurationSec: 135,
-      audioTitle: "The Stage Without Nails: Otowa's Sacred Spring",
-      audioScript: "Hovering over Mount Otowa's precipice is Kiyomizu-dera's legendary wooden veranda, elevated 13 meters above the hillside. Constructed using the traditional kakezukuri interlocking joinery method without a single iron nail, 139 Japanese zelkova pillars bear the weight of the temple hall and thousands of visitors.",
-      historicalNarrative: "The temple takes its name ('Clear Water Temple') from the Otowa Waterfall rushing beneath the main hall. Divided into three streams, pilgrims drink from long-handled cups praying for health, longevity, or success in studies. The Japanese idiom 'to leap from the stage of Kiyomizu' equates to taking a bold, irrevocable leap of faith.",
-      timeline: [
+      "id": "landmark-kiyomizu-dera",
+      "routeId": "route-kyoto-zen",
+      "name": "Kiyomizu-dera (Pure Water Temple)",
+      "nativeName": "Otowasan Kiyomizu-dera",
+      "yearBuilt": "778 AD (Current Hall 1633)",
+      "era": "Heian Period & Tokugawa Rebuild",
+      "coordinates": [
+        34.9949,
+        135.785
+      ],
+      "elevation": "190m above sea level",
+      "qrCode": "HERITAGE-JAPAN-KIYOMIZU-778AD",
+      "modelType": "wooden-stage",
+      "thumbnail": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80",
+      "audioDurationSec": 135,
+      "audioTitle": "The Stage Without Nails: Otowa's Sacred Spring",
+      "audioScript": "Hovering over Mount Otowa's precipice is Kiyomizu-dera's legendary wooden veranda, elevated 13 meters above the hillside. Constructed using the traditional kakezukuri interlocking joinery method without a single iron nail, 139 Japanese zelkova pillars bear the weight of the temple hall and thousands of visitors.",
+      "historicalNarrative": "The temple takes its name ('Clear Water Temple') from the Otowa Waterfall rushing beneath the main hall. Divided into three streams, pilgrims drink from long-handled cups praying for health, longevity, or success in studies. The Japanese idiom 'to leap from the stage of Kiyomizu' equates to taking a bold, irrevocable leap of faith.",
+      "timeline": [
         {
-          year: "778 AD",
-          title: "Monk Enchin Founds Hermitage",
-          description: "Enchin discovers the pure spring water and carves an image of Eleven-Headed Kannon."
+          "year": "778 AD",
+          "title": "Monk Enchin Founds Hermitage",
+          "description": "Enchin discovers the pure spring water and carves an image of Eleven-Headed Kannon."
         },
         {
-          year: "1633 AD",
-          title: "Tokugawa Iemitsu Rebuilds",
-          description: "Third Tokugawa Shogun reconstructs the main hall following a fire, perfecting the nail-less wooden stage."
+          "year": "1633 AD",
+          "title": "Tokugawa Iemitsu Rebuilds",
+          "description": "Third Tokugawa Shogun reconstructs the main hall following a fire, perfecting the nail-less wooden stage."
         }
       ],
-      character: {
-        name: "Lady Murasaki Shikibu",
-        title: "Heian Author of The Tale of Genji",
-        avatar: "🪭",
-        introQuote: "In my chronicles of the Heian court, lovers and courtiers walked in pilgrimage to Kiyomizu under the cherry blossoms.",
-        dialogues: [
+      "character": {
+        "name": "Lady Murasaki Shikibu",
+        "title": "Heian Author of The Tale of Genji",
+        "avatar": "🪭",
+        "introQuote": "In my chronicles of the Heian court, lovers and courtiers walked in pilgrimage to Kiyomizu under the cherry blossoms.",
+        "dialogues": [
           {
-            question: "How can a stage holding hundreds of people stand without any nails?",
-            answer: "Traditional Kigumi joinery! Beams of aged keyaki wood are chiseled with mortise-and-tenon joints that flex during earthquakes, dissipating tremors where rigid metal nails would snap."
+            "question": "How can a stage holding hundreds of people stand without any nails?",
+            "answer": "Traditional Kigumi joinery! Beams of aged keyaki wood are chiseled with mortise-and-tenon joints that flex during earthquakes, dissipating tremors where rigid metal nails would snap."
           }
         ]
       },
-      culturalInsights: [
+      "culturalInsights": [
         "In the Edo period, 234 people leaped from the stage believing a jump survived would grant their wish; the practice was outlawed in 1872.",
         "The roof is thatched with hinoki cypress bark (hiwada-buki), replaced every 30 to 50 years by master artisans."
       ]
     },
-    // Cairo & Giza Trail Landmarks
     {
-      id: "landmark-pyramid-khufu",
-      routeId: "route-cairo-pharaohs",
-      name: "The Great Pyramid of Giza (Khufu)",
-      nativeName: "Akhet Khufu (Horizon of Khufu)",
-      yearBuilt: "c. 2560 BC",
-      era: "Old Kingdom, 4th Dynasty",
-      coordinates: [29.9792, 31.1342],
-      elevation: "65m above sea level",
-      qrCode: "HERITAGE-EGYPT-KHUFU-2560BC",
-      modelType: "pyramid",
-      thumbnail: "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=800&q=80",
-      archivalImage: "https://images.unsplash.com/photo-1544077960-604201fe74bc?auto=format&fit=crop&w=800&q=80",
-      audioDurationSec: 165,
-      audioTitle: "Horizon of Khufu: The Only Surviving Wonder of the Ancient World",
-      audioScript: "You stand before the oldest and sole surviving wonder of the original Seven Wonders of the Ancient World. Erected circa 2560 BC over a 27-year reign, the Great Pyramid comprised 2.3 million quarried limestone and granite blocks weighing on average 2.5 tons each. Originally clad in gleaming polished Tura limestone that reflected the desert sun like a beacon, it stood 146.6 meters tall—the tallest human construction on Earth for over 3,800 years.",
-      historicalNarrative: "Overseen by vizier and royal architect Hemiunu, the pyramid exhibits extraordinary astronomical precision: its four base corners deviate from true cardinal North by less than four minutes of arc. Inside, three major chambers ascend into the core: the subterranean rock-cut chamber, the Queen's Chamber, and the King's Chamber entered through the corbelled Grand Gallery. Relieving chambers above the King's granite sarcophagus dissipate millions of tons of superincumbent masonry.",
-      timeline: [
+      "id": "landmark-pyramid-khufu",
+      "routeId": "route-cairo-pharaohs",
+      "name": "The Great Pyramid of Giza (Khufu)",
+      "nativeName": "Akhet Khufu (Horizon of Khufu)",
+      "yearBuilt": "c. 2560 BC",
+      "era": "Old Kingdom, 4th Dynasty",
+      "coordinates": [
+        29.9792,
+        31.1342
+      ],
+      "elevation": "65m above sea level",
+      "qrCode": "HERITAGE-EGYPT-KHUFU-2560BC",
+      "modelType": "pyramid",
+      "thumbnail": "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1544077960-604201fe74bc?auto=format&fit=crop&w=800&q=80",
+      "audioDurationSec": 165,
+      "audioTitle": "Horizon of Khufu: The Only Surviving Wonder of the Ancient World",
+      "audioScript": "You stand before the oldest and sole surviving wonder of the original Seven Wonders of the Ancient World. Erected circa 2560 BC over a 27-year reign, the Great Pyramid comprised 2.3 million quarried limestone and granite blocks weighing on average 2.5 tons each. Originally clad in gleaming polished Tura limestone that reflected the desert sun like a beacon, it stood 146.6 meters tall—the tallest human construction on Earth for over 3,800 years.",
+      "historicalNarrative": "Overseen by vizier and royal architect Hemiunu, the pyramid exhibits extraordinary astronomical precision: its four base corners deviate from true cardinal North by less than four minutes of arc. Inside, three major chambers ascend into the core: the subterranean rock-cut chamber, the Queen's Chamber, and the King's Chamber entered through the corbelled Grand Gallery. Relieving chambers above the King's granite sarcophagus dissipate millions of tons of superincumbent masonry.",
+      "timeline": [
         {
-          year: "c. 2560 BC",
-          title: "Completion under Pharaoh Khufu",
-          description: "Capped with a gilded electrum pyramidion (benben stone) capturing the first rays of Ra."
+          "year": "c. 2560 BC",
+          "title": "Completion under Pharaoh Khufu",
+          "description": "Capped with a gilded electrum pyramidion (benben stone) capturing the first rays of Ra."
         },
         {
-          year: "820 AD",
-          title: "Caliph Al-Ma'mun's Tunnel",
-          description: "Abbasid explorers tunnel through the limestone core, creating the tourist entrance used today."
+          "year": "820 AD",
+          "title": "Caliph Al-Ma'mun's Tunnel",
+          "description": "Abbasid explorers tunnel through the limestone core, creating the tourist entrance used today."
         },
         {
-          year: "2017–Present",
-          title: "ScanPyramids Cosmic Muon Discovery",
-          description: "Non-invasive cosmic-ray muon radiography reveals a previously unknown 30-meter void above the Grand Gallery."
+          "year": "2017–Present",
+          "title": "ScanPyramids Cosmic Muon Discovery",
+          "description": "Non-invasive cosmic-ray muon radiography reveals a previously unknown 30-meter void above the Grand Gallery."
         }
       ],
-      character: {
-        name: "Master Builder Hemiunu",
-        title: "Royal Vizier & Overseer of Works",
-        avatar: "📐",
-        introQuote: "We aligned each stone to the polar stars so our Pharaoh's soul could journey into eternity among the imperishable ones.",
-        dialogues: [
+      "character": {
+        "name": "Master Builder Hemiunu",
+        "title": "Royal Vizier & Overseer of Works",
+        "avatar": "📐",
+        "introQuote": "We aligned each stone to the polar stars so our Pharaoh's soul could journey into eternity among the imperishable ones.",
+        "dialogues": [
           {
-            question: "How did workers transport 2.5-ton limestone blocks without iron tools or wheels?",
-            answer: "Water and wet sand! By wetting the sand before wooden transport sledges, friction is halved. Boats ferried white Tura limestone across the flooded Nile during the annual inundation right to the plateau."
+            "question": "How did workers transport 2.5-ton limestone blocks without iron tools or wheels?",
+            "answer": "Water and wet sand! By wetting the sand before wooden transport sledges, friction is halved. Boats ferried white Tura limestone across the flooded Nile during the annual inundation right to the plateau."
           },
           {
-            question: "Why does the pyramid face true north with such staggering accuracy?",
-            answer: "We tracked the simultaneous transit of two circumpolar stars (Kochab and Mizar) using a plumb-line merkhet instrument, establishing true cardinal orientation with less error than modern compasses."
+            "question": "Why does the pyramid face true north with such staggering accuracy?",
+            "answer": "We tracked the simultaneous transit of two circumpolar stars (Kochab and Mizar) using a plumb-line merkhet instrument, establishing true cardinal orientation with less error than modern compasses."
           }
         ]
       },
-      culturalInsights: [
+      "culturalInsights": [
         "Archaeological discoveries at the Workers' Village in Giza proved the pyramid was built by organized, salaried Egyptian laborers and artisans—not enslaved captives.",
         "The eight-sided optical concavity of the pyramid faces becomes visibly discernible during the equinoxes under raking sunlight."
       ]
     },
     {
-      id: "landmark-great-sphinx",
-      routeId: "route-cairo-pharaohs",
-      name: "The Great Sphinx of Giza",
-      nativeName: "Hor-em-akhet (Horus in the Horizon)",
-      yearBuilt: "c. 2500 BC",
-      era: "Old Kingdom, 4th Dynasty",
-      coordinates: [29.9753, 31.1376],
-      elevation: "55m above sea level",
-      qrCode: "HERITAGE-EGYPT-SPHINX-2500BC",
-      modelType: "sphinx",
-      thumbnail: "https://images.unsplash.com/photo-1544077960-604201fe74bc?auto=format&fit=crop&w=800&q=80",
-      archivalImage: "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=800&q=80",
-      audioDurationSec: 130,
-      audioTitle: "The Recumbent Lion: Riddle of the Sentinel of Giza",
-      audioScript: "Carved from a single colossal ridge of natural limestone bedrock, the Great Sphinx reclines 73 meters long and 20 meters high. Bearing the recumbent body of a lion and the portrait head of Pharaoh Khafre crowned in the royal nemes headdress, this colossal guardian faces due east to salute the morning sun.",
-      historicalNarrative: "Between its massive paws rests the Dream Stele, erected by Pharaoh Thutmose IV in 1401 BC. The inscription recounts how young Thutmose fell asleep under the sand-buried monument; the Sphinx spoke to him in a dream, promising the throne of Egypt if he cleared the desert sands suffocating its body.",
-      timeline: [
+      "id": "landmark-great-sphinx",
+      "routeId": "route-cairo-pharaohs",
+      "name": "The Great Sphinx of Giza",
+      "nativeName": "Hor-em-akhet (Horus in the Horizon)",
+      "yearBuilt": "c. 2500 BC",
+      "era": "Old Kingdom, 4th Dynasty",
+      "coordinates": [
+        29.9753,
+        31.1376
+      ],
+      "elevation": "55m above sea level",
+      "qrCode": "HERITAGE-EGYPT-SPHINX-2500BC",
+      "modelType": "sphinx",
+      "thumbnail": "https://images.unsplash.com/photo-1544077960-604201fe74bc?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=800&q=80",
+      "audioDurationSec": 130,
+      "audioTitle": "The Recumbent Lion: Riddle of the Sentinel of Giza",
+      "audioScript": "Carved from a single colossal ridge of natural limestone bedrock, the Great Sphinx reclines 73 meters long and 20 meters high. Bearing the recumbent body of a lion and the portrait head of Pharaoh Khafre crowned in the royal nemes headdress, this colossal guardian faces due east to salute the morning sun.",
+      "historicalNarrative": "Between its massive paws rests the Dream Stele, erected by Pharaoh Thutmose IV in 1401 BC. The inscription recounts how young Thutmose fell asleep under the sand-buried monument; the Sphinx spoke to him in a dream, promising the throne of Egypt if he cleared the desert sands suffocating its body.",
+      "timeline": [
         {
-          year: "c. 2500 BC",
-          title: "Sculpted under Khafre",
-          description: "Carved out of the limestone quarry alongside Khafre's pyramid causeway and Valley Temple."
+          "year": "c. 2500 BC",
+          "title": "Sculpted under Khafre",
+          "description": "Carved out of the limestone quarry alongside Khafre's pyramid causeway and Valley Temple."
         },
         {
-          year: "1401 BC",
-          title: "Thutmose IV Clears the Sands",
-          description: "Dedication of the Dream Stele commemorating the removal of drifting Saharan sands."
+          "year": "1401 BC",
+          "title": "Thutmose IV Clears the Sands",
+          "description": "Dedication of the Dream Stele commemorating the removal of drifting Saharan sands."
         }
       ],
-      character: {
-        name: "Pharaoh Khafre",
-        title: "Lord of Upper and Lower Egypt",
-        avatar: "🏺",
-        introQuote: "I united the strength of the desert lion with the divine countenance of the Pharaoh to safeguard the horizon.",
-        dialogues: [
+      "character": {
+        "name": "Pharaoh Khafre",
+        "title": "Lord of Upper and Lower Egypt",
+        "avatar": "🏺",
+        "introQuote": "I united the strength of the desert lion with the divine countenance of the Pharaoh to safeguard the horizon.",
+        "dialogues": [
           {
-            question: "What happened to the Sphinx's famous nose?",
-            answer: "Contrary to the myth of Napoleon's cannonballs, 15th-century Arab historian Al-Maqrizi documented that a religious iconoclast named Muhammad Sa'im al-Dahr defaced the nose in 1378 AD when peasants made offerings to it."
+            "question": "What happened to the Sphinx's famous nose?",
+            "answer": "Contrary to the myth of Napoleon's cannonballs, 15th-century Arab historian Al-Maqrizi documented that a religious iconoclast named Muhammad Sa'im al-Dahr defaced the nose in 1378 AD when peasants made offerings to it."
           }
         ]
       },
-      culturalInsights: [
+      "culturalInsights": [
         "Traces of red pigment on the face and yellow and blue paint on the nemes headdress show the Sphinx was once vibrantly polychrome.",
         "The Sphinx was buried up to its shoulders in desert sand for centuries until modern excavations in 1925–1936 by Selim Hassan."
       ]
     },
     {
-      id: "landmark-sultan-hassan",
-      routeId: "route-cairo-pharaohs",
-      name: "Mosque-Madrasa of Sultan Hassan",
-      nativeName: "Masjid wa Madrasat al-Sultan Hasan",
-      yearBuilt: "1356–1363 AD",
-      era: "Bahri Mamluk Sultanate",
-      coordinates: [30.0322, 31.2568],
-      elevation: "45m above sea level",
-      qrCode: "HERITAGE-EGYPT-SULTANHASSAN-1363AD",
-      modelType: "mamluk-mosque",
-      thumbnail: "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?auto=format&fit=crop&w=800&q=80",
-      archivalImage: "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=800&q=80",
-      audioDurationSec: 135,
-      audioTitle: "The Mamluk Fortress of Sacred Learning",
-      audioScript: "Standing beneath the Citadel of Cairo, this colossal complex represents the crowning achievement of Mamluk architecture. Commissioned in 1356 by Sultan an-Nasir Hasan, it housed four separate madrasas dedicated to the four Sunni schools of Islamic jurisprudence around an immense central marble courtyard, flanked by four soaring vaulted iwans and a 68-meter minaret.",
-      historicalNarrative: "Its monumental portal rises 38 meters, adorned with cascading stalactite muqarnas vaulting. The soaring central iwan is framed by an ornate stucco Quranic inscription frieze in majestic Kufic calligraphy, leading to the Sultan's domed mausoleum.",
-      timeline: [
+      "id": "landmark-sultan-hassan",
+      "routeId": "route-cairo-pharaohs",
+      "name": "Mosque-Madrasa of Sultan Hassan",
+      "nativeName": "Masjid wa Madrasat al-Sultan Hasan",
+      "yearBuilt": "1356–1363 AD",
+      "era": "Bahri Mamluk Sultanate",
+      "coordinates": [
+        30.0322,
+        31.2568
+      ],
+      "elevation": "45m above sea level",
+      "qrCode": "HERITAGE-EGYPT-SULTANHASSAN-1363AD",
+      "modelType": "mamluk-mosque",
+      "thumbnail": "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=800&q=80",
+      "audioDurationSec": 135,
+      "audioTitle": "The Mamluk Fortress of Sacred Learning",
+      "audioScript": "Standing beneath the Citadel of Cairo, this colossal complex represents the crowning achievement of Mamluk architecture. Commissioned in 1356 by Sultan an-Nasir Hasan, it housed four separate madrasas dedicated to the four Sunni schools of Islamic jurisprudence around an immense central marble courtyard, flanked by four soaring vaulted iwans and a 68-meter minaret.",
+      "historicalNarrative": "Its monumental portal rises 38 meters, adorned with cascading stalactite muqarnas vaulting. The soaring central iwan is framed by an ornate stucco Quranic inscription frieze in majestic Kufic calligraphy, leading to the Sultan's domed mausoleum.",
+      "timeline": [
         {
-          year: "1356 AD",
-          title: "Groundbreaking by Sultan Hasan",
-          description: "Funded by state revenues and wealth from the estates of victims of the Black Death."
+          "year": "1356 AD",
+          "title": "Groundbreaking by Sultan Hasan",
+          "description": "Funded by state revenues and wealth from the estates of victims of the Black Death."
         },
         {
-          year: "1363 AD",
-          title: "Complex Dedicated",
-          description: "Opened for scholars and students across the Islamic world."
+          "year": "1363 AD",
+          "title": "Complex Dedicated",
+          "description": "Opened for scholars and students across the Islamic world."
         }
       ],
-      character: {
-        name: "Sultan an-Nasir Hasan",
-        title: "Mamluk Sultan of Egypt",
-        avatar: "🕌",
-        introQuote: "I built this house of knowledge so that jurisprudence and contemplation would flourish in the shadow of the Citadel.",
-        dialogues: [
+      "character": {
+        "name": "Sultan an-Nasir Hasan",
+        "title": "Mamluk Sultan of Egypt",
+        "avatar": "🕌",
+        "introQuote": "I built this house of knowledge so that jurisprudence and contemplation would flourish in the shadow of the Citadel.",
+        "dialogues": [
           {
-            question: "Why did you build four distinct madrasas inside one mosque?",
-            answer: "Unity in diversity! Each corner housed students of the four great Sunni schools—Hanafi, Maliki, Shafi'i, and Hanbali—under one vaulted sky."
+            "question": "Why did you build four distinct madrasas inside one mosque?",
+            "answer": "Unity in diversity! Each corner housed students of the four great Sunni schools—Hanafi, Maliki, Shafi'i, and Hanbali—under one vaulted sky."
           }
         ]
       },
-      culturalInsights: [
+      "culturalInsights": [
         "Due to its fortress-like height, rebellious Mamluk factions frequently mounted cannons on its roof to bombard the Citadel, causing sultans to occasionally brick up the stairwells.",
         "The central marble fountain pavilion provided ceremonial ablutions for hundreds of scholars simultaneously."
       ]
+    },
+    {
+      "id": "landmark-parthenon",
+      "routeId": "route-athens-acropolis",
+      "name": "The Parthenon",
+      "nativeName": "Παρθενών",
+      "yearBuilt": "447–432 BC",
+      "era": "Classical Golden Age of Pericles",
+      "coordinates": [
+        37.9715,
+        23.7267
+      ],
+      "elevation": "156m above sea level",
+      "qrCode": "HERITAGE-GREECE-PARTHENON-447BC",
+      "modelType": "parthenon",
+      "thumbnail": "https://images.unsplash.com/photo-1555993539-1732916b8235?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80",
+      "audioDurationSec": 155,
+      "audioTitle": "The Crown of Athens: Entasis & The Golden Ratio",
+      "audioScript": "Rising above the sacred rock of Athens, the Parthenon is universally revered as the supreme monument of Classical Greek architecture. Commissioned by Pericles and sculpted under the master Phidias, not a single line of this temple is truly straight. The Doric columns lean imperceptibly inward by seven centimeters, the stylobate floor swells upward in a gentle convex arc, and the column shafts swell with subtle entasis, counteracting optical illusions to create an aura of divine organic perfection.",
+      "historicalNarrative": "Built from 20,000 tons of translucent white Pentelic marble hauled from Mount Pentelikon, the temple was adorned with 92 carved metopes showing mythic battles of civilization against chaos. Inside stood the monumental 12-meter tall chryselephantine (gold and ivory) statue of Athena Parthenos.",
+      "timeline": [
+        {
+          "year": "447 BC",
+          "title": "Construction Inaugurated",
+          "description": "Pericles initiates construction using Delian League treasury funds, led by architects Ictinus and Callicrates."
+        },
+        {
+          "year": "438 BC",
+          "title": "Athena Chryselephantine Dedicated",
+          "description": "Phidias installs the colossal gold-and-ivory statue inside the inner cella."
+        },
+        {
+          "year": "1687 AD",
+          "title": "Venetian Bombardment",
+          "description": "A Venetian mortar round ignites Ottoman gunpowder stored within, blowing out the central colonnade."
+        },
+        {
+          "year": "1975–Present",
+          "title": "Acropolis Restoration & 3D LiDAR",
+          "description": "The Committee for the Conservation of the Acropolis Monuments employs titanium dowels and CyArk laser scanners for precision structural preservation."
+        }
+      ],
+      "character": {
+        "name": "Pericles",
+        "title": "Strategos & Statesman of Democratic Athens",
+        "avatar": "🏛️",
+        "introQuote": "Future ages will wonder at us, even as the present age wonders at us now. We have left imperishable monuments behind us.",
+        "dialogues": [
+          {
+            "question": "Why did you build optical curves into every column?",
+            "answer": "Because strict geometric straightness appears sunken and weak to human eyes! By curving the floor and columns with entasis, the temple appears upright, majestic, and alive."
+          },
+          {
+            "question": "What did the Parthenon symbolize for your citizens?",
+            "answer": "It was a living testament to Athenian democracy, maritime prowess, and devotion to wisdom over tyrannical brute force."
+          }
+        ]
+      },
+      "culturalInsights": [
+        "The Parthenon was brilliantly painted in antiquity with vibrant vermilion red, Egyptian blue, and gold leaf on its friezes.",
+        "The columns lean inward so precisely that if projected into the sky, their central axes would converge into a single apex 2,400 meters above the Acropolis."
+      ]
+    },
+    {
+      "id": "landmark-erechtheion",
+      "routeId": "route-athens-acropolis",
+      "name": "The Erechtheion & Porch of the Caryatids",
+      "nativeName": "Ἐρέχθειον",
+      "yearBuilt": "421–406 BC",
+      "era": "High Classical Ionic Period",
+      "coordinates": [
+        37.9722,
+        23.7265
+      ],
+      "elevation": "154m above sea level",
+      "qrCode": "HERITAGE-GREECE-ERECHTHEION-406BC",
+      "modelType": "parthenon",
+      "thumbnail": "https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80",
+      "audioDurationSec": 130,
+      "audioTitle": "Maidens of Stone: The Sacred Spring and Olive Tree",
+      "audioScript": "On the northern edge of the Acropolis stands the Erechtheion, celebrated for the world-famous Porch of the Caryatids. Here, six sculpted maidens of Pentelic marble bear the massive entablature weight gracefully upon their heads, their draped peplos garments folding like the fluting of columns. This complex multi-level sanctuary housed Athens' most sacred archaic relic: the olive-wood statue of Athena Polias.",
+      "historicalNarrative": "Built on sharply sloping terrain, the Erechtheion ingeniously accommodates four separate chambers at two distinct ground levels. It marks the legendary spot where Poseidon struck the rock with his trident, bringing forth a saltwater spring, and Athena planted the first sacred olive tree.",
+      "timeline": [
+        {
+          "year": "421 BC",
+          "title": "Peace of Nicias Groundbreaking",
+          "description": "Construction begins during a temporary truce in the Peloponnesian War under architect Mnesikles."
+        },
+        {
+          "year": "406 BC",
+          "title": "Caryatids Unveiled",
+          "description": "The six sculpted korai are unveiled, standing in poised contrapposto stance."
+        },
+        {
+          "year": "1979 AD",
+          "title": "Caryatid Conservation",
+          "description": "The original Caryatids are safely moved to the Acropolis Museum to protect against acid rain, replaced by exact replicas on-site."
+        }
+      ],
+      "character": {
+        "name": "Athena Polias",
+        "title": "Guardian of the Sacred Olive Tree & Acropolis",
+        "avatar": "🕊️",
+        "introQuote": "Here on this living bedrock, the contest was decided. Not by the salt waves of Poseidon, but by the peaceful fruit of the olive branch.",
+        "dialogues": [
+          {
+            "question": "How do the Caryatids support such heavy stone roofs?",
+            "answer": "Observe their thick braided tresses cascading down their necks! The sculptors thickened their hair to reinforce the structural load without sacrificing feminine grace."
+          }
+        ]
+      },
+      "culturalInsights": [
+        "The sacred olive tree still grows beside the western facade, planted as a living descendant of the original tree.",
+        "The Caryatid figures rest their weight on their outside leg with the inner knee bent, creating rhythmic symmetry across the facade."
+      ]
+    },
+    {
+      "id": "landmark-temple-zeus",
+      "routeId": "route-athens-acropolis",
+      "name": "Temple of Olympian Zeus (Olympieion)",
+      "nativeName": "Ναὸς τοῦ Ὀλυμπίου Διός",
+      "yearBuilt": "174 BC–131 AD",
+      "era": "Hellenistic & Greco-Roman Period",
+      "coordinates": [
+        37.9693,
+        23.7331
+      ],
+      "elevation": "85m above sea level",
+      "qrCode": "HERITAGE-GREECE-ZEUSTEMPLE-131AD",
+      "modelType": "parthenon",
+      "thumbnail": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1555993539-1732916b8235?auto=format&fit=crop&w=800&q=80",
+      "audioDurationSec": 125,
+      "audioTitle": "Colossus of the Plain: 600 Years to Complete",
+      "audioScript": "Spanning six centuries from inception under Athenian tyrants to dedication by Roman Emperor Hadrian in 131 AD, the Olympieion was among the largest temples in the ancient Mediterranean. 104 monumental Corinthian columns rose seventeen meters into the sky, arranged in a double row of twenty along the flanks and a triple row of eight across the fronts.",
+      "historicalNarrative": "Today, sixteen colossal columns survive, with one lying dramatically toppled by an 1852 gale, displaying its sliced marble drums like fallen coins. Hadrian dedicated the temple alongside a colossal chryselephantine statue of Zeus and an equally grand statue of himself.",
+      "timeline": [
+        {
+          "year": "520 BC",
+          "title": "Pisistratid Tyrants Begin Work",
+          "description": "Peisistratos begins work on a colossal Doric temple, abandoned after his sons are expelled."
+        },
+        {
+          "year": "174 BC",
+          "title": "Antiochus IV Resumes in Corinthian",
+          "description": "Seleucid king Antiochus IV Epiphanes hires Roman architect Cossutius to redesign in Corinthian marble."
+        },
+        {
+          "year": "131 AD",
+          "title": "Dedicated by Emperor Hadrian",
+          "description": "Hadrian completes the temple as part of his Panhellenic league revival."
+        }
+      ],
+      "character": {
+        "name": "Emperor Hadrian",
+        "title": "Philhellene Roman Emperor",
+        "avatar": "👑",
+        "introQuote": "I united the grandeur of Rome with the divine aesthetic soul of Greece. Here at the Olympieion, I finished what Athens began six hundred years before me.",
+        "dialogues": [
+          {
+            "question": "Why did you build the Arch of Hadrian right beside this temple?",
+            "answer": "To mark the eternal boundary between the ancient city of Theseus and my new Greek capital, the city of Hadrian!"
+          }
+        ]
+      },
+      "culturalInsights": [
+        "In the medieval era, a Christian stylite hermit lived for years atop the architrave of two of the temple's surviving columns.",
+        "The Corinthian capitals were carved from single blocks of marble weighing over twelve tons each."
+      ]
+    },
+    {
+      "id": "landmark-intihuatana",
+      "routeId": "route-machu-picchu",
+      "name": "The Intihuatana Solar Observatory",
+      "nativeName": "Intiwatana (Solar Hitching Post)",
+      "yearBuilt": "1450 AD",
+      "era": "Inca Imperial Period (Tawantinsuyu)",
+      "coordinates": [
+        -13.1631,
+        -72.545
+      ],
+      "elevation": "2,430m above sea level",
+      "qrCode": "HERITAGE-PERU-INTIHUATANA-1450AD",
+      "modelType": "machu-picchu",
+      "thumbnail": "https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1509299349698-dd22323b5963?auto=format&fit=crop&w=800&q=80",
+      "audioDurationSec": 140,
+      "audioTitle": "Tethering the Sun: Astronomy on the Andean Cloud Summit",
+      "audioScript": "Crowning a stepped pyramid at the highest point of Machu Picchu's urban sector, the Intihuatana is the spiritual and astronomical anchor of the citadel. Carved from a single outcrop of granite bedrock, this sculpted monolith features an upright polygonal prism inclined at thirteen degrees. During the equinoxes on March 21 and September 23, the sun stands directly overhead at noon, casting virtually zero shadow, symbolically tethering the sun god Inti to ensure the return of agricultural warmth.",
+      "historicalNarrative": "When the Spanish conquistadors invaded the Inca heartland, they methodically shattered every Intihuatana they discovered to eradicate indigenous religion. Because Machu Picchu remained hidden from the Spanish, this is one of the few pristine Intihuatana stones surviving in South America.",
+      "timeline": [
+        {
+          "year": "1450 AD",
+          "title": "Carved Under Emperor Pachacuti",
+          "description": "Inca imperial stonemasons carve the granite outcrop in precise alignment with the four cardinal directions and sacred Apus (mountain peaks)."
+        },
+        {
+          "year": "1572 AD",
+          "title": "City Safely Concealed",
+          "description": "Machu Picchu is abandoned during the Spanish conquest, preserving the sacred stone unblemished."
+        },
+        {
+          "year": "1911 AD",
+          "title": "Scientific Rediscovery",
+          "description": "Hiram Bingham of Yale University is guided to the ruins by local Quechua farmer Melchor Arteaga."
+        }
+      ],
+      "character": {
+        "name": "Emperor Pachacuti",
+        "title": "Earth-Shaker & Sovereign of Tawantinsuyu",
+        "avatar": "☀️",
+        "introQuote": "I built this royal sanctuary in the clouds so that our priests could converse with the Sun God Inti and bind the celestial light to the earth.",
+        "dialogues": [
+          {
+            "question": "How did your masons cut granite without iron or wheels?",
+            "answer": "We used hematite hammerstones, sand abrasives, and bronze chisels, polishing the seams until not even a blade of grass could pass between the stones!"
+          }
+        ]
+      },
+      "culturalInsights": [
+        "The four corners of the Intihuatana point precisely to the four sacred peaks (Apus): Huayna Picchu to the north, Salcantay to the south, Veronica to the east, and San Miguel to the west.",
+        "Touching the stone was believed to transmit ancestral vitality (Kallpa) from the earth's granite bones."
+      ]
+    },
+    {
+      "id": "landmark-temple-sun",
+      "routeId": "route-machu-picchu",
+      "name": "Temple of the Sun (Torreón)",
+      "nativeName": "Quri Kancha Sanctuario",
+      "yearBuilt": "1450–1470 AD",
+      "era": "Inca Imperial Period",
+      "coordinates": [
+        -13.1635,
+        -72.5455
+      ],
+      "elevation": "2,425m above sea level",
+      "qrCode": "HERITAGE-PERU-TEMPLESUN-1450AD",
+      "modelType": "machu-picchu",
+      "thumbnail": "https://images.unsplash.com/photo-1509299349698-dd22323b5963?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=800&q=80",
+      "audioDurationSec": 135,
+      "audioTitle": "The Curved Tower: Solstice Alignment and the Royal Tomb",
+      "audioScript": "The Temple of the Sun, or Torreón, features the only semicircular curved wall in all of Machu Picchu, displaying the pinnacle of imperial ashlar stonework. Built over an organic cave known as the Royal Tomb, its eastern trapezoidal window captures the winter solstice sunrise on June 21, projecting a beam of sunlight directly onto a carved altar stone in the center of the chamber.",
+      "historicalNarrative": "The subterranean cave beneath contains stepped Andean cross (chakana) carvings and served as a crypt for mummified Inca royalty. The exterior stones are carved with small exterior relief knobs used for hoisting and celestial sighting lines.",
+      "timeline": [
+        {
+          "year": "1450 AD",
+          "title": "Construction Over Sacred Cavern",
+          "description": "Built seamlessly into the natural bedrock boulder."
+        },
+        {
+          "year": "1470 AD",
+          "title": "Solstice Window Calibrated",
+          "description": "Astronomers verify the illumination of the winter solstice alignment with the Pleiades constellation."
+        }
+      ],
+      "character": {
+        "name": "High Priest of Inti",
+        "title": "Guardian of Solstice Rites",
+        "avatar": "🔥",
+        "introQuote": "When the June solstice sun pierces the eastern window, we know our father Inti has renewed his covenant with the children of the Andes.",
+        "dialogues": [
+          {
+            "question": "What lies inside the cave beneath the temple?",
+            "answer": "The Royal Tomb—a sacred pacarina portal where the spirits of our ancestors transition into the Hanan Pacha (upper world)."
+          }
+        ]
+      },
+      "culturalInsights": [
+        "The walls are tilted inward at a five-degree angle, making them impervious to high-magnitude Andean earthquakes.",
+        "During earthquakes, the mortarless dry stones literally 'dance' in place and resettle perfectly into their interlocking seats."
+      ]
+    },
+    {
+      "id": "landmark-sacred-plaza",
+      "routeId": "route-machu-picchu",
+      "name": "The Principal Temple & Sacred Plaza",
+      "nativeName": "Hatun Kancha",
+      "yearBuilt": "1450 AD",
+      "era": "Inca Imperial Period",
+      "coordinates": [
+        -13.1628,
+        -72.5448
+      ],
+      "elevation": "2,432m above sea level",
+      "qrCode": "HERITAGE-PERU-SACREDPLAZA-1450AD",
+      "modelType": "machu-picchu",
+      "thumbnail": "https://images.unsplash.com/photo-1589802829985-817e51171b92?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=800&q=80",
+      "audioDurationSec": 120,
+      "audioTitle": "Monuments of Cyclopean Granite: The Three-Walled Temple",
+      "audioScript": "The Principal Temple is an imposing three-walled structure overlooking the Sacred Plaza, constructed from colossal blocks of white granite weighing up to ten tons each. Because the building was deliberately left open on the southern side, rituals conducted inside were visible to hundreds of assembled pilgrims gathered across the central green plaza.",
+      "historicalNarrative": "Its eastern wall has slightly settled due to geological ground creep over five hundred years, offering structural archaeologists an invaluable cross-section into Inca foundation engineering. Beside it stands the Temple of the Three Windows, symbolizing the mythic origin caves of the Ayar brothers.",
+      "timeline": [
+        {
+          "year": "1450 AD",
+          "title": "Cyclopean Blocks Hauled",
+          "description": "Quarried directly on-site using gravity ramps and wooden rollers."
+        },
+        {
+          "year": "1983 AD",
+          "title": "UNESCO Inscription",
+          "description": "Declared a UNESCO World Heritage site for dual cultural and natural significance."
+        }
+      ],
+      "character": {
+        "name": "Master Stonemason Huamán",
+        "title": "Royal Architect of Machu Picchu",
+        "avatar": "⚒️",
+        "introQuote": "We did not conquer nature; we conversed with the mountain. Every stone was shaped so the wall became one living body with the Andean ridge.",
+        "dialogues": [
+          {
+            "question": "Why did you build only three walls instead of four?",
+            "answer": "The fourth wall was the living sky! Sacred energy flows freely between the altar and the holy peaks of the sacred Apus."
+          }
+        ]
+      },
+      "culturalInsights": [
+        "Machu Picchu features over 700 agricultural terraces that prevent soil erosion and absorb rain runoff.",
+        "A sophisticated underground canal system still funnels fresh spring water from a mountain spring through 16 ceremonial fountains."
+      ]
     }
   ],
-
-  translations: {
-    en: {
-      appTitle: "Heritage Route Digital Guide",
-      subtitle: "AR-Powered Interactive Storytelling & 3D Cultural Exploration",
-      exploreRoutes: "Explore Routes",
-      interactiveMap: "Interactive Map",
-      arMode: "AR Mode",
-      adminPanel: "Admin Panel",
-      analytics: "Analytics",
-      passport: "Passport",
-      login: "Login",
-      register: "Register",
-      logout: "Logout",
-      unescoHeritage: "UNESCO World Heritage",
-      audioTour: "Audio Tour",
-      characterStory: "Character Story",
-      historicalTimeline: "Historical Timeline",
-      launchAr: "Launch WebAR View",
-      markVisited: "Stamp Passport",
-      saveFavorite: "Bookmark Landmark",
-      scanQr: "Scan Landmark QR",
-      takeSnapshot: "Take AR Snapshot",
-      view3D: "3D LiDAR Model",
-      distanceAway: "distance away",
-      unlocked: "Story Unlocked",
-      locked: "Visit within 200m to unlock",
-      simulateGps: "Simulate GPS Walker",
-      elevationProfile: "Elevation Profile",
-      thenAndNow: "Then & Now Reconstruction"
+  "translations": {
+    "en": {
+      "appTitle": "Heritage Route Digital Guide",
+      "subtitle": "AR-Powered Interactive Storytelling & 3D Cultural Exploration",
+      "exploreRoutes": "Explore Routes",
+      "interactiveMap": "Interactive Map",
+      "arMode": "AR Mode",
+      "adminPanel": "Admin Panel",
+      "analytics": "Analytics",
+      "passport": "Passport",
+      "login": "Login",
+      "register": "Register",
+      "logout": "Logout",
+      "unescoHeritage": "UNESCO World Heritage",
+      "audioTour": "Audio Tour",
+      "characterStory": "Character Story",
+      "historicalTimeline": "Historical Timeline",
+      "launchAr": "Launch WebAR View",
+      "markVisited": "Stamp Passport",
+      "saveFavorite": "Bookmark Landmark",
+      "scanQr": "Scan Landmark QR",
+      "takeSnapshot": "Take AR Snapshot",
+      "view3D": "3D LiDAR Model",
+      "distanceAway": "distance away",
+      "unlocked": "Story Unlocked",
+      "locked": "Visit within 200m to unlock",
+      "simulateGps": "Simulate GPS Walker",
+      "elevationProfile": "Elevation Profile",
+      "thenAndNow": "Then & Now Reconstruction",
+      "agenticAi": "Agentic AI Studio",
+      "strawberryMode": "Strawberry Deep Thinking",
+      "openClaw": "Open Claw Research Crawler",
+      "n8nWorkflows": "n8n Autonomous Workflows",
+      "askStrawberry": "Ask Strawberry Scholar",
+      "chronoSlider": "Epoch Reconstruction Slider",
+      "lidarDensity": "LiDAR Point Density",
+      "aiRouteOptimize": "Strawberry Smart Path"
     },
-    es: {
-      appTitle: "Guía Digital de Rutas Patrimoniales",
-      subtitle: "Narrativa Interactiva en Realidad Aumentada y Exploración 3D",
-      exploreRoutes: "Explorar Rutas",
-      interactiveMap: "Mapa Interactivo",
-      arMode: "Modo RA",
-      adminPanel: "Panel de Administración",
-      analytics: "Analítica",
-      passport: "Pasaporte",
-      login: "Iniciar Sesión",
-      register: "Registrarse",
-      logout: "Cerrar Sesión",
-      unescoHeritage: "Patrimonio Mundial de la UNESCO",
-      audioTour: "Audioguía",
-      characterStory: "Historia del Personaje",
-      historicalTimeline: "Línea de Tiempo Histórica",
-      launchAr: "Iniciar Vista RA",
-      markVisited: "Sellar Pasaporte",
-      saveFavorite: "Guardar Favorito",
-      scanQr: "Escanear QR de Monumento",
-      takeSnapshot: "Captura de Foto RA",
-      view3D: "Modelo 3D LiDAR",
-      distanceAway: "de distancia",
-      unlocked: "Historia Desbloqueada",
-      locked: "Visita dentro de 200m para desbloquear",
-      simulateGps: "Simular Caminata GPS",
-      elevationProfile: "Perfil de Elevación",
-      thenAndNow: "Reconstrucción Antes y Después"
+    "es": {
+      "appTitle": "Guía Digital de Rutas Patrimoniales",
+      "subtitle": "Narrativa Interactiva en Realidad Aumentada y Exploración 3D",
+      "exploreRoutes": "Explorar Rutas",
+      "interactiveMap": "Mapa Interactivo",
+      "arMode": "Modo RA",
+      "adminPanel": "Panel de Administración",
+      "analytics": "Analítica",
+      "passport": "Pasaporte",
+      "login": "Iniciar Sesión",
+      "register": "Registrarse",
+      "logout": "Cerrar Sesión",
+      "unescoHeritage": "Patrimonio Mundial de la UNESCO",
+      "audioTour": "Audioguía",
+      "characterStory": "Historia del Personaje",
+      "historicalTimeline": "Línea de Tiempo Histórica",
+      "launchAr": "Iniciar Vista RA",
+      "markVisited": "Sellar Pasaporte",
+      "saveFavorite": "Guardar Favorito",
+      "scanQr": "Escanear QR de Monumento",
+      "takeSnapshot": "Captura de Foto RA",
+      "view3D": "Modelo 3D LiDAR",
+      "distanceAway": "de distancia",
+      "unlocked": "Historia Desbloqueada",
+      "locked": "Visita dentro de 200m para desbloquear",
+      "simulateGps": "Simular Caminata GPS",
+      "elevationProfile": "Perfil de Elevación",
+      "thenAndNow": "Reconstrucción Antes y Después",
+      "agenticAi": "Estudio IA Agéntica",
+      "strawberryMode": "Pensamiento Profundo Strawberry",
+      "openClaw": "Rastreador Open Claw",
+      "n8nWorkflows": "Flujos Autónomos n8n",
+      "askStrawberry": "Consultar a Strawberry",
+      "chronoSlider": "Control Deslizante de Época",
+      "lidarDensity": "Densidad de Puntos LiDAR",
+      "aiRouteOptimize": "Ruta Óptima Strawberry"
     },
-    fr: {
-      appTitle: "Guide Numérique des Routes du Patrimoine",
-      subtitle: "Récit Interactif en Réalité Augmentée et Exploration 3D",
-      exploreRoutes: "Explorer les Itinéraires",
-      interactiveMap: "Carte Interactive",
-      arMode: "Mode RA",
-      adminPanel: "Panneau d'Administration",
-      analytics: "Analytique",
-      passport: "Passeport",
-      login: "Connexion",
-      register: "S'inscrire",
-      logout: "Déconnexion",
-      unescoHeritage: "Patrimoine Mondial de l'UNESCO",
-      audioTour: "Visite Audio",
-      characterStory: "Récit Historique",
-      historicalTimeline: "Chronologie Historique",
-      launchAr: "Lancer la Vue RA",
-      markVisited: "Tamponner le Passeport",
-      saveFavorite: "Favori",
-      scanQr: "Scanner le QR du Monument",
-      takeSnapshot: "Prendre Photo RA",
-      view3D: "Modèle LiDAR 3D",
-      distanceAway: "de distance",
-      unlocked: "Histoire Débloquée",
-      locked: "Visitez à moins de 200m pour débloquer",
-      simulateGps: "Simuler Marcheur GPS",
-      elevationProfile: "Profil d'Élévation",
-      thenAndNow: "Reconstruction Hier et Aujourd'hui"
+    "fr": {
+      "appTitle": "Guide Numérique des Routes du Patrimoine",
+      "subtitle": "Récit Interactif en Réalité Augmentée et Exploration 3D",
+      "exploreRoutes": "Explorer les Itinéraires",
+      "interactiveMap": "Carte Interactive",
+      "arMode": "Mode RA",
+      "adminPanel": "Panneau d'Administration",
+      "analytics": "Analytique",
+      "passport": "Passeport",
+      "login": "Connexion",
+      "register": "S'inscrire",
+      "logout": "Déconnexion",
+      "unescoHeritage": "Patrimoine Mondial de l'UNESCO",
+      "audioTour": "Visite Audio",
+      "characterStory": "Récit Historique",
+      "historicalTimeline": "Chronologie Historique",
+      "launchAr": "Lancer la Vue RA",
+      "markVisited": "Tamponner le Passeport",
+      "saveFavorite": "Favori",
+      "scanQr": "Scanner le QR du Monument",
+      "takeSnapshot": "Prendre Photo RA",
+      "view3D": "Modèle LiDAR 3D",
+      "distanceAway": "de distance",
+      "unlocked": "Histoire Débloquée",
+      "locked": "Visitez à moins de 200m pour débloquer",
+      "simulateGps": "Simuler Marcheur GPS",
+      "elevationProfile": "Profil d'Élévation",
+      "thenAndNow": "Reconstruction Hier et Aujourd'hui",
+      "agenticAi": "Studio IA Agentique",
+      "strawberryMode": "Raisonnement Strawberry",
+      "openClaw": "Crawler de Recherche Open Claw",
+      "n8nWorkflows": "Workflows Autonomes n8n",
+      "askStrawberry": "Consulter l'Érudit Strawberry",
+      "chronoSlider": "Curseur de Reconstruction Temporelle",
+      "lidarDensity": "Densité de Points LiDAR",
+      "aiRouteOptimize": "Trajet Optimal Strawberry"
     },
-    hi: {
-      appTitle: "धरोहर मार्ग डिजिटल गाइड प्लेटफॉर्म",
-      subtitle: "संवर्धित वास्तविकता (AR) आधारित ऐतिहासिक कथाएं और 3D अन्वेषण",
-      exploreRoutes: "धरोहर मार्ग देखें",
-      interactiveMap: "इंटरैक्टिव मानचित्र",
-      arMode: "AR मोड",
-      adminPanel: "प्रशासन पैनल",
-      analytics: "एनालिटिक्स",
-      passport: "पर्यटक पासपोर्ट",
-      login: "लॉग इन",
-      register: "पंजीकरण",
-      logout: "लॉग आउट",
-      unescoHeritage: "यूनेस्को विश्व धरोहर",
-      audioTour: "ऑडियो गाइड",
-      characterStory: "ऐतिहासिक चरित्र संवाद",
-      historicalTimeline: "ऐतिहासिक कालक्रम",
-      launchAr: "AR 3D दृश्य शुरू करें",
-      markVisited: "पासपोर्ट स्टैम्प प्राप्त करें",
-      saveFavorite: "पसंदीदा में जोड़ें",
-      scanQr: "स्मारक QR स्कैन करें",
-      takeSnapshot: "AR फोटो खींचे",
-      view3D: "3D LiDAR मॉडल",
-      distanceAway: "दूरी पर",
-      unlocked: "कथा अनलॉक है",
-      locked: "अनलॉक करने हेतु 200 मी के भीतर आएं",
-      simulateGps: "GPS वॉक का अनुकरण करें",
-      elevationProfile: "ऊंचाई प्रोफ़ाइल",
-      thenAndNow: "पुनर्निर्माण तुलना (तब और अब)"
+    "hi": {
+      "appTitle": "धरोहर मार्ग डिजिटल गाइड प्लेटफॉर्म",
+      "subtitle": "संवर्धित वास्तविकता (AR) आधारित ऐतिहासिक कथाएं और 3D अन्वेषण",
+      "exploreRoutes": "धरोहर मार्ग देखें",
+      "interactiveMap": "इंटरैक्टिव मानचित्र",
+      "arMode": "AR मोड",
+      "adminPanel": "प्रशासन पैनल",
+      "analytics": "एनालिटिक्स",
+      "passport": "पर्यटक पासपोर्ट",
+      "login": "लॉग इन",
+      "register": "पंजीकरण",
+      "logout": "लॉग आउट",
+      "unescoHeritage": "यूनेस्को विश्व धरोहर",
+      "audioTour": "ऑडियो गाइड",
+      "characterStory": "ऐतिहासिक चरित्र संवाद",
+      "historicalTimeline": "ऐतिहासिक कालक्रम",
+      "launchAr": "AR 3D दृश्य शुरू करें",
+      "markVisited": "पासपोर्ट स्टैम्प प्राप्त करें",
+      "saveFavorite": "पसंदीदा में जोड़ें",
+      "scanQr": "स्मारक QR स्कैन करें",
+      "takeSnapshot": "AR फोटो खींचे",
+      "view3D": "3D LiDAR मॉडल",
+      "distanceAway": "दूरी पर",
+      "unlocked": "कथा अनलॉक है",
+      "locked": "अनलॉक करने हेतु 200 मी के भीतर आएं",
+      "simulateGps": "GPS वॉक का अनुकरण करें",
+      "elevationProfile": "ऊंचाई प्रोफ़ाइल",
+      "thenAndNow": "पुनर्निर्माण तुलना (तब और अब)",
+      "agenticAi": "एजेंटिक एआई स्टूडियो",
+      "strawberryMode": "स्ट्रॉबेरी डीप थिंकिंग",
+      "openClaw": "ओपन क्लॉ रिसर्च क्रॉलर",
+      "n8nWorkflows": "n8n स्वायत्त वर्कफ़्लो",
+      "askStrawberry": "स्ट्रॉबेरी विद्वान से पूछें",
+      "chronoSlider": "पुनर्निर्माण स्लाइडर",
+      "lidarDensity": "LiDAR बिंदु घनत्व",
+      "aiRouteOptimize": "स्मार्ट स्ट्रॉबेरी पथ"
     },
-    it: {
-      appTitle: "Piattaforma Guida Digitale Itinerari del Patrimonio",
-      subtitle: "Storytelling Interattivo in Realtà Aumentata ed Esplorazione 3D",
-      exploreRoutes: "Esplora Itinerari",
-      interactiveMap: "Mappa Interattiva",
-      arMode: "Modalità AR",
-      adminPanel: "Pannello Amministratore",
-      analytics: "Statistiche",
-      passport: "Passaporto",
-      login: "Accedi",
-      register: "Registrati",
-      logout: "Disconnetti",
-      unescoHeritage: "Patrimonio Mondiale UNESCO",
-      audioTour: "Audioguida",
-      characterStory: "Storia del Personaggio",
-      historicalTimeline: "Linea Temporale",
-      launchAr: "Avvia Vista AR",
-      markVisited: "Timbra Passaporto",
-      saveFavorite: "Salva nei Preferiti",
-      scanQr: "Scansiona QR Monumento",
-      takeSnapshot: "Scatta Foto AR",
-      view3D: "Modello LiDAR 3D",
-      distanceAway: "di distanza",
-      unlocked: "Storia Sbloccata",
-      locked: "Avvicinati entro 200m per sbloccare",
-      simulateGps: "Simula Camminatore GPS",
-      elevationProfile: "Profilo Altimetrico",
-      thenAndNow: "Ricostruzione Ieri e Oggi"
+    "it": {
+      "appTitle": "Piattaforma Guida Digitale Itinerari del Patrimonio",
+      "subtitle": "Storytelling Interattivo in Realtà Aumentata ed Esplorazione 3D",
+      "exploreRoutes": "Esplora Itinerari",
+      "interactiveMap": "Mappa Interattiva",
+      "arMode": "Modalità AR",
+      "adminPanel": "Pannello Amministratore",
+      "analytics": "Statistiche",
+      "passport": "Passaporto",
+      "login": "Accedi",
+      "register": "Registrati",
+      "logout": "Disconnetti",
+      "unescoHeritage": "Patrimonio Mondiale UNESCO",
+      "audioTour": "Audioguida",
+      "characterStory": "Storia del Personaggio",
+      "historicalTimeline": "Linea Temporale",
+      "launchAr": "Avvia Vista AR",
+      "markVisited": "Timbra Passaporto",
+      "saveFavorite": "Salva nei Preferiti",
+      "scanQr": "Scansiona QR Monumento",
+      "takeSnapshot": "Scatta Foto AR",
+      "view3D": "Modello LiDAR 3D",
+      "distanceAway": "di distanza",
+      "unlocked": "Storia Sbloccata",
+      "locked": "Avvicinati entro 200m per sbloccare",
+      "simulateGps": "Simula Camminatore GPS",
+      "elevationProfile": "Profilo Altimetrico",
+      "thenAndNow": "Ricostruzione Ieri e Oggi",
+      "agenticAi": "Studio IA Agentica",
+      "strawberryMode": "Ragionamento Strawberry",
+      "openClaw": "Crawler di Ricerca Open Claw",
+      "n8nWorkflows": "Flussi di Lavoro n8n",
+      "askStrawberry": "Chiedi allo Studioso Strawberry",
+      "chronoSlider": "Cursore di Ricostruzione Storica",
+      "lidarDensity": "Densità Punti LiDAR",
+      "aiRouteOptimize": "Percorso Ottimale Strawberry"
     },
-    ja: {
-      appTitle: "遺産ルート デジタルガイド プラットフォーム",
-      subtitle: "AR拡張現実ストーリーテリング＆3D文化財探索",
-      exploreRoutes: "ルート一覧",
-      interactiveMap: "インタラクティブ地図",
-      arMode: "ARモード",
-      adminPanel: "管理者パネル",
-      analytics: "アナリティクス",
-      passport: "遺産パスポート",
-      login: "ログイン",
-      register: "新規登録",
-      logout: "ログアウト",
-      unescoHeritage: "ユネスコ世界文化遺産",
-      audioTour: "音声ガイド",
-      characterStory: "歴史人物の語り",
-      historicalTimeline: "歴史年表",
-      launchAr: "ARビュー起動",
-      markVisited: "パスポートに押印",
-      saveFavorite: "お気に入り保存",
-      scanQr: "文化財QRスキャン",
-      takeSnapshot: "AR写真撮影",
-      view3D: "3D LiDARモデル",
-      distanceAway: "先",
-      unlocked: "物語アンロック済み",
-      locked: "200m以内に接近して解放",
-      simulateGps: "GPS歩行シミュレート",
-      elevationProfile: "高低差プロファイル",
-      thenAndNow: "過去と現代の復元比較"
+    "ja": {
+      "appTitle": "遺産ルート デジタルガイド プラットフォーム",
+      "subtitle": "AR拡張現実ストーリーテリング＆3D文化財探索",
+      "exploreRoutes": "ルート一覧",
+      "interactiveMap": "インタラクティブ地図",
+      "arMode": "ARモード",
+      "adminPanel": "管理者パネル",
+      "analytics": "アナリティクス",
+      "passport": "遺産パスポート",
+      "login": "ログイン",
+      "register": "新規登録",
+      "logout": "ログアウト",
+      "unescoHeritage": "ユネスコ世界文化遺産",
+      "audioTour": "音声ガイド",
+      "characterStory": "歴史人物の語り",
+      "historicalTimeline": "歴史年表",
+      "launchAr": "ARビュー起動",
+      "markVisited": "パスポートに押印",
+      "saveFavorite": "お気に入り保存",
+      "scanQr": "文化財QRスキャン",
+      "takeSnapshot": "AR写真撮影",
+      "view3D": "3D LiDARモデル",
+      "distanceAway": "先",
+      "unlocked": "物語アンロック済み",
+      "locked": "200m以内に接近して解放",
+      "simulateGps": "GPS歩行シミュレート",
+      "elevationProfile": "高低差プロファイル",
+      "thenAndNow": "過去と現代の復元比較",
+      "agenticAi": "エージェントAIスタジオ",
+      "strawberryMode": "ストロベリー深層推論",
+      "openClaw": "オープンクロー調査クローラー",
+      "n8nWorkflows": "n8n自律ワークフロー",
+      "askStrawberry": "ストロベリー学者に質問",
+      "chronoSlider": "時代復元スライダー",
+      "lidarDensity": "LiDAR点群密度",
+      "aiRouteOptimize": "ストロベリー最適経路"
     }
   },
-
-  initialAnalytics: {
-    totalVisitors: 84920,
-    arInteractions: 52140,
-    audioToursCompleted: 39820,
-    passportsIssued: 19430,
-    averageSessionMins: 18.4,
-    routeVisits: {
+  "initialAnalytics": {
+    "totalVisitors": 84920,
+    "arInteractions": 52140,
+    "audioToursCompleted": 39820,
+    "passportsIssued": 19430,
+    "averageSessionMins": 18.4,
+    "routeVisits": {
       "route-rome-imperial": 28410,
       "route-delhi-mughal": 24980,
       "route-kyoto-zen": 19120,
       "route-cairo-pharaohs": 12410
     },
-    landmarkViews: {
+    "landmarkViews": {
       "landmark-colosseum": 22100,
       "landmark-taj-mahal": 20450,
       "landmark-pyramid-khufu": 16900,
@@ -1044,12 +1547,12 @@ const seedData = {
       "landmark-fushimi-inari": 11400,
       "landmark-great-sphinx": 9800
     },
-    devices: {
+    "devices": {
       "Mobile (iOS / Safari)": 58,
       "Mobile (Android / Chrome)": 34,
       "Desktop / Tablet": 8
     },
-    languages: {
+    "languages": {
       "English": 45,
       "Español": 18,
       "Italiano": 14,
@@ -1057,12 +1560,42 @@ const seedData = {
       "Japanese": 8,
       "Français": 3
     },
-    recentEvents: [
-      { id: 1, type: "ar_scan", landmark: "The Colosseum", location: "Rome, Italy", timestamp: "2 mins ago" },
-      { id: 2, type: "passport_stamp", landmark: "Taj Mahal", location: "Agra, India", timestamp: "5 mins ago" },
-      { id: 3, type: "audio_complete", landmark: "The Great Pyramid of Giza", location: "Cairo, Egypt", timestamp: "9 mins ago" },
-      { id: 4, type: "qr_triggered", landmark: "Kinkaku-ji", location: "Kyoto, Japan", timestamp: "12 mins ago" },
-      { id: 5, type: "route_start", route: "Imperial Rome", location: "Rome, Italy", timestamp: "16 mins ago" }
+    "recentEvents": [
+      {
+        "id": 1,
+        "type": "ar_scan",
+        "landmark": "The Colosseum",
+        "location": "Rome, Italy",
+        "timestamp": "2 mins ago"
+      },
+      {
+        "id": 2,
+        "type": "passport_stamp",
+        "landmark": "Taj Mahal",
+        "location": "Agra, India",
+        "timestamp": "5 mins ago"
+      },
+      {
+        "id": 3,
+        "type": "audio_complete",
+        "landmark": "The Great Pyramid of Giza",
+        "location": "Cairo, Egypt",
+        "timestamp": "9 mins ago"
+      },
+      {
+        "id": 4,
+        "type": "qr_triggered",
+        "landmark": "Kinkaku-ji",
+        "location": "Kyoto, Japan",
+        "timestamp": "12 mins ago"
+      },
+      {
+        "id": 5,
+        "type": "route_start",
+        "route": "Imperial Rome",
+        "location": "Rome, Italy",
+        "timestamp": "16 mins ago"
+      }
     ]
   }
 };

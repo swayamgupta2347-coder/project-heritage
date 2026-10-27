@@ -3,6 +3,7 @@ const path = require('path');
 const fs = require('fs');
 const crypto = require('crypto');
 const seedData = require('./data/seed_data');
+const agenticService = require('./services/agentic_service');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -633,6 +634,96 @@ app.get('/api/qr/lookup/:code', (req, res) => {
     routeId: landmark.routeId,
     landmark
   });
+});
+
+// --- AGENTIC AI & AUTONOMOUS WORKFLOWS API ---
+
+// 1. Strawberry Deep Reasoning & Historical Personas
+app.post('/api/agent/strawberry', (req, res) => {
+  try {
+    const { query, landmarkId, mode, personaId, language } = req.body || {};
+    const result = agenticService.runStrawberryReasoning({ query, landmarkId, mode, personaId, language, db });
+    
+    // Log AI interaction in analytics
+    db.analytics.recentEvents.unshift({
+      id: Date.now(),
+      type: "ai_reasoning",
+      landmark: result.landmarkName,
+      location: `Strawberry AI (${mode || 'reasoning'})`,
+      timestamp: "Just now"
+    });
+    if (db.analytics.recentEvents.length > 25) db.analytics.recentEvents.pop();
+    saveDatabase();
+
+    res.json(result);
+  } catch (err) {
+    console.error('Strawberry AI error:', err);
+    res.status(500).json({ error: 'Failed to process AI reasoning request' });
+  }
+});
+
+// 2. Open Claw Autonomous Heritage Crawler
+app.post('/api/agent/openclaw/crawl', (req, res) => {
+  try {
+    const { landmarkId, targetDomain, scrapeDepth } = req.body || {};
+    const result = agenticService.runOpenClawCrawler({ landmarkId, targetDomain, scrapeDepth, db });
+    
+    // Log crawler event
+    db.analytics.recentEvents.unshift({
+      id: Date.now(),
+      type: "openclaw_crawl",
+      landmark: result.extractedData.landmarkName,
+      location: "Open Claw Heritage Crawler",
+      timestamp: "Just now"
+    });
+    if (db.analytics.recentEvents.length > 25) db.analytics.recentEvents.pop();
+    saveDatabase();
+
+    res.json(result);
+  } catch (err) {
+    console.error('Open Claw crawler error:', err);
+    res.status(500).json({ error: 'Crawler execution failed' });
+  }
+});
+
+// 3. n8n Autonomous Workflows Registry
+app.get('/api/agent/workflows', (req, res) => {
+  res.json(agenticService.getWorkflows());
+});
+
+// 4. n8n Workflow Execution Engine
+app.post('/api/agent/workflow/run', (req, res) => {
+  try {
+    const { workflowId, params } = req.body || {};
+    const result = agenticService.executeWorkflow({ workflowId, params, db });
+    
+    db.analytics.recentEvents.unshift({
+      id: Date.now(),
+      type: "workflow_executed",
+      landmark: result.workflowTitle,
+      location: "n8n Agentic Canvas",
+      timestamp: "Just now"
+    });
+    if (db.analytics.recentEvents.length > 25) db.analytics.recentEvents.pop();
+    saveDatabase();
+
+    res.json(result);
+  } catch (err) {
+    console.error('Workflow execution error:', err);
+    res.status(500).json({ error: 'Failed to execute agent workflow' });
+  }
+});
+
+// 5. Strawberry Smart Route Optimizer
+app.post('/api/agent/optimize-route', (req, res) => {
+  try {
+    const { routeId, strategy } = req.body || {};
+    const result = agenticService.optimizeRoute({ routeId, strategy, db });
+    res.json(result);
+  } catch (err) {
+    console.error('Route optimizer error:', err);
+    res.status(500).json({ error: 'Route optimization failed' });
+  }
 });
 
 // Fallback to SPA index.html

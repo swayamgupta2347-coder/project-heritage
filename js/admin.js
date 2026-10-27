@@ -22,6 +22,10 @@ const AdminCMS = {
       this.renderRoutesTab(container);
     } else if (this.currentTab === 'landmarks') {
       this.renderLandmarksTab(container);
+    } else if (this.currentTab === 'workflows') {
+      this.renderWorkflowsTab(container);
+    } else if (this.currentTab === 'openclaw') {
+      this.renderOpenClawTab(container);
     } else {
       this.renderTranslationsTab(container);
     }
@@ -438,6 +442,64 @@ const AdminCMS = {
       }
     } catch (err) {
       console.error(err);
+    }
+  },
+
+  renderWorkflowsTab(container) {
+    container.innerHTML = `
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+        <div>
+          <h3 style="font-family:var(--font-serif); font-size:20px; color:#FFF;">n8n Autonomous Agent Workflows</h3>
+          <p style="font-size:13px; color:var(--text-secondary);">Visual event-driven automation pipeline coordinating Open Claw scrapers, Strawberry reasoning agents, and WebAR anchors</p>
+        </div>
+      </div>
+      <div id="admin-n8n-studio-area"></div>
+    `;
+    if (window.AgenticAI) {
+      AgenticAI.renderWorkflowStudio('admin-n8n-studio-area');
+    }
+  },
+
+  renderOpenClawTab(container) {
+    container.innerHTML = `
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+        <div>
+          <h3 style="font-family:var(--font-serif); font-size:20px; color:#FFF;">Open Claw Autonomous Heritage Researcher</h3>
+          <p style="font-size:13px; color:var(--text-secondary);">Automated crawler scraping CyArk 3D laser-scan repositories, UNESCO conservation state records, and epigraphic libraries</p>
+        </div>
+      </div>
+
+      <div class="admin-table-card" style="padding:20px; margin-bottom:24px;">
+        <div style="display:grid; grid-template-columns: 1fr 1fr auto; gap:16px; align-items:flex-end;">
+          <div>
+            <label style="display:block; font-size:12px; color:var(--text-secondary); margin-bottom:6px;">Select Monument to Investigate:</label>
+            <select id="claw-target-landmark" class="form-input">
+              ${App.state.landmarks.map(l => `<option value="${l.id}">${l.name} (${l.yearBuilt})</option>`).join('')}
+            </select>
+          </div>
+          <div>
+            <label style="display:block; font-size:12px; color:var(--text-secondary); margin-bottom:6px;">Target Repositories:</label>
+            <select id="claw-target-repo" class="form-input">
+              <option value="all">CyArk 3D LiDAR + UNESCO SOC + JSTOR Antiquity</option>
+              <option value="cyark">CyArk 3D Point-Cloud Database</option>
+              <option value="unesco">UNESCO World Heritage Center</option>
+            </select>
+          </div>
+          <button class="btn btn-primary" onclick="AdminCMS.launchOpenClaw()">
+            🦅 Launch Autonomous Crawler
+          </button>
+        </div>
+      </div>
+
+      <div id="openclaw-live-results"></div>
+    `;
+  },
+
+  launchOpenClaw() {
+    const lmSelect = document.getElementById('claw-target-landmark');
+    const lmId = lmSelect ? lmSelect.value : (App.state.landmarks[0]?.id || 'landmark-colosseum');
+    if (window.AgenticAI) {
+      AgenticAI.runOpenClaw(lmId, 'openclaw-live-results');
     }
   },
 

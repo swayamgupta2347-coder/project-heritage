@@ -241,6 +241,21 @@ const AudioGuide = {
     if (e && e.target && e.target.id !== 'audio-modal-backdrop' && !e.target.classList.contains('modal-close')) return;
     const modal = document.getElementById('audio-modal-backdrop');
     if (modal) modal.classList.add('hidden');
+  },
+
+  speakDirect(text, voiceName = null, lang = 'en') {
+    if (!('speechSynthesis' in window)) return;
+    window.speechSynthesis.cancel();
+    const cleanText = text.replace(/[*#_`]/g, '');
+    const ut = new SpeechSynthesisUtterance(cleanText);
+    ut.rate = this.playbackRate || 1.0;
+    if (this.selectedVoice) {
+      ut.voice = this.selectedVoice;
+    } else if (this.availableVoices.length > 0) {
+      const match = this.availableVoices.find(v => v.lang.toLowerCase().startsWith(lang.toLowerCase()));
+      if (match) ut.voice = match;
+    }
+    window.speechSynthesis.speak(ut);
   }
 };
 

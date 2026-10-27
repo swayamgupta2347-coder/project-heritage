@@ -32,6 +32,9 @@ const App = {
     }
 
     AudioGuide.init();
+    if (window.AgenticAI && typeof window.AgenticAI.init === 'function') {
+      window.AgenticAI.init();
+    }
   },
 
   setupAudioContext() {
@@ -324,6 +327,8 @@ const App = {
           <button class="pill-btn" data-city="Delhi" onclick="App.filterByCity('Delhi')">Delhi & Agra (India)</button>
           <button class="pill-btn" data-city="Kyoto" onclick="App.filterByCity('Kyoto')">Kyoto (Japan)</button>
           <button class="pill-btn" data-city="Cairo" onclick="App.filterByCity('Cairo')">Cairo & Giza (Egypt)</button>
+          <button class="pill-btn" data-city="Athens" onclick="App.filterByCity('Athens')">Athens (Greece)</button>
+          <button class="pill-btn" data-city="Cusco" onclick="App.filterByCity('Cusco')">Machu Picchu (Peru)</button>
         </div>
       </div>
 
@@ -441,9 +446,13 @@ const App = {
               <button class="layer-btn active" data-style="antique" onclick="RouteMap.setMapStyle('antique')">Antique</button>
               <button class="layer-btn" data-style="dark" onclick="RouteMap.setMapStyle('dark')">LiDAR Dark</button>
               <button class="layer-btn" data-style="satellite" onclick="RouteMap.setMapStyle('satellite')">Terrain</button>
+              <button class="layer-btn btn-agentic-glow" id="map-ai-optimize-btn" onclick="RouteMap.toggleAiOptimization()">
+                <span>🍓</span> Strawberry Smart Path
+              </button>
             </div>
           </div>
 
+          <div id="map-ai-banner" class="map-ai-banner hidden"></div>
           <canvas id="route-map-canvas" class="map-canvas"></canvas>
 
           <!-- Telemetry HUD Bottom -->
@@ -549,6 +558,12 @@ const App = {
             <button class="btn btn-secondary" onclick="App.toggleFavorite('${lm.id}')">
               ${isFav ? '★ Bookmarked' : '☆ Bookmark'}
             </button>
+            <button class="btn btn-secondary btn-agentic-glow" onclick="AgenticAI.toggleDrawer(true); AgenticAI.askPredefined('Analyze the construction engineering and epigraphy of ' + ${JSON.stringify(lm.name)})">
+              🍓 Strawberry Scholar
+            </button>
+            <button class="btn btn-secondary" onclick="AgenticAI.runOpenClaw('${lm.id}', 'landmark-openclaw-area')">
+              🦅 Open Claw Research
+            </button>
             <button class="btn btn-secondary" onclick="App.shareLandmark('${lm.id}')">
               🔗 Share Story
             </button>
@@ -560,6 +575,7 @@ const App = {
       <div class="story-layout">
         <!-- Main Column -->
         <div class="story-main-col">
+          <div id="landmark-openclaw-area"></div>
           <!-- Comprehensive Narrative Card -->
           <div class="story-card">
             <h3 class="section-title">Architectural & Historical Chronicle</h3>
@@ -810,6 +826,15 @@ const App = {
             <input type="range" min="0.5" max="2.0" step="0.1" value="1.0" class="range-input" oninput="WebAR.setScale(this.value); document.getElementById('scale-val-txt').textContent = this.value + 'x';">
           </div>
 
+          <!-- Epoch Time-Travel Chrono-Slider -->
+          <div class="slider-group">
+            <div class="slider-label">
+              <span>Time-Travel Epoch:</span>
+              <span id="chrono-val" style="font-family:var(--font-mono); color:var(--gold-primary);">Modern Preserved State</span>
+            </div>
+            <input type="range" min="0" max="1" step="0.05" value="0" class="range-input" oninput="WebAR.setChronoRatio(this.value)">
+          </div>
+
           <!-- Simulated Background Selector -->
           <div class="form-group">
             <label style="font-size:12px;">Simulated Plaza Background:</label>
@@ -842,6 +867,9 @@ const App = {
           <div style="display:flex; flex-direction:column; gap:8px;">
             <button class="btn btn-primary btn-sm" onclick="App.navigate('landmark/${lm.id}')">
               📖 View Landmark Story
+            </button>
+            <button class="btn btn-secondary btn-sm btn-agentic-glow" onclick="AgenticAI.toggleDrawer(true); AgenticAI.askPredefined('Explain the 3D structural physics and materials of ' + ${JSON.stringify(lm.name)})">
+              🍓 Ask Strawberry Scholar
             </button>
             <button class="btn btn-secondary btn-sm" onclick="AudioGuide.loadTrack('${lm.id}')">
               🎧 Listen to Audio Guide
@@ -890,7 +918,10 @@ const App = {
           { id: '2', title: 'Roman Antiquary', icon: '🛡️', unlocked: visitedLandmarks.some(l => l.routeId === 'route-rome-imperial'), description: 'Explored Imperial Rome' },
           { id: '3', title: 'Mughal Connoisseur', icon: '🕌', unlocked: visitedLandmarks.some(l => l.routeId === 'route-delhi-mughal'), description: 'Explored Mughal monuments' },
           { id: '4', title: 'Zen Pilgrim', icon: '⛩️', unlocked: visitedLandmarks.some(l => l.routeId === 'route-kyoto-zen'), description: 'Walked Kyoto temple paths' },
-          { id: '5', title: 'Horizon Seeker', icon: '🏺', unlocked: visitedLandmarks.some(l => l.routeId === 'route-cairo-pharaohs'), description: 'Explored Egyptian pyramids' }
+          { id: '5', title: 'Horizon Seeker', icon: '🏺', unlocked: visitedLandmarks.some(l => l.routeId === 'route-cairo-pharaohs'), description: 'Explored Egyptian pyramids' },
+          { id: '6', title: 'Hellenic Philosopher', icon: '🏛️', unlocked: visitedLandmarks.some(l => l.routeId === 'route-athens-acropolis'), description: 'Walked the Sacred Rock of Athens' },
+          { id: '7', title: 'Inca Cloud Sovereign', icon: '☀️', unlocked: visitedLandmarks.some(l => l.routeId === 'route-machu-picchu'), description: 'Scaled the heights of Machu Picchu' },
+          { id: '8', title: 'Ancient Relic Hologram', icon: '💎', unlocked: visitedLandmarks.length >= 3, description: 'Unlocked 3D LiDAR Holographic Relic Seal' }
         ]
       };
     }
@@ -967,6 +998,23 @@ const App = {
               </div>
             `).join('')}
           </div>
+        </div>
+
+        <!-- Strawberry AI Personalized Expedition Log -->
+        <div class="story-card" style="margin-top:24px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; flex-wrap:wrap; gap:8px;">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span style="font-size:22px;">🍓</span>
+              <h3 class="section-title" style="margin:0;">Strawberry AI Personalized Expedition Log</h3>
+            </div>
+            <span class="badge-agentic">SCHOLAR SYNTHESIS</span>
+          </div>
+          <p style="font-size:13.5px; color:var(--text-secondary); line-height:1.6;">
+            ${passportData.visitedCount > 0
+              ? `Scholarly Expedition Assessment for <strong>${passportData.user.name}</strong>: Having stamped ${passportData.visitedCount} world heritage landmarks (${passportData.visited.map(v => v.name).join(', ')}), you have demonstrated deep curatorial immersion across ancient architectural engineering, epigraphic chronologies, and CyArk 3D laser documentation.`
+              : `Embark upon your first heritage corridor to generate an AI-synthesized scholarly expedition chronicle signed by the virtual Lead Curator.`
+            }
+          </p>
         </div>
       </div>
     `;
@@ -1059,6 +1107,8 @@ const App = {
         <button class="admin-tab-btn active" data-tab="routes" onclick="AdminCMS.setTab('routes')">Heritage Routes</button>
         <button class="admin-tab-btn" data-tab="landmarks" onclick="AdminCMS.setTab('landmarks')">Monuments & 3D Assets</button>
         <button class="admin-tab-btn" data-tab="translations" onclick="AdminCMS.setTab('translations')">Multilingual Localization</button>
+        <button class="admin-tab-btn" data-tab="workflows" onclick="AdminCMS.setTab('workflows')">⚡ n8n Workflows Studio</button>
+        <button class="admin-tab-btn" data-tab="openclaw" onclick="AdminCMS.setTab('openclaw')">🦅 Open Claw Researcher</button>
       </div>
 
       <div id="admin-content-area"></div>

@@ -40,6 +40,11 @@
           <span data-i18n="arMode">WebAR & 3D</span>
           <span class="badge-live">LIVE</span>
         </button>
+        <button class="nav-btn btn-agentic-glow" data-page="agentic" onclick="AgenticAI.toggleDrawer(true)">
+          <span class="nav-icon">🍓</span>
+          <span>Strawberry AI</span>
+          <span class="badge-agentic">AGENTIC</span>
+        </button>
         <button class="nav-btn" data-page="passport" onclick="App.navigate('passport')">
           <span class="nav-icon">🛂</span>
           <span data-i18n="passport">Passport</span>
@@ -100,6 +105,9 @@
         </button>
         <button class="drawer-btn" onclick="App.navigate('ar'); App.toggleMobileMenu();">
           <span>✨</span> <span data-i18n="arMode">WebAR & 3D</span>
+        </button>
+        <button class="drawer-btn" onclick="AgenticAI.toggleDrawer(true); App.toggleMobileMenu();">
+          <span>🍓</span> <span>Strawberry AI Scholar</span>
         </button>
         <button class="drawer-btn" onclick="App.navigate('passport'); App.toggleMobileMenu();">
           <span>🛂</span> <span data-i18n="passport">Passport & Badges</span>
@@ -268,6 +276,7 @@
   <script src="./js/qrscanner.js"></script>
   <script src="./js/analytics.js"></script>
   <script src="./js/admin.js"></script>
+  <script src="./js/agentic_ai.js"></script>
   <script src="./js/app.js"></script>
 </body>
 </html>

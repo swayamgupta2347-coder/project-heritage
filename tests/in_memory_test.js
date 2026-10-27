@@ -161,6 +161,39 @@ async function runTests() {
     });
     assert(createLmRes.status === 201 && createLmRes.body.id, 'Admin POST /api/landmarks registers monument with 3D model configuration');
 
+    // 16. Agentic AI: Strawberry Deep-Reasoning Engine (o-series CoT)
+    const strawberryRes = await dispatch('POST', '/api/agent/strawberry', { 'content-type': 'application/json' }, {
+      landmarkId: 'landmark-colosseum',
+      mode: 'strawberry',
+      query: 'Explain how the subterranean hypogeum mechanics operated'
+    });
+    assert(strawberryRes.status === 200 && strawberryRes.body.thoughts.length >= 4 && strawberryRes.body.answer.length > 50, 'POST /api/agent/strawberry returns multi-step chain-of-thought and deep historical synthesis');
+
+    // 17. Agentic AI: Open Claw Autonomous Heritage Crawler
+    const clawRes = await dispatch('POST', '/api/agent/openclaw/crawl', { 'content-type': 'application/json' }, {
+      landmarkId: 'landmark-taj-mahal',
+      scrapeDepth: 2
+    });
+    assert(clawRes.status === 200 && clawRes.body.logs.length >= 5 && clawRes.body.extractedData.lidarTelemetry, 'POST /api/agent/openclaw/crawl extracts CyArk LiDAR point clouds & conservation status');
+
+    // 18. Agentic AI: n8n Autonomous Workflows Registry
+    const wfListRes = await dispatch('GET', '/api/agent/workflows');
+    assert(wfListRes.status === 200 && wfListRes.body.length >= 3, 'GET /api/agent/workflows returns production n8n visual agent workflows');
+
+    // 19. Agentic AI: n8n Workflow Execution Engine
+    const wfRunRes = await dispatch('POST', '/api/agent/workflow/run', { 'content-type': 'application/json' }, {
+      workflowId: 'wf-monument-enrichment',
+      params: { landmarkId: 'landmark-colosseum' }
+    });
+    assert(wfRunRes.status === 200 && wfRunRes.body.status === 'completed' && wfRunRes.body.steps.length === 5, 'POST /api/agent/workflow/run executes sequential agent nodes with telemetry');
+
+    // 20. Agentic AI: Strawberry Smart Route Optimizer
+    const optRes = await dispatch('POST', '/api/agent/optimize-route', { 'content-type': 'application/json' }, {
+      routeId: 'route-rome-imperial',
+      strategy: 'historical_chronology'
+    });
+    assert(optRes.status === 200 && optRes.body.optimizedSequence.length > 0 && optRes.body.rationale, 'POST /api/agent/optimize-route computes chronological walking sequence and scholarly rationale');
+
     console.log(`\n====================================================`);
     console.log(`FINAL RESULT: ALL ${passed} VERIFICATION TESTS PASSED (0 FAILED)`);
     console.log(`====================================================`);

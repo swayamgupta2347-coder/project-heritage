@@ -252,6 +252,46 @@ const RouteMap = {
     }
   },
 
+  async toggleAiOptimization() {
+    this.isAiOptimized = !this.isAiOptimized;
+    const btn = document.getElementById('map-ai-optimize-btn');
+    const banner = document.getElementById('map-ai-banner');
+
+    if (this.isAiOptimized) {
+      if (btn) {
+        btn.classList.add('active');
+        btn.innerHTML = `<span>🍓</span> Strawberry Path Active`;
+      }
+      if (window.AgenticAI) {
+        const res = await AgenticAI.optimizeRoute(this.route.id, 'historical_chronology');
+        if (res && res.success) {
+          this.aiRationale = res.rationale;
+          if (banner) {
+            banner.classList.remove('hidden');
+            banner.innerHTML = `
+              <div class="ai-banner-inner">
+                <span class="ai-badge">🍓 STRAWBERRY CHRONO-OPTIMIZER</span>
+                <p><strong>Optimal Walking Path:</strong> ${res.rationale}</p>
+                <div class="ai-metrics-row">
+                  <span>⏱️ Time Saved: <strong>${res.timeSavedMinutes} mins</strong></span>
+                  <span>🚶 Sequence: <strong>${res.optimizedSequence.map(s => s.name).join(' ➔ ')}</strong></span>
+                </div>
+              </div>
+            `;
+          }
+        }
+      }
+    } else {
+      if (btn) {
+        btn.classList.remove('active');
+        btn.innerHTML = `<span>🍓</span> Strawberry Smart Path`;
+      }
+      if (banner) banner.classList.add('hidden');
+      this.aiRationale = null;
+    }
+    this.render();
+  },
+
   toggleWalkerSimulation() {
     this.simulatingWalk = !this.simulatingWalk;
     const btn = document.getElementById('walker-toggle-btn');

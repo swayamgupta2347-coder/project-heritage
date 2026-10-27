@@ -167,6 +167,8 @@ const WebAR = {
     this.models['fortress'] = this.generateRedFortGeometry();
     this.models['mamluk-mosque'] = this.generateSultanHassanGeometry();
     this.models['tower'] = this.generateQutbMinarGeometry();
+    this.models['parthenon'] = this.generateParthenonGeometry();
+    this.models['machu-picchu'] = this.generateMachuPicchuGeometry();
   },
 
   generateColosseumGeometry() {
@@ -1183,6 +1185,169 @@ const WebAR = {
       giza: 'https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=1200&q=80'
     };
     el.style.backgroundImage = `url('${envs[env] || envs.forum}')`;
+  },
+
+  setChronoRatio(ratio) {
+    this.chronoRatio = parseFloat(ratio);
+    const label = document.getElementById('chrono-val');
+    if (label) {
+      if (this.chronoRatio < 0.25) label.textContent = 'Modern Preserved State';
+      else if (this.chronoRatio < 0.75) label.textContent = 'Partial Classical Restoration';
+      else label.textContent = 'Ancient Golden Era Glory ✨';
+    }
+  },
+
+  setLidarDensity(density) {
+    this.lidarDensity = parseFloat(density);
+  },
+
+  generateParthenonGeometry() {
+    const positions = [];
+    const normals = [];
+    const colors = [];
+    const layers = [];
+
+    // Stepped Stylobate Podium (3 marble steps, Layer 0.0)
+    for (let step = 0; step < 3; step++) {
+      const w = 1.9 - step * 0.08;
+      const d = 1.2 - step * 0.06;
+      const y = -0.6 + step * 0.06;
+      for (let x = -w; x <= w; x += 0.12) {
+        for (let z = -d; z <= d; z += 0.12) {
+          positions.push(x, y, z);
+          normals.push(0, 1, 0);
+          colors.push(0.92, 0.90, 0.85, 1.0);
+          layers.push(0.0);
+        }
+      }
+    }
+
+    // Outer Peristyle Colonnade (Doric columns: 8 front/back, 17 along flanks, Layer 0.3)
+    const colCols = [-1.6, -1.2, -0.8, -0.4, 0.0, 0.4, 0.8, 1.2, 1.6];
+    const colRows = [-0.95, -0.65, -0.35, 0.0, 0.35, 0.65, 0.95];
+
+    const placeCol = (cx, cz) => {
+      for (let y = -0.42; y <= 0.45; y += 0.07) {
+        for (let a = 0; a < 8; a++) {
+          const theta = (a / 8) * Math.PI * 2;
+          const r = 0.08 * (1.0 - (y + 0.42) * 0.08); // subtle entasis
+          positions.push(cx + Math.cos(theta) * r, y, cz + Math.sin(theta) * r);
+          normals.push(Math.cos(theta), 0, Math.sin(theta));
+          colors.push(0.96, 0.94, 0.90, 1.0);
+          layers.push(0.3);
+        }
+      }
+    };
+
+    colCols.forEach(x => {
+      placeCol(x, -0.95);
+      placeCol(x, 0.95);
+    });
+    colRows.forEach(z => {
+      placeCol(-1.6, z);
+      placeCol(1.6, z);
+    });
+
+    // Entablature & Architrave (Layer 0.6)
+    for (let x = -1.75; x <= 1.75; x += 0.08) {
+      for (let z = -1.05; z <= 1.05; z += 0.08) {
+        if (Math.abs(x) >= 1.4 || Math.abs(z) >= 0.8) {
+          positions.push(x, 0.52, z);
+          normals.push(0, 1, 0);
+          colors.push(0.94, 0.92, 0.86, 1.0);
+          layers.push(0.6);
+        }
+      }
+    }
+
+    // Triangular Pediments & Roof Gables (Layer 0.9)
+    for (let side = -1; side <= 1; side += 2) {
+      const z = side * 1.0;
+      for (let x = -1.7; x <= 1.7; x += 0.08) {
+        const peakY = 0.55 + (1.0 - Math.abs(x) / 1.7) * 0.35;
+        for (let y = 0.55; y <= peakY; y += 0.06) {
+          positions.push(x, y, z);
+          normals.push(0, 0, side);
+          colors.push(0.98, 0.88, 0.45, 1.0); // gilded pediment sculptures
+          layers.push(0.9);
+        }
+      }
+    }
+
+    return this.bufferData(positions, normals, colors, layers);
+  },
+
+  generateMachuPicchuGeometry() {
+    const positions = [];
+    const normals = [];
+    const colors = [];
+    const layers = [];
+
+    // Stepped Andean Agricultural Terraces (Granite Bedrock Contours, Layer 0.0 - 0.2)
+    for (let t = 0; t < 5; t++) {
+      const y = -0.7 + t * 0.2;
+      const r = 2.0 - t * 0.25;
+      for (let a = 0; a < 36; a++) {
+        const theta = (a / 36) * Math.PI * 2;
+        const x = Math.cos(theta) * r + Math.sin(theta * 3.0) * 0.15;
+        const z = Math.sin(theta) * r * 0.7;
+        positions.push(x, y, z);
+        normals.push(0, 1, 0);
+        // Andean grass green & granite gray
+        colors.push(0.25 + t * 0.05, 0.45 + t * 0.04, 0.22, 1.0);
+        layers.push(t * 0.05);
+      }
+    }
+
+    // Semicircular Torreón (Temple of the Sun, Curved Wall, Layer 0.5)
+    for (let a = 0; a <= 20; a++) {
+      const theta = (a / 20) * Math.PI * 1.2 - 0.3;
+      const r = 0.45;
+      for (let y = 0.0; y <= 0.6; y += 0.08) {
+        positions.push(-0.6 + Math.cos(theta) * r, y, -0.2 + Math.sin(theta) * r);
+        normals.push(Math.cos(theta), 0, Math.sin(theta));
+        colors.push(0.82, 0.80, 0.78, 1.0); // Imperial Inca Ashlar
+        layers.push(0.5);
+      }
+    }
+
+    // Sacred Plaza Principal Temple (Three Walls, Layer 0.6)
+    for (let x = 0.1; x <= 0.9; x += 0.08) {
+      for (let y = 0.1; y <= 0.7; y += 0.08) {
+        positions.push(x, y, 0.5);
+        normals.push(0, 0, -1);
+        colors.push(0.85, 0.83, 0.80, 1.0);
+        layers.push(0.6);
+      }
+    }
+    for (let z = 0.0; z <= 0.5; z += 0.08) {
+      for (let y = 0.1; y <= 0.7; y += 0.08) {
+        positions.push(0.1, y, z);
+        normals.push(1, 0, 0);
+        colors.push(0.85, 0.83, 0.80, 1.0);
+        layers.push(0.6);
+
+        positions.push(0.9, y, z);
+        normals.push(-1, 0, 0);
+        colors.push(0.85, 0.83, 0.80, 1.0);
+        layers.push(0.6);
+      }
+    }
+
+    // Intihuatana Bedrock Monolith & Inclined Solar Prism (Layer 0.9)
+    for (let dy = 0.4; dy <= 0.95; dy += 0.06) {
+      positions.push(0.0, dy, 0.0);
+      normals.push(0, 1, 0);
+      colors.push(0.95, 0.88, 0.55, 1.0); // sacred solar stone
+      layers.push(0.9);
+
+      positions.push(Math.sin((dy - 0.4) * 0.22), dy, 0.05);
+      normals.push(0.2, 0.9, 0.0);
+      colors.push(1.0, 0.92, 0.5, 1.0);
+      layers.push(0.9);
+    }
+
+    return this.bufferData(positions, normals, colors, layers);
   },
 
   // Take Composite AR Snapshot

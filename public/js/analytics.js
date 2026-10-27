@@ -163,6 +163,39 @@ const Analytics = {
                 <span style="font-size:11px; color:var(--text-gold); font-family:var(--font-mono);">${ev.timestamp}</span>
               </div>
             `).join('')}
+        </div>
+      </div>
+
+      <!-- Agentic AI Autonomous Intelligence Card -->
+      <div class="chart-card" style="margin-top:24px; border:1px solid rgba(229,184,66,0.3); background:linear-gradient(135deg, rgba(20,26,36,0.95), rgba(35,25,15,0.85));">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; flex-wrap:wrap; gap:8px;">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <span style="font-size:24px;">🍓</span>
+            <div>
+              <h3 class="section-title" style="margin:0;">Strawberry AI Curatorial Insights & Predictive Telemetry</h3>
+              <p style="font-size:12px; color:var(--text-secondary); margin:0;">Autonomous reasoning agent analyzing visitor heatmaps, route velocity, and retention</p>
+            </div>
+          </div>
+          <span class="badge-agentic">AGENTIC REASONING</span>
+        </div>
+
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:16px;">
+          <div class="stat-card" style="background:rgba(0,0,0,0.35);">
+            <span class="stat-label">Peak Tourist AR Engagement Window</span>
+            <span class="stat-value" style="font-size:18px; color:var(--gold-primary);">10:30 AM – 1:15 PM</span>
+            <span class="stat-delta">Correlates with optimal ambient lighting for WebAR</span>
+          </div>
+          <div class="stat-card" style="background:rgba(0,0,0,0.35);">
+            <span class="stat-label">High-Retention Storytelling Stops</span>
+            <span class="stat-value" style="font-size:18px; color:var(--lidar-cyan);">Colosseum, Parthenon, Taj Mahal</span>
+            <span class="stat-delta">Visitors spent avg 4.8 mins exploring 3D layer dissection</span>
+          </div>
+          <div class="stat-card" style="background:rgba(0,0,0,0.35);">
+            <span class="stat-label">Strawberry Curatorial Recommendation</span>
+            <span class="stat-value" style="font-size:13px; color:#FFF; font-weight:normal; line-height:1.45;">
+              Strawberry suggests activating an audio waypoint between Roman Forum and Pantheon to mitigate afternoon drop-off.
+            </span>
+            <span class="stat-delta" style="color:var(--lidar-green);">Confidence Score: 98.4%</span>
           </div>
         </div>
       </div>
