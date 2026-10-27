@@ -1210,7 +1210,7 @@ const WebAR = {
     if (!el) return;
 
     const envs = {
-      forum: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80',
+      forum: 'https://images.unsplash.com/photo-1543429776-2782fb5a3887?auto=format&fit=crop&w=1200&q=80',
       mughal: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80',
       kyoto: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80',
       giza: 'https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=1200&q=80'

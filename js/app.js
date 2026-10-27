@@ -239,11 +239,15 @@ const App = {
   async fetchRoutes() {
     try {
       const res = await fetch('/api/routes');
-      if (res.ok) {
-        this.state.routes = await res.json();
-      } else {
-        this.state.routes = window.SEED_CACHE?.routes || [];
-      }
+      const raw = res.ok ? await res.json() : (window.SEED_CACHE?.routes || []);
+      // Strict de-duplication by id and title
+      const seen = new Set();
+      this.state.routes = raw.filter(r => {
+        if (!r || !r.id || seen.has(r.id) || seen.has(r.title)) return false;
+        seen.add(r.id);
+        seen.add(r.title);
+        return true;
+      });
     } catch (e) {
       this.state.routes = window.SEED_CACHE?.routes || [];
     }
@@ -252,11 +256,15 @@ const App = {
   async fetchLandmarks() {
     try {
       const res = await fetch('/api/landmarks');
-      if (res.ok) {
-        this.state.landmarks = await res.json();
-      } else {
-        this.state.landmarks = window.SEED_CACHE?.landmarks || [];
-      }
+      const raw = res.ok ? await res.json() : (window.SEED_CACHE?.landmarks || []);
+      // Strict de-duplication by id and name
+      const seen = new Set();
+      this.state.landmarks = raw.filter(l => {
+        if (!l || !l.id || seen.has(l.id) || seen.has(l.name)) return false;
+        seen.add(l.id);
+        seen.add(l.name);
+        return true;
+      });
     } catch (e) {
       this.state.landmarks = window.SEED_CACHE?.landmarks || [];
     }
@@ -435,17 +443,19 @@ const App = {
       </div>
 
       <div class="map-view-container">
-        <!-- Interactive Vector Map Canvas -->
+        <!-- Google Maps Interactive Viewport -->
         <div class="map-canvas-wrapper">
           <div class="map-hud-top">
             <div class="hud-route-badge">
-              <span>📍</span>
-              <span class="hud-route-name">${route.city}: ${route.landmarks?.length || 0} Historical Stops</span>
+              <span>🗺️</span>
+              <span class="hud-route-name">${route.city}: ${route.landmarks?.length || 0} Historical Stops (Google Maps)</span>
             </div>
             <div class="map-layer-controls">
-              <button class="layer-btn active" data-style="antique" onclick="RouteMap.setMapStyle('antique')">Antique</button>
-              <button class="layer-btn" data-style="dark" onclick="RouteMap.setMapStyle('dark')">LiDAR Dark</button>
-              <button class="layer-btn" data-style="satellite" onclick="RouteMap.setMapStyle('satellite')">Terrain</button>
+              <button class="layer-btn active" data-style="m" onclick="RouteMap.setMapStyle('m')">🗺️ Google Map</button>
+              <button class="layer-btn" data-style="s" onclick="RouteMap.setMapStyle('s')">🛰️ Satellite (LiDAR)</button>
+              <button class="layer-btn" data-style="y" onclick="RouteMap.setMapStyle('y')">🌐 Hybrid</button>
+              <button class="layer-btn" data-style="p" onclick="RouteMap.setMapStyle('p')">⛰️ Terrain</button>
+              <button class="layer-btn" data-style="streetview" onclick="RouteMap.setMapStyle('streetview')">👁️ Street View 360°</button>
               <button class="layer-btn btn-agentic-glow" id="map-ai-optimize-btn" onclick="RouteMap.toggleAiOptimization()">
                 <span>🍓</span> Strawberry Smart Path
               </button>
@@ -453,7 +463,12 @@ const App = {
           </div>
 
           <div id="map-ai-banner" class="map-ai-banner hidden"></div>
-          <canvas id="route-map-canvas" class="map-canvas"></canvas>
+          
+          <div id="google-map-container" class="google-map-container">
+            <div id="google-map-leaflet" class="google-map-leaflet"></div>
+            <iframe id="google-map-iframe" class="google-map-frame hidden" src="" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div id="google-map-pins-bar" class="google-map-pins-bar"></div>
+          </div>
 
           <!-- Telemetry HUD Bottom -->
           <div class="map-telemetry-bottom">
@@ -468,6 +483,9 @@ const App = {
             </div>
 
             <div style="pointer-events:auto; display:flex; gap:8px;">
+              <button class="btn btn-primary btn-sm" onclick="RouteMap.openInGoogleMaps()">
+                🚶 Google Maps Directions
+              </button>
               <button class="btn btn-secondary btn-sm" onclick="RouteMap.fitRouteBounds()">Reset View</button>
             </div>
           </div>
@@ -513,7 +531,7 @@ const App = {
     `;
 
     setTimeout(() => {
-      RouteMap.init('route-map-canvas', route, routeLandmarks);
+      RouteMap.init('google-map-container', route, routeLandmarks);
     }, 50);
   },
 
@@ -558,7 +576,7 @@ const App = {
             <button class="btn btn-secondary" onclick="App.toggleFavorite('${lm.id}')">
               ${isFav ? '★ Bookmarked' : '☆ Bookmark'}
             </button>
-            <button class="btn btn-secondary btn-agentic-glow" onclick="AgenticAI.toggleDrawer(true); AgenticAI.askPredefined('Analyze the construction engineering and epigraphy of ' + ${JSON.stringify(lm.name)})">
+            <button class="btn btn-secondary btn-agentic-glow" onclick="AgenticAI.askForLandmark('${lm.id}', 'engineering')">
               🍓 Strawberry Scholar
             </button>
             <button class="btn btn-secondary" onclick="AgenticAI.runOpenClaw('${lm.id}', 'landmark-openclaw-area')">
@@ -662,15 +680,15 @@ const App = {
             </p>
 
             <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:12px;">
-              <button class="dialogue-question-btn" style="border-color:rgba(255,51,102,0.35); text-align:left;" onclick="AgenticAI.toggleDrawer(true); AgenticAI.askPredefined('Perform structural stress and material mechanics analysis for ' + ${JSON.stringify(lm.name)})">
+              <button class="dialogue-question-btn" style="border-color:rgba(255,51,102,0.35); text-align:left;" onclick="AgenticAI.askForLandmark('${lm.id}', 'engineering')">
                 <span>📐 Structural & Seismic Mechanics</span>
                 <span>🍓</span>
               </button>
-              <button class="dialogue-question-btn" style="border-color:rgba(255,51,102,0.35); text-align:left;" onclick="AgenticAI.toggleDrawer(true); AgenticAI.askPredefined('What epigraphic records and ancient chronicles document ' + ${JSON.stringify(lm.name)} + '?')">
+              <button class="dialogue-question-btn" style="border-color:rgba(255,51,102,0.35); text-align:left;" onclick="AgenticAI.askForLandmark('${lm.id}', 'epigraphy')">
                 <span>📜 Epigraphic & Textual Records</span>
                 <span>🍓</span>
               </button>
-              <button class="dialogue-question-btn" style="border-color:rgba(255,51,102,0.35); text-align:left;" onclick="AgenticAI.toggleDrawer(true); AgenticAI.askPredefined('Compare ancient construction techniques with CyArk 3D point-cloud data for ' + ${JSON.stringify(lm.name)})">
+              <button class="dialogue-question-btn" style="border-color:rgba(255,51,102,0.35); text-align:left;" onclick="AgenticAI.askForLandmark('${lm.id}', 'lidar')">
                 <span>🦅 CyArk 3D LiDAR Comparison</span>
                 <span>🍓</span>
               </button>
@@ -912,7 +930,7 @@ const App = {
             <button class="btn btn-primary btn-sm" onclick="App.navigate('landmark/${lm.id}')">
               📖 View Landmark Story
             </button>
-            <button class="btn btn-secondary btn-sm btn-agentic-glow" onclick="AgenticAI.toggleDrawer(true); AgenticAI.askPredefined('Explain the 3D structural physics and materials of ' + ${JSON.stringify(lm.name)})">
+            <button class="btn btn-secondary btn-sm btn-agentic-glow" onclick="AgenticAI.askForLandmark('${lm.id}', 'physics')">
               🍓 Ask Strawberry Scholar
             </button>
             <button class="btn btn-secondary btn-sm" onclick="AudioGuide.loadTrack('${lm.id}')">
