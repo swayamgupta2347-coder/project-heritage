@@ -57,8 +57,25 @@ function loadDatabase() {
   try {
     if (fs.existsSync(DB_FILE)) {
       const data = JSON.parse(fs.readFileSync(DB_FILE, 'utf8'));
-      db.routes = data.routes || db.routes;
-      db.landmarks = data.landmarks || db.landmarks;
+
+      // Strict de-duplication of routes
+      const seenRoutes = new Set();
+      db.routes = (data.routes || db.routes).filter(r => {
+        if (!r || !r.id || seenRoutes.has(r.id) || seenRoutes.has(r.title)) return false;
+        seenRoutes.add(r.id);
+        seenRoutes.add(r.title);
+        return true;
+      });
+
+      // Strict de-duplication of landmarks
+      const seenLandmarks = new Set();
+      db.landmarks = (data.landmarks || db.landmarks).filter(l => {
+        if (!l || !l.id || seenLandmarks.has(l.id) || seenLandmarks.has(l.name)) return false;
+        seenLandmarks.add(l.id);
+        seenLandmarks.add(l.name);
+        return true;
+      });
+
       db.translations = data.translations || db.translations;
       db.analytics = data.analytics || db.analytics;
       if (data.users && data.users.length) {

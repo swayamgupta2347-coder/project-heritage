@@ -239,11 +239,15 @@ const App = {
   async fetchRoutes() {
     try {
       const res = await fetch('/api/routes');
-      if (res.ok) {
-        this.state.routes = await res.json();
-      } else {
-        this.state.routes = window.SEED_CACHE?.routes || [];
-      }
+      const raw = res.ok ? await res.json() : (window.SEED_CACHE?.routes || []);
+      // Strict de-duplication by id and title
+      const seen = new Set();
+      this.state.routes = raw.filter(r => {
+        if (!r || !r.id || seen.has(r.id) || seen.has(r.title)) return false;
+        seen.add(r.id);
+        seen.add(r.title);
+        return true;
+      });
     } catch (e) {
       this.state.routes = window.SEED_CACHE?.routes || [];
     }
@@ -252,11 +256,15 @@ const App = {
   async fetchLandmarks() {
     try {
       const res = await fetch('/api/landmarks');
-      if (res.ok) {
-        this.state.landmarks = await res.json();
-      } else {
-        this.state.landmarks = window.SEED_CACHE?.landmarks || [];
-      }
+      const raw = res.ok ? await res.json() : (window.SEED_CACHE?.landmarks || []);
+      // Strict de-duplication by id and name
+      const seen = new Set();
+      this.state.landmarks = raw.filter(l => {
+        if (!l || !l.id || seen.has(l.id) || seen.has(l.name)) return false;
+        seen.add(l.id);
+        seen.add(l.name);
+        return true;
+      });
     } catch (e) {
       this.state.landmarks = window.SEED_CACHE?.landmarks || [];
     }
