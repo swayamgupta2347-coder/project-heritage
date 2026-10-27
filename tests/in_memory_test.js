@@ -169,6 +169,20 @@ async function runTests() {
     });
     assert(strawberryRes.status === 200 && strawberryRes.body.thoughts.length >= 4 && strawberryRes.body.answer.length > 50, 'POST /api/agent/strawberry returns multi-step chain-of-thought and deep historical synthesis');
 
+    // 16b. Agentic AI: Strawberry Architecture Query ("which agentic ai are used")
+    const agenticQueryRes = await dispatch('POST', '/api/agent/strawberry', { 'content-type': 'application/json' }, {
+      query: 'which agentic ai are used',
+      landmarkId: 'landmark-colosseum'
+    });
+    assert(agenticQueryRes.status === 200 && agenticQueryRes.body.answer.includes('Strawberry') && agenticQueryRes.body.answer.includes('Open Claw') && agenticQueryRes.body.answer.includes('n8n'), 'POST /api/agent/strawberry correctly answers architecture questions about Strawberry, Open Claw, and n8n');
+
+    // 16c. Agentic AI: Strawberry Dynamic Landmark Keyword Detection
+    const keywordRes = await dispatch('POST', '/api/agent/strawberry', { 'content-type': 'application/json' }, {
+      query: 'Tell me about the engineering of Red Fort in Delhi',
+      landmarkId: 'landmark-colosseum'
+    });
+    assert(keywordRes.status === 200 && keywordRes.body.landmarkId === 'landmark-red-fort', 'POST /api/agent/strawberry detects Red Fort keyword in user query and switches to Red Fort');
+
     // 17. Agentic AI: Open Claw Autonomous Heritage Crawler
     const clawRes = await dispatch('POST', '/api/agent/openclaw/crawl', { 'content-type': 'application/json' }, {
       landmarkId: 'landmark-taj-mahal',

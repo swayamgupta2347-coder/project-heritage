@@ -558,7 +558,7 @@ const App = {
             <button class="btn btn-secondary" onclick="App.toggleFavorite('${lm.id}')">
               ${isFav ? '★ Bookmarked' : '☆ Bookmark'}
             </button>
-            <button class="btn btn-secondary btn-agentic-glow" onclick="AgenticAI.toggleDrawer(true); AgenticAI.askPredefined('Analyze the construction engineering and epigraphy of ' + ${JSON.stringify(lm.name)})">
+            <button class="btn btn-secondary btn-agentic-glow" onclick="AgenticAI.askForLandmark('${lm.id}', 'engineering')">
               🍓 Strawberry Scholar
             </button>
             <button class="btn btn-secondary" onclick="AgenticAI.runOpenClaw('${lm.id}', 'landmark-openclaw-area')">
@@ -662,15 +662,15 @@ const App = {
             </p>
 
             <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:12px;">
-              <button class="dialogue-question-btn" style="border-color:rgba(255,51,102,0.35); text-align:left;" onclick="AgenticAI.toggleDrawer(true); AgenticAI.askPredefined('Perform structural stress and material mechanics analysis for ' + ${JSON.stringify(lm.name)})">
+              <button class="dialogue-question-btn" style="border-color:rgba(255,51,102,0.35); text-align:left;" onclick="AgenticAI.askForLandmark('${lm.id}', 'engineering')">
                 <span>📐 Structural & Seismic Mechanics</span>
                 <span>🍓</span>
               </button>
-              <button class="dialogue-question-btn" style="border-color:rgba(255,51,102,0.35); text-align:left;" onclick="AgenticAI.toggleDrawer(true); AgenticAI.askPredefined('What epigraphic records and ancient chronicles document ' + ${JSON.stringify(lm.name)} + '?')">
+              <button class="dialogue-question-btn" style="border-color:rgba(255,51,102,0.35); text-align:left;" onclick="AgenticAI.askForLandmark('${lm.id}', 'epigraphy')">
                 <span>📜 Epigraphic & Textual Records</span>
                 <span>🍓</span>
               </button>
-              <button class="dialogue-question-btn" style="border-color:rgba(255,51,102,0.35); text-align:left;" onclick="AgenticAI.toggleDrawer(true); AgenticAI.askPredefined('Compare ancient construction techniques with CyArk 3D point-cloud data for ' + ${JSON.stringify(lm.name)})">
+              <button class="dialogue-question-btn" style="border-color:rgba(255,51,102,0.35); text-align:left;" onclick="AgenticAI.askForLandmark('${lm.id}', 'lidar')">
                 <span>🦅 CyArk 3D LiDAR Comparison</span>
                 <span>🍓</span>
               </button>
@@ -912,7 +912,7 @@ const App = {
             <button class="btn btn-primary btn-sm" onclick="App.navigate('landmark/${lm.id}')">
               📖 View Landmark Story
             </button>
-            <button class="btn btn-secondary btn-sm btn-agentic-glow" onclick="AgenticAI.toggleDrawer(true); AgenticAI.askPredefined('Explain the 3D structural physics and materials of ' + ${JSON.stringify(lm.name)})">
+            <button class="btn btn-secondary btn-sm btn-agentic-glow" onclick="AgenticAI.askForLandmark('${lm.id}', 'physics')">
               🍓 Ask Strawberry Scholar
             </button>
             <button class="btn btn-secondary btn-sm" onclick="AudioGuide.loadTrack('${lm.id}')">

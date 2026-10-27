@@ -2470,7 +2470,7 @@ body {
   position: fixed;
   bottom: 84px;
   right: 28px;
-  z-index: 999;
+  z-index: 1100;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -2525,11 +2525,18 @@ body {
   z-index: 1200;
   display: flex;
   flex-direction: column;
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  visibility: visible;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s ease;
 }
 
 .strawberry-drawer.hidden {
   transform: translateX(105%);
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.hidden:not(.strawberry-drawer):not(.audio-dock) {
+  display: none !important;
 }
 
 .strawberry-drawer-inner {

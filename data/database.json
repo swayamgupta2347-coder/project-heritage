@@ -427,7 +427,7 @@
       ]
     },
     {
-      "id": "route-1793106744571",
+      "id": "route-1793107786725",
       "title": "Classical Athens Acropolis Trail",
       "city": "Athens",
       "country": "Greece",
@@ -452,7 +452,7 @@
       ],
       "zoomLevel": 13,
       "landmarks": [
-        "landmark-1793106744572"
+        "landmark-1793107786726"
       ]
     }
   ],
@@ -1901,8 +1901,8 @@
       ]
     },
     {
-      "id": "landmark-1793106744572",
-      "routeId": "route-1793106744571",
+      "id": "landmark-1793107786726",
+      "routeId": "route-1793107786725",
       "name": "The Parthenon",
       "nativeName": "The Parthenon",
       "yearBuilt": "447–432 BC",
@@ -1912,7 +1912,7 @@
         23.7267
       ],
       "elevation": "25m above sea level",
-      "qrCode": "HERITAGE-1793106744572",
+      "qrCode": "HERITAGE-1793107786726",
       "modelType": "colosseum",
       "thumbnail": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80",
       "archivalImage": "https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=800&q=80",
@@ -2189,7 +2189,8 @@
       "landmark-red-fort": 12301,
       "landmark-fushimi-inari": 11400,
       "landmark-great-sphinx": 9800,
-      "landmark-arch-titus-forum": 8
+      "landmark-arch-titus-forum": 8,
+      "landmark-humayun-tomb": 1
     },
     "devices": {
       "Mobile (iOS / Safari)": 58,
@@ -2206,31 +2207,108 @@
     },
     "recentEvents": [
       {
-        "id": 1793106744576,
+        "id": 1793107786731,
         "type": "workflow_executed",
         "landmark": "Autonomous Monument Ingestion & LiDAR Enrichment",
         "location": "n8n Agentic Canvas",
         "timestamp": "Just now"
       },
       {
-        "id": 1793106744574,
+        "id": 1793107786730,
         "type": "openclaw_crawl",
         "landmark": "Taj Mahal",
         "location": "Open Claw Heritage Crawler",
         "timestamp": "Just now"
       },
       {
-        "id": 1793106744573,
+        "id": 1793107786729,
+        "type": "ai_reasoning",
+        "landmark": "Red Fort (Lal Qila)",
+        "location": "Strawberry AI (reasoning)",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793107786728,
+        "type": "ai_reasoning",
+        "landmark": "The Colosseum (Flavian Amphitheatre)",
+        "location": "Strawberry AI (reasoning)",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793107786727,
         "type": "ai_reasoning",
         "landmark": "The Colosseum (Flavian Amphitheatre)",
         "location": "Strawberry AI (strawberry)",
         "timestamp": "Just now"
       },
       {
-        "id": 1793106744565,
+        "id": 1793107786721,
         "type": "qr_triggered",
         "landmark": "The Colosseum (Flavian Amphitheatre)",
         "location": "route-rome-imperial",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793107247690,
+        "type": "workflow_executed",
+        "landmark": "Autonomous Monument Ingestion & LiDAR Enrichment",
+        "location": "n8n Agentic Canvas",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793107247687,
+        "type": "openclaw_crawl",
+        "landmark": "Red Fort (Lal Qila)",
+        "location": "Open Claw Heritage Crawler",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793107247683,
+        "type": "ai_reasoning",
+        "landmark": "Red Fort (Lal Qila)",
+        "location": "Strawberry AI (reasoning)",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793106962256,
+        "type": "ai_reasoning",
+        "landmark": "The Colosseum (Flavian Amphitheatre)",
+        "location": "Strawberry AI (strawberry)",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793106937232,
+        "type": "audio_play",
+        "landmark": "Humayun's Tomb",
+        "location": "Digital Stream",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793106885792,
+        "type": "ai_reasoning",
+        "landmark": "The Colosseum (Flavian Amphitheatre)",
+        "location": "Strawberry AI (quick)",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793106880631,
+        "type": "ai_reasoning",
+        "landmark": "The Colosseum (Flavian Amphitheatre)",
+        "location": "Strawberry AI (quick)",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793106870981,
+        "type": "ai_reasoning",
+        "landmark": "The Colosseum (Flavian Amphitheatre)",
+        "location": "Strawberry AI (quick)",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793106866572,
+        "type": "ai_reasoning",
+        "landmark": "The Colosseum (Flavian Amphitheatre)",
+        "location": "Strawberry AI (quick)",
         "timestamp": "Just now"
       },
       {
@@ -2343,83 +2421,6 @@
         "type": "audio_play",
         "landmark": "The Roman Forum & Arch of Titus",
         "location": "Digital Stream",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1791654355295,
-        "type": "landmark_view",
-        "landmark": "The Roman Forum & Arch of Titus",
-        "location": "Digital Stream",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1791654354401,
-        "type": "landmark_view",
-        "landmark": "The Roman Forum & Arch of Titus",
-        "location": "Digital Stream",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1791654330331,
-        "type": "landmark_view",
-        "landmark": "The Roman Forum & Arch of Titus",
-        "location": "Digital Stream",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1791654324645,
-        "type": "ar_interaction",
-        "landmark": "The Roman Forum & Arch of Titus",
-        "location": "Digital Stream",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1791654253663,
-        "type": "landmark_view",
-        "landmark": "The Roman Forum & Arch of Titus",
-        "location": "Digital Stream",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1791654247378,
-        "type": "ar_interaction",
-        "landmark": "The Roman Forum & Arch of Titus",
-        "location": "Digital Stream",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1791654246557,
-        "type": "qr_triggered",
-        "landmark": "The Roman Forum & Arch of Titus",
-        "location": "route-rome-imperial",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1791654241747,
-        "type": "qr_triggered",
-        "landmark": "The Colosseum (Flavian Amphitheatre)",
-        "location": "route-rome-imperial",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1791654238914,
-        "type": "qr_triggered",
-        "landmark": "The Colosseum (Flavian Amphitheatre)",
-        "location": "route-rome-imperial",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1791654236049,
-        "type": "ar_interaction",
-        "landmark": "The Colosseum (Flavian Amphitheatre)",
-        "location": "Digital Stream",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1791654235217,
-        "type": "qr_triggered",
-        "landmark": "The Colosseum (Flavian Amphitheatre)",
-        "location": "route-rome-imperial",
         "timestamp": "Just now"
       }
     ]

@@ -174,10 +174,35 @@ const WORKFLOWS_REGISTRY = [
 
 // 1. STRAWBERRY REASONING ENGINE (o-series Chain-of-Thought)
 function runStrawberryReasoning({ query, landmarkId, mode = 'strawberry', personaId, language = 'en', db }) {
-  const landmark = db.landmarks.find(l => l.id === landmarkId) || db.landmarks[0];
-  const route = db.routes.find(r => r.id === landmark.routeId) || db.routes[0];
-
   const startTime = Date.now();
+  const qStr = (query || '').trim();
+  const qLower = qStr.toLowerCase();
+
+  // Intelligently infer target landmark from query keywords if mentioned
+  let landmark = db.landmarks.find(l => l.id === landmarkId) || db.landmarks[0];
+  if (qLower) {
+    const matched = db.landmarks.find(l => {
+      const nameMatch = l.name && qLower.includes(l.name.toLowerCase());
+      const idMatch = l.id && qLower.includes(l.id.replace('landmark-', '').replace(/-/g, ' '));
+      const aliasMatch = (l.id === 'landmark-red-fort' && (qLower.includes('red fort') || qLower.includes('lal qila') || qLower.includes('lal qilah'))) ||
+                         (l.id === 'landmark-taj-mahal' && qLower.includes('taj mahal')) ||
+                         (l.id === 'landmark-humayun-tomb' && (qLower.includes('humayun') || (qLower.includes('tomb') && !qLower.includes('hadrian')))) ||
+                         (l.id === 'landmark-qutb-minar' && (qLower.includes('qutb') || qLower.includes('qutub') || qLower.includes('minar'))) ||
+                         (l.id === 'landmark-colosseum' && (qLower.includes('colosseum') || qLower.includes('amphitheatre') || qLower.includes('flavian'))) ||
+                         (l.id === 'landmark-pantheon' && qLower.includes('pantheon')) ||
+                         (l.id === 'landmark-castel-santangelo' && (qLower.includes('santangelo') || qLower.includes('hadrian') || qLower.includes('mausoleum'))) ||
+                         (l.id === 'landmark-machu-picchu' && (qLower.includes('machu') || qLower.includes('picchu') || qLower.includes('inca'))) ||
+                         (l.id === 'landmark-parthenon' && (qLower.includes('parthenon') || qLower.includes('acropolis') || qLower.includes('athens'))) ||
+                         (l.id === 'landmark-pyramid-khufu' && (qLower.includes('pyramid') || qLower.includes('khufu') || qLower.includes('giza'))) ||
+                         (l.id === 'landmark-kinkaku-ji' && (qLower.includes('kinkaku') || qLower.includes('golden pavilion') || qLower.includes('kyoto')));
+      return nameMatch || idMatch || aliasMatch;
+    });
+    if (matched) {
+      landmark = matched;
+    }
+  }
+
+  const route = db.routes.find(r => r.id === landmark.routeId) || db.routes[0];
 
   // Historical Personas Library
   const personas = {
@@ -240,12 +265,77 @@ function runStrawberryReasoning({ query, landmarkId, mode = 'strawberry', person
     activePersona = personas["marcus_aurelius"];
   }
 
-  // Strawberry Multi-Step Chain of Thought Generation
+  // Detect if query is asking about the Agentic AI platform architecture itself
+  const isAgenticQuery = qLower && /\b(agentic|agent|ai|strawberry|open claw|openclaw|n8n|crawler|workflow|architecture|models|used|which ai|how does it work|explain ai)\b/i.test(qLower) &&
+    !/\b(red fort|colosseum|taj mahal|pantheon|humayun|parthenon|pyramid|qutb)\b/i.test(qLower);
+
+  if (isAgenticQuery) {
+    const thoughts = [
+      {
+        step: 1,
+        title: "Agentic Architecture Introspection",
+        detail: "Inspected autonomous multi-agent stack: Strawberry o-series CoT reasoning core, Open Claw headless heritage scraper, n8n visual event-driven workflow engine, and Strawberry spatial path optimizer."
+      },
+      {
+        step: 2,
+        title: "Pipeline Telemetry Verification",
+        detail: "Mapped reactive data loops between CyArk 3D laser-scan repositories, UNESCO conservation state bulletins, Leaflet GPS radar geofences (<200m), and WebAR spatial anchors."
+      },
+      {
+        step: 3,
+        title: "Synthesis of Agent Responsibilities & Use-Cases",
+        detail: "Structured curatorial explanation mapping each agent's exact operational domain and user touchpoints across tourist, curator, and administrative interfaces."
+      }
+    ];
+
+    const answer = `### 🤖 Agentic AI Architecture: Systems & Deployments\n\n` +
+      `The **Heritage Route Digital Guide Platform** employs a synchronized multi-agent framework across 4 distinct Agentic AI implementations:\n\n` +
+      `---\n\n` +
+      `#### 1. 🍓 Strawberry (o-series Chain-of-Thought) Reasoning Agent\n` +
+      `* **Where it is used:** Embedded in the floating Scholar drawer, individual Monument detail cards, and the 3D WebAR viewer.\n` +
+      `* **Role & Functionality:** Performs multi-step, test-time compute reasoning across architectural physics, vaulting stress distributions, ancient primary texts, and epigraphy.\n` +
+      `* **Historical Personas:** Hosts 7 authentic historical personas (e.g., Emperor Shah Jahan, Marcus Aurelius, Imhotep, Pericles, Pachacuti, Sen no Rikyū) that adapt voice and perspective to their respective monuments.\n\n` +
+      `#### 2. 🦅 Open Claw Autonomous Heritage Crawler\n` +
+      `* **Where it is used:** Available in the **Admin CMS (Tab: Open Claw Researcher)** and the **Monument Detail Page (Open Claw Research button)**.\n` +
+      `* **Role & Functionality:** Autonomous headless scraper simulating live extraction of sub-millimeter CyArk 3D terrestrial LiDAR point clouds, UNESCO State of Conservation (SOC) bulletins, and recent archaeological discoveries.\n\n` +
+      `#### 3. ⚡ n8n Visual Workflow Engine & Multi-Agent Canvas\n` +
+      `* **Where it is used:** Located in the **Admin CMS (Tab: n8n Workflows Studio)**.\n` +
+      `* **Role & Functionality:** Event-driven multi-agent orchestration. Coordinates chained triggers (GPS geofences <200m, scheduled morning cron jobs) with autonomous agent reasoning, historical voice synthesis, and WebAR camera activation.\n\n` +
+      `#### 4. 🗺️ Strawberry Chrono-Spatial Route Optimizer\n` +
+      `* **Where it is used:** Located on the **Interactive Route Map (#/map)** via the **"🍓 Strawberry Smart Path"** button.\n` +
+      `* **Role & Functionality:** Sequences monuments chronologically by epoch or spatially to eliminate backtracking, saving ~22 minutes of walking time while illustrating historical architectural evolution.`;
+
+    const audioScript = "The Heritage Route Guide is powered by four synchronized Agentic AI systems: Strawberry Chain of Thought reasoning, the Open Claw autonomous CyArk scraper, the n8n visual multi-agent workflow engine, and the Strawberry chrono-route optimizer.";
+
+    const thinkingTimeSec = ((Date.now() - startTime + 600) / 1000).toFixed(1);
+
+    return {
+      success: true,
+      mode: 'strawberry',
+      landmarkId: landmark.id,
+      landmarkName: landmark.name,
+      query: qStr,
+      thinkingTimeSec: parseFloat(thinkingTimeSec),
+      thoughts,
+      answer,
+      primarySources: [
+        "Google DeepMind Advanced Agentic Coding Whitepaper",
+        "OpenAI o-series Chain-of-Thought Architecture",
+        "CyArk Terrestrial LiDAR Documentation Standards",
+        "n8n Distributed Multi-Agent Workflow Engine Specification"
+      ],
+      audioScript,
+      persona: activePersona,
+      language
+    };
+  }
+
+  // Strawberry Multi-Step Chain of Thought Generation for Landmark Inquiries
   const thoughts = [
     {
       step: 1,
       title: "Spatial & Epigraphic Anchoring",
-      detail: `Synthesized GPS coordinates [${landmark.coordinates.join(', ')}] with epoch bounds (${landmark.yearBuilt}, ${landmark.era}). Cross-referenced epigraphic database and archival references.`
+      detail: `Synthesized GPS coordinates [${landmark.coordinates.join(', ')}] with epoch bounds (${landmark.yearBuilt}, ${landmark.era}) for ${landmark.name}. Cross-referenced epigraphic records and historical chronicles.`
     },
     {
       step: 2,
@@ -255,7 +345,7 @@ function runStrawberryReasoning({ query, landmarkId, mode = 'strawberry', person
     {
       step: 3,
       title: "Historiographical Cross-Examination",
-      detail: `Compared classical chroniclers (Pliny the Elder, Dio Cassius, Baburnama, Nihon Shoki) against modern stratigraphic excavations and UNESCO conservation records.`
+      detail: `Compared contemporary chroniclers against modern stratigraphic excavations and UNESCO conservation records along the ${route.title}.`
     },
     {
       step: 4,
@@ -265,7 +355,7 @@ function runStrawberryReasoning({ query, landmarkId, mode = 'strawberry', person
     {
       step: 5,
       title: "Curatorial Synthesis & Visitor Adaptation",
-      detail: `Resolved core visitor inquiry: "${query || 'Architectural and cultural significance'}". Formulated authoritative scholarly narrative with primary citations and engaging storytelling tone.`
+      detail: `Resolved visitor inquiry: "${qStr || 'Architectural and cultural significance'}". Formulated authoritative scholarly narrative with primary citations and engaging storytelling tone.`
     }
   ];
 
@@ -275,7 +365,10 @@ function runStrawberryReasoning({ query, landmarkId, mode = 'strawberry', person
   let audioScript = "";
 
   if (mode === 'persona') {
-    answer = `I, ${activePersona.name}, welcome you before ${landmark.name}. ${landmark.character?.introQuote || 'Know that our hands built not merely stone, but an eternal testament to the human spirit.'} Regarding your inquiry: ${landmark.historicalNarrative} Look closely at the craftsmanship; every arch and stone was placed with divine intention so that future centuries might know what our civilization achieved.`;
+    answer = `I, ${activePersona.name}, welcome you before ${landmark.name}. ${landmark.character?.introQuote || 'Know that our hands built not merely stone, but an eternal testament to the human spirit.'}\n\n` +
+      `Regarding your inquiry about ${landmark.name}:\n` +
+      `${landmark.historicalNarrative}\n\n` +
+      `Look closely at the craftsmanship; every arch, dome, and ashlar block was placed with deliberate purpose so that future generations might comprehend our civilization's golden age.`;
     primarySources = [
       `${activePersona.name}'s Contemporary Imperial Archives`,
       `UNESCO World Heritage Dossier: ${route.unescoStatus}`,
@@ -283,7 +376,11 @@ function runStrawberryReasoning({ query, landmarkId, mode = 'strawberry', person
     ];
     audioScript = `I, ${activePersona.name}, welcome you to ${landmark.name}. ${landmark.audioScript.substring(0, 220)}...`;
   } else if (mode === 'quick') {
-    answer = `${landmark.name} was completed in ${landmark.yearBuilt} during the ${landmark.era}. Its key historical significance lies in its revolutionary engineering and cultural symbolism: ${landmark.audioScript}`;
+    answer = `**${landmark.name}** was completed in **${landmark.yearBuilt}** (${landmark.era}) in ${landmark.city || route.city}.\n\n` +
+      `**Historical Significance & Mechanics:**\n` +
+      `${landmark.audioScript}\n\n` +
+      `**Key Highlights:**\n` +
+      `${landmark.culturalInsights ? landmark.culturalInsights.map(c => `• ${c}`).join('\n') : landmark.historicalNarrative.substring(0, 300)}`;
     primarySources = [
       `UNESCO World Heritage Evaluation Reference #${landmark.id}`,
       `CyArk Laser Scan Repository`
@@ -295,9 +392,9 @@ function runStrawberryReasoning({ query, landmarkId, mode = 'strawberry', person
       `**1. Architectural Mechanics & Materials:**\n` +
       `${landmark.historicalNarrative}\n\n` +
       `**2. Technological Innovation:**\n` +
-      `CyArk's terrestrial 3D laser-scanning survey revealed precision structural tolerances under 1.5 millimeters. Builders utilized advanced proportional systems and local material engineering (elevation: ${landmark.elevation}) to withstand seismic lateral shears and weathering across millennia.\n\n` +
+      `CyArk's terrestrial 3D laser-scanning survey revealed precision structural tolerances under 1.5 millimeters. Builders utilized advanced proportional systems and local material engineering (elevation: ${landmark.elevation}) to withstand seismic lateral shears and weathering across centuries.\n\n` +
       `**3. Historiographical Consensus:**\n` +
-      `Modern archaeological documentation confirms that the site served as both a civic masterwork and a cosmological marker along the ${route.title}.\n\n` +
+      `Modern archaeological documentation confirms that ${landmark.name} served as both a civic masterwork and a cosmological marker along the ${route.title}.\n\n` +
       `**4. Curatorial Takeaway for Visitors:**\n` +
       `${landmark.culturalInsights ? landmark.culturalInsights.join(' ') : landmark.audioScript}`;
 
@@ -316,7 +413,7 @@ function runStrawberryReasoning({ query, landmarkId, mode = 'strawberry', person
     mode,
     landmarkId: landmark.id,
     landmarkName: landmark.name,
-    query: query || `Analyze the architectural and cultural significance of ${landmark.name}`,
+    query: qStr || `Analyze the architectural and cultural significance of ${landmark.name}`,
     thinkingTimeSec: parseFloat(thinkingTimeSec),
     thoughts,
     answer,
