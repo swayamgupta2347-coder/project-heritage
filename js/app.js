@@ -648,6 +648,39 @@ const App = {
             <div id="character-response-area"></div>
           </div>
 
+          <!-- Embedded Strawberry AI Scholarly Inquiry Console -->
+          <div class="story-card" style="border:1px solid rgba(255,51,102,0.3); background:linear-gradient(135deg, rgba(20,26,36,0.95), rgba(30,15,22,0.9)); margin-bottom:20px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+              <div style="display:flex; align-items:center; gap:8px;">
+                <span style="font-size:22px;">🍓</span>
+                <h4 style="font-size:15px; font-weight:700; color:#FFF; margin:0;">Strawberry AI Scholar</h4>
+              </div>
+              <span class="badge-strawberry">o-series CoT</span>
+            </div>
+            <p style="font-size:12px; color:var(--text-secondary); margin-bottom:12px; line-height:1.45;">
+              Inquire into structural physics, epigraphic records, or CyArk 3D laser-scan analysis with deep multi-step reasoning.
+            </p>
+
+            <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:12px;">
+              <button class="dialogue-question-btn" style="border-color:rgba(255,51,102,0.35); text-align:left;" onclick="AgenticAI.toggleDrawer(true); AgenticAI.askPredefined('Perform structural stress and material mechanics analysis for ' + ${JSON.stringify(lm.name)})">
+                <span>📐 Structural & Seismic Mechanics</span>
+                <span>🍓</span>
+              </button>
+              <button class="dialogue-question-btn" style="border-color:rgba(255,51,102,0.35); text-align:left;" onclick="AgenticAI.toggleDrawer(true); AgenticAI.askPredefined('What epigraphic records and ancient chronicles document ' + ${JSON.stringify(lm.name)} + '?')">
+                <span>📜 Epigraphic & Textual Records</span>
+                <span>🍓</span>
+              </button>
+              <button class="dialogue-question-btn" style="border-color:rgba(255,51,102,0.35); text-align:left;" onclick="AgenticAI.toggleDrawer(true); AgenticAI.askPredefined('Compare ancient construction techniques with CyArk 3D point-cloud data for ' + ${JSON.stringify(lm.name)})">
+                <span>🦅 CyArk 3D LiDAR Comparison</span>
+                <span>🍓</span>
+              </button>
+            </div>
+
+            <button class="btn btn-primary btn-block btn-sm btn-agentic-glow" onclick="AgenticAI.toggleDrawer(true)">
+              💬 Open Full Interactive Scholar Chat
+            </button>
+          </div>
+
           <!-- Cultural Insights -->
           <div class="story-card">
             <h4 class="section-title" style="font-size:18px;">Archaeological Highlights</h4>
@@ -833,6 +866,17 @@ const App = {
               <span id="chrono-val" style="font-family:var(--font-mono); color:var(--gold-primary);">Modern Preserved State</span>
             </div>
             <input type="range" min="0" max="1" step="0.05" value="0" class="range-input" oninput="WebAR.setChronoRatio(this.value)">
+          </div>
+
+          <!-- Interactive 3D Viewpoints -->
+          <div style="margin: 14px 0;">
+            <label style="display:block; font-size:11px; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:8px;">Interactive 3D Camera Angles:</label>
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:6px;">
+              <button class="btn btn-secondary btn-sm" onclick="WebAR.setViewpoint('front')">👁️ Front Facade</button>
+              <button class="btn btn-secondary btn-sm" onclick="WebAR.setViewpoint('drone')">🦅 Aerial Drone</button>
+              <button class="btn btn-secondary btn-sm" onclick="WebAR.setViewpoint('hypogeum')">🔍 Hypogeum</button>
+              <button class="btn btn-secondary btn-sm" onclick="WebAR.setViewpoint('orbit')">🔄 360° Orbit</button>
+            </div>
           </div>
 
           <!-- Simulated Background Selector -->

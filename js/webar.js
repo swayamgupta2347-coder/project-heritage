@@ -989,6 +989,9 @@ const WebAR = {
     const projMat = this.createPerspectiveMatrix(45 * Math.PI / 180, aspect, 0.1, 100.0);
     
     // ModelView Matrix with rotations and zoom
+    if (this.autoOrbit) {
+      this.rotationY += 0.008;
+    }
     let mvMat = this.createIdentityMatrix();
     mvMat = this.translateMatrix(mvMat, 0.0, 0.0, -3.8);
     mvMat = this.rotateX(mvMat, this.rotationX);
@@ -1171,6 +1174,34 @@ const WebAR = {
 
   setScale(val) {
     this.scale = parseFloat(val);
+  },
+
+  setViewpoint(view) {
+    if (view === 'front') {
+      this.rotationX = 0.15;
+      this.rotationY = 0.0;
+      this.scale = 1.0;
+      this.autoOrbit = false;
+      App.showToast('👁️ Viewpoint: Monument Front Facade');
+    } else if (view === 'drone') {
+      this.rotationX = 0.95;
+      this.rotationY = 0.78;
+      this.scale = 0.85;
+      this.autoOrbit = false;
+      App.showToast('🦅 Viewpoint: Aerial Drone Telemetry');
+    } else if (view === 'hypogeum') {
+      this.rotationX = -0.35;
+      this.rotationY = 0.45;
+      this.scale = 1.25;
+      this.autoOrbit = false;
+      this.setExplode(0.5);
+      const expEl = document.getElementById('explode-val-txt');
+      if (expEl) expEl.textContent = '50%';
+      App.showToast('🔍 Viewpoint: Subterranean Hypogeum & Vaults');
+    } else if (view === 'orbit') {
+      this.autoOrbit = !this.autoOrbit;
+      App.showToast(this.autoOrbit ? '🔄 360° Continuous Orbit Mode Active' : '⏸ Orbit Mode Paused');
+    }
   },
 
   setSimulatedEnv(env) {

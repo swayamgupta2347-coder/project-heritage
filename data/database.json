@@ -396,6 +396,35 @@
       "landmarks": [
         "landmark-1793103700541"
       ]
+    },
+    {
+      "id": "route-1793104473085",
+      "title": "Classical Athens Acropolis Trail",
+      "city": "Athens",
+      "country": "Greece",
+      "region": "Athens, Greece",
+      "difficulty": "Easy Walk",
+      "durationMins": 140,
+      "distanceKm": 3.2,
+      "theme": "Classical Hellenic Antiquity",
+      "unescoStatus": "Protected Cultural Heritage",
+      "coverImage": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80",
+      "description": "Journey through the Parthenon, Erechtheion, and the Theatre of Dionysus on the sacred rock of Athens.",
+      "rating": 5,
+      "reviewCount": 1,
+      "tags": [
+        "Heritage",
+        "Audio Tour",
+        "3D LiDAR"
+      ],
+      "centerCoords": [
+        41.8902,
+        12.4922
+      ],
+      "zoomLevel": 13,
+      "landmarks": [
+        "landmark-1793104473086"
+      ]
     }
   ],
   "landmarks": [
@@ -599,7 +628,7 @@
       "qrCode": "HERITAGE-ROME-HADRIAN-139AD",
       "modelType": "rotunda",
       "thumbnail": "https://images.unsplash.com/photo-1525874684015-58379d421a52?auto=format&fit=crop&w=800&q=80",
-      "archivalImage": "https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1531572753322-ad063cecc140?auto=format&fit=crop&w=800&q=80",
       "audioDurationSec": 120,
       "audioTitle": "From Imperial Tomb to Papal Citadel",
       "audioScript": "Perched on the right bank of the Tiber River stands Hadrian's cylindrical mausoleum, linked to Campus Martius across the marble-bridged Pons Aelius. Over nearly two millennia, this monumental tomb morphed into a formidable medieval fortress, connected to the Vatican by the Passetto di Borgo—an elevated secret escape corridor traversed by embattled Popes.",
@@ -652,8 +681,8 @@
       "elevation": "216m above sea level",
       "qrCode": "HERITAGE-INDIA-REDFORT-1648AD",
       "modelType": "fortress",
-      "thumbnail": "https://images.unsplash.com/photo-1598324789736-4861fadd3a4c?auto=format&fit=crop&w=800&q=80",
-      "archivalImage": "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=80",
+      "thumbnail": "https://images.unsplash.com/photo-1585135497273-1a86b09fe70e?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1621847468516-1ed5d0df56fe?auto=format&fit=crop&w=800&q=80",
       "audioDurationSec": 150,
       "audioTitle": "Citadel of the Peacock Throne: Shah Jahan's Crimson Jewel",
       "audioScript": "Welcome to Lal Qila, the octagonal citadel of red sandstone that defined the zenith of Mughal sovereignty. When Emperor Shah Jahan relocated his imperial capital from Agra to Shahjahanabad in 1638, he commissioned master architects Ustad Hamid and Ustad Ahmad to construct an architectural paradise on earth. Enter the Lahori Gate to witness the blend of Persian, Timurid, and indigenous Hindu aesthetic traditions.",
@@ -778,8 +807,8 @@
       "elevation": "215m above sea level",
       "qrCode": "HERITAGE-INDIA-HUMAYUN-1572AD",
       "modelType": "dome-tomb",
-      "thumbnail": "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=80",
-      "archivalImage": "https://images.unsplash.com/photo-1598324789736-4861fadd3a4c?auto=format&fit=crop&w=800&q=80",
+      "thumbnail": "https://images.unsplash.com/photo-1597044141243-7f309a63c64c?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1620619767323-b95a89183081?auto=format&fit=crop&w=800&q=80",
       "audioDurationSec": 135,
       "audioTitle": "The Garden Tomb that Breathed Life into Mughal Architecture",
       "audioScript": "Commissioned by Humayun's chief consort, Empress Bega Begum, and designed by Persian architect Mirak Mirza Ghiyas, this monument introduced the grand Charbagh four-quadrant garden tomb typology to the Indian subcontinent, directly foreshadowing the design of the Taj Mahal sixty years later.",
@@ -827,8 +856,8 @@
       "elevation": "230m above sea level",
       "qrCode": "HERITAGE-INDIA-QUTB-1199AD",
       "modelType": "tower",
-      "thumbnail": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80",
-      "archivalImage": "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=80",
+      "thumbnail": "https://images.unsplash.com/photo-1545129139-1beb780cf337?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80",
       "audioDurationSec": 140,
       "audioTitle": "Tower of Victory: 800 Years of Fluted Red Sandstone",
       "audioScript": "Towering 72.5 meters above Mehrauli, Qutb Minar is the world's tallest brick minaret. Initiated by Qutb ud-Din Aibak in 1199, its five distinct tapering storeys alternate between angular and rounded flutings, encircled by balconies supported by intricate honeycomb stalactite corbels. Standing nearby in the courtyard is the 1,600-year-old rust-resistant Gupta Iron Pillar.",
@@ -1798,6 +1827,49 @@
       "culturalInsights": [
         "Documented for 3D preservation under international heritage conventions."
       ]
+    },
+    {
+      "id": "landmark-1793104473086",
+      "routeId": "route-1793104473085",
+      "name": "The Parthenon",
+      "nativeName": "The Parthenon",
+      "yearBuilt": "447–432 BC",
+      "era": "Classical Greece (Periclean Golden Age)",
+      "coordinates": [
+        37.9715,
+        23.7267
+      ],
+      "elevation": "25m above sea level",
+      "qrCode": "HERITAGE-1793104473086",
+      "modelType": "colosseum",
+      "thumbnail": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=800&q=80",
+      "audioDurationSec": 120,
+      "audioTitle": "The Parthenon Audio Guide",
+      "audioScript": "Perched upon the Acropolis, the Parthenon stands as the pinnacle of Doric architecture.",
+      "historicalNarrative": "Dedicated to Athena Parthenos, master sculptor Phidias and architects Ictinus and Callicrates engineered subtle optical corrections known as entasis.",
+      "timeline": [
+        {
+          "year": "447–432 BC",
+          "title": "Construction",
+          "description": "Monument erected."
+        }
+      ],
+      "character": {
+        "name": "Historical Guide",
+        "title": "Archaeological Chronicler",
+        "avatar": "🏛️",
+        "introQuote": "Welcome to this sacred monument of antiquity.",
+        "dialogues": [
+          {
+            "question": "Tell me about this monument",
+            "answer": "Dedicated to Athena Parthenos, master sculptor Phidias and architects Ictinus and Callicrates engineered subtle optical corrections known as entasis."
+          }
+        ]
+      },
+      "culturalInsights": [
+        "Documented for 3D preservation under international heritage conventions."
+      ]
     }
   ],
   "translations": {
@@ -2026,7 +2098,7 @@
   },
   "analytics": {
     "totalVisitors": 84920,
-    "arInteractions": 52159,
+    "arInteractions": 52160,
     "audioToursCompleted": 39820,
     "passportsIssued": 19431,
     "averageSessionMins": 18.4,
@@ -2061,6 +2133,34 @@
       "Français": 3
     },
     "recentEvents": [
+      {
+        "id": 1793104473089,
+        "type": "workflow_executed",
+        "landmark": "Autonomous Monument Ingestion & LiDAR Enrichment",
+        "location": "n8n Agentic Canvas",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793104473088,
+        "type": "openclaw_crawl",
+        "landmark": "Taj Mahal",
+        "location": "Open Claw Heritage Crawler",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793104473087,
+        "type": "ai_reasoning",
+        "landmark": "The Colosseum (Flavian Amphitheatre)",
+        "location": "Strawberry AI (strawberry)",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793104473081,
+        "type": "qr_triggered",
+        "landmark": "The Colosseum (Flavian Amphitheatre)",
+        "location": "route-rome-imperial",
+        "timestamp": "Just now"
+      },
       {
         "id": 1793103700544,
         "type": "workflow_executed",
@@ -2242,27 +2342,6 @@
         "landmark": "The Colosseum (Flavian Amphitheatre)",
         "location": "route-rome-imperial",
         "timestamp": "Just now"
-      },
-      {
-        "id": 1791649284396,
-        "type": "passport_stamp",
-        "landmark": "Taj Mahal",
-        "location": "route-delhi-mughal",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1791649284392,
-        "type": "qr_triggered",
-        "landmark": "The Colosseum (Flavian Amphitheatre)",
-        "location": "route-rome-imperial",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1791649208743,
-        "type": "qr_triggered",
-        "landmark": "The Colosseum (Flavian Amphitheatre)",
-        "location": "route-rome-imperial",
-        "timestamp": "Just now"
       }
     ]
   },
@@ -2280,8 +2359,7 @@
       ],
       "favorites": [
         "landmark-pantheon",
-        "landmark-taj-mahal",
-        "landmark-kinkaku-ji"
+        "landmark-taj-mahal"
       ],
       "createdAt": "2026-10-10T16:03:59.902Z"
     },
