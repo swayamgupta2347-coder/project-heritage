@@ -425,6 +425,35 @@
       "landmarks": [
         "landmark-1793104473086"
       ]
+    },
+    {
+      "id": "route-1793106744571",
+      "title": "Classical Athens Acropolis Trail",
+      "city": "Athens",
+      "country": "Greece",
+      "region": "Athens, Greece",
+      "difficulty": "Easy Walk",
+      "durationMins": 140,
+      "distanceKm": 3.2,
+      "theme": "Classical Hellenic Antiquity",
+      "unescoStatus": "Protected Cultural Heritage",
+      "coverImage": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80",
+      "description": "Journey through the Parthenon, Erechtheion, and the Theatre of Dionysus on the sacred rock of Athens.",
+      "rating": 5,
+      "reviewCount": 1,
+      "tags": [
+        "Heritage",
+        "Audio Tour",
+        "3D LiDAR"
+      ],
+      "centerCoords": [
+        41.8902,
+        12.4922
+      ],
+      "zoomLevel": 13,
+      "landmarks": [
+        "landmark-1793106744572"
+      ]
     }
   ],
   "landmarks": [
@@ -1870,6 +1899,49 @@
       "culturalInsights": [
         "Documented for 3D preservation under international heritage conventions."
       ]
+    },
+    {
+      "id": "landmark-1793106744572",
+      "routeId": "route-1793106744571",
+      "name": "The Parthenon",
+      "nativeName": "The Parthenon",
+      "yearBuilt": "447–432 BC",
+      "era": "Classical Greece (Periclean Golden Age)",
+      "coordinates": [
+        37.9715,
+        23.7267
+      ],
+      "elevation": "25m above sea level",
+      "qrCode": "HERITAGE-1793106744572",
+      "modelType": "colosseum",
+      "thumbnail": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80",
+      "archivalImage": "https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=800&q=80",
+      "audioDurationSec": 120,
+      "audioTitle": "The Parthenon Audio Guide",
+      "audioScript": "Perched upon the Acropolis, the Parthenon stands as the pinnacle of Doric architecture.",
+      "historicalNarrative": "Dedicated to Athena Parthenos, master sculptor Phidias and architects Ictinus and Callicrates engineered subtle optical corrections known as entasis.",
+      "timeline": [
+        {
+          "year": "447–432 BC",
+          "title": "Construction",
+          "description": "Monument erected."
+        }
+      ],
+      "character": {
+        "name": "Historical Guide",
+        "title": "Archaeological Chronicler",
+        "avatar": "🏛️",
+        "introQuote": "Welcome to this sacred monument of antiquity.",
+        "dialogues": [
+          {
+            "question": "Tell me about this monument",
+            "answer": "Dedicated to Athena Parthenos, master sculptor Phidias and architects Ictinus and Callicrates engineered subtle optical corrections known as entasis."
+          }
+        ]
+      },
+      "culturalInsights": [
+        "Documented for 3D preservation under international heritage conventions."
+      ]
     }
   ],
   "translations": {
@@ -2098,7 +2170,7 @@
   },
   "analytics": {
     "totalVisitors": 84920,
-    "arInteractions": 52160,
+    "arInteractions": 52161,
     "audioToursCompleted": 39820,
     "passportsIssued": 19431,
     "averageSessionMins": 18.4,
@@ -2133,6 +2205,34 @@
       "Français": 3
     },
     "recentEvents": [
+      {
+        "id": 1793106744576,
+        "type": "workflow_executed",
+        "landmark": "Autonomous Monument Ingestion & LiDAR Enrichment",
+        "location": "n8n Agentic Canvas",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793106744574,
+        "type": "openclaw_crawl",
+        "landmark": "Taj Mahal",
+        "location": "Open Claw Heritage Crawler",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793106744573,
+        "type": "ai_reasoning",
+        "landmark": "The Colosseum (Flavian Amphitheatre)",
+        "location": "Strawberry AI (strawberry)",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793106744565,
+        "type": "qr_triggered",
+        "landmark": "The Colosseum (Flavian Amphitheatre)",
+        "location": "route-rome-imperial",
+        "timestamp": "Just now"
+      },
       {
         "id": 1793104473089,
         "type": "workflow_executed",
@@ -2321,27 +2421,6 @@
         "landmark": "The Colosseum (Flavian Amphitheatre)",
         "location": "route-rome-imperial",
         "timestamp": "Just now"
-      },
-      {
-        "id": 1791654209584,
-        "type": "ar_interaction",
-        "landmark": "Red Fort (Lal Qila)",
-        "location": "Digital Stream",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1791649955778,
-        "type": "qr_triggered",
-        "landmark": "The Colosseum (Flavian Amphitheatre)",
-        "location": "route-rome-imperial",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1791649933353,
-        "type": "qr_triggered",
-        "landmark": "The Colosseum (Flavian Amphitheatre)",
-        "location": "route-rome-imperial",
-        "timestamp": "Just now"
       }
     ]
   },
@@ -2359,7 +2438,8 @@
       ],
       "favorites": [
         "landmark-pantheon",
-        "landmark-taj-mahal"
+        "landmark-taj-mahal",
+        "landmark-kinkaku-ji"
       ],
       "createdAt": "2026-10-10T16:03:59.902Z"
     },
