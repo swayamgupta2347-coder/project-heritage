@@ -1522,7 +1522,7 @@
   },
   "analytics": {
     "totalVisitors": 84920,
-    "arInteractions": 52166,
+    "arInteractions": 52167,
     "audioToursCompleted": 39820,
     "passportsIssued": 19431,
     "averageSessionMins": 18.4,
@@ -1558,6 +1558,48 @@
       "Français": 3
     },
     "recentEvents": [
+      {
+        "id": 1793172855670,
+        "type": "workflow_executed",
+        "landmark": "Autonomous Monument Ingestion & LiDAR Enrichment",
+        "location": "n8n Agentic Canvas",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793172855669,
+        "type": "openclaw_crawl",
+        "landmark": "Taj Mahal",
+        "location": "Open Claw Heritage Crawler",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793172855668,
+        "type": "ai_reasoning",
+        "landmark": "Red Fort (Lal Qila)",
+        "location": "Strawberry AI (reasoning)",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793172855667,
+        "type": "ai_reasoning",
+        "landmark": "The Colosseum (Flavian Amphitheatre)",
+        "location": "Strawberry AI (reasoning)",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793172855667,
+        "type": "ai_reasoning",
+        "landmark": "The Colosseum (Flavian Amphitheatre)",
+        "location": "Strawberry AI (strawberry)",
+        "timestamp": "Just now"
+      },
+      {
+        "id": 1793172855659,
+        "type": "qr_triggered",
+        "landmark": "The Colosseum (Flavian Amphitheatre)",
+        "location": "route-rome-imperial",
+        "timestamp": "Just now"
+      },
       {
         "id": 1793119042845,
         "type": "workflow_executed",
@@ -1774,41 +1816,6 @@
         "landmark": "The Colosseum (Flavian Amphitheatre)",
         "location": "Strawberry AI (strawberry)",
         "timestamp": "Just now"
-      },
-      {
-        "id": 1793117086891,
-        "type": "qr_triggered",
-        "landmark": "The Colosseum (Flavian Amphitheatre)",
-        "location": "route-rome-imperial",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1793107786731,
-        "type": "workflow_executed",
-        "landmark": "Autonomous Monument Ingestion & LiDAR Enrichment",
-        "location": "n8n Agentic Canvas",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1793107786730,
-        "type": "openclaw_crawl",
-        "landmark": "Taj Mahal",
-        "location": "Open Claw Heritage Crawler",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1793107786729,
-        "type": "ai_reasoning",
-        "landmark": "Red Fort (Lal Qila)",
-        "location": "Strawberry AI (reasoning)",
-        "timestamp": "Just now"
-      },
-      {
-        "id": 1793107786728,
-        "type": "ai_reasoning",
-        "landmark": "The Colosseum (Flavian Amphitheatre)",
-        "location": "Strawberry AI (reasoning)",
-        "timestamp": "Just now"
       }
     ]
   },
@@ -1826,7 +1833,8 @@
       ],
       "favorites": [
         "landmark-pantheon",
-        "landmark-taj-mahal"
+        "landmark-taj-mahal",
+        "landmark-kinkaku-ji"
       ],
       "createdAt": "2026-10-10T16:03:59.902Z"
     },

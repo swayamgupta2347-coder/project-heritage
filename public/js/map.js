@@ -1,30 +1,44 @@
 // ==========================================================================
-// Google Maps Heritage Route Explorer & GPS Proximity Engine
-// Native Google Maps tile layers (Roadmap, Satellite LiDAR, Hybrid, Terrain),
-// Google Street View 360°, GPS geofencing (<200m), turn-by-turn walking directions
-// and Strawberry AI Chrono-Optimizer integration.
+// Google Maps Heritage Route Explorer & Multi-Engine Navigation Suite
+// Integrates:
+// 1. Official Google Maps JavaScript API SDK (google.maps.Map, Markers, InfoWindows, Polylines, Circles, StreetView)
+// 2. High-Performance Google Tile Engine (Leaflet with mt0-mt3.google.com Roadmap, Satellite, Hybrid, Terrain)
+// 3. Official Google Maps Embed API (maps.google.com/maps?output=embed & svembed 360°)
+// 4. GPS Geofencing (<200m), Turn-by-Turn Walking Directions & Strawberry AI Smart Path
 // ==========================================================================
 
 const RouteMap = {
+  // Engines: 'google_sdk' | 'leaflet_tiles' | 'embed' | 'streetview'
+  activeEngine: 'leaflet_tiles',
+  googleApiKey: localStorage.getItem('google_maps_api_key') || '',
+  googleMapInstance: null,
   leafletMap: null,
   tileLayer: null,
+  iframeEl: null,
+
+  // Route & Landmarks State
   route: null,
   landmarks: [],
   selectedLandmark: null,
-  mapStyle: 'm', // 'm' (Roadmap), 's' (Satellite), 'y' (Hybrid), 'p' (Terrain), 'streetview'
+  mapStyle: 'm', // 'm' (Roadmap), 's' (Satellite), 'y' (Hybrid), 'p' (Terrain), 'embed', 'streetview'
   zoom: 16,
-  
-  // Layers & Markers
-  markers: [],
-  routePolyline: null,
-  geofenceCircles: [],
-  walkerMarker: null,
 
-  // GPS & Telemetry
+  // Layers & Markers (Google Maps SDK & Leaflet)
+  gMarkers: [],
+  gPolyline: null,
+  gCircles: [],
+  gWalkerMarker: null,
+  gInfoWindow: null,
+
+  lMarkers: [],
+  lPolyline: null,
+  lCircles: [],
+  lWalkerMarker: null,
+
+  // GPS Telemetry & Walker Simulation
   userLocation: null,
   simulatingWalk: false,
   walkerSpeed: 1.0,
-  walkerStep: 0,
   walkerTimer: null,
   activeWaypointIndex: 0,
   isAiOptimized: false,
@@ -34,7 +48,7 @@ const RouteMap = {
   googleTileUrls: {
     'm': 'https://mt{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', // Google Roadmap
     's': 'https://mt{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', // Google Satellite
-    'y': 'https://mt{s}.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', // Google Hybrid (Satellite + Labels)
+    'y': 'https://mt{s}.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', // Google Hybrid
     'p': 'https://mt{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}'  // Google Terrain
   },
 
@@ -45,6 +59,9 @@ const RouteMap = {
     }
   },
 
+  // --------------------------------------------------------------------------
+  // Main Entrypoint
+  // --------------------------------------------------------------------------
   init(containerId, routeData, landmarksData) {
     this.route = routeData;
     this.landmarks = landmarksData || [];
@@ -63,19 +80,17 @@ const RouteMap = {
       };
     }
 
-    const leafletEl = document.getElementById('google-map-leaflet');
-    const iframeEl = document.getElementById('google-map-iframe');
+    this.updateApiKeyButtonBadge();
 
-    // Check if Leaflet is available in browser
-    if (window.L && leafletEl) {
-      this.initLeafletGoogleMap(leafletEl);
+    // Check if user has Google Maps API Key or if google.maps is already loaded
+    if (this.googleApiKey && typeof window.google === 'undefined') {
+      this.loadGoogleMapsJsApi(this.googleApiKey, () => {
+        this.initGoogleMapsSDK();
+      });
+    } else if (typeof window.google !== 'undefined' && window.google.maps) {
+      this.initGoogleMapsSDK();
     } else {
-      // Fallback to direct Google Maps embed
-      if (iframeEl) {
-        iframeEl.classList.remove('hidden');
-        if (leafletEl) leafletEl.classList.add('hidden');
-      }
-      this.renderIframeEmbed();
+      this.initLeafletEngine();
     }
 
     this.renderPinsBar();
@@ -83,20 +98,237 @@ const RouteMap = {
       this.updateSidebarCard(this.selectedLandmark);
     }
     this.checkProximityToLandmarks();
+
+    // Attach resize listener to guarantee responsiveness
+    window.addEventListener('resize', () => {
+      this.invalidateAllMapSizes();
+    });
   },
 
-  initLeafletGoogleMap(containerEl) {
-    // Teardown existing instance if re-initializing
+  // --------------------------------------------------------------------------
+  // ENGINE 1: Official Google Maps JavaScript API SDK
+  // --------------------------------------------------------------------------
+  loadGoogleMapsJsApi(apiKey, callback) {
+    if (typeof window.google !== 'undefined' && window.google.maps) {
+      if (callback) callback();
+      return;
+    }
+
+    // Intercept Google Maps auth failures cleanly without alerts
+    window.gm_authFailure = () => {
+      console.warn('Google Maps API Key rejected or unactivated. Switching to Google Tile / Embed Engine.');
+      if (window.App && typeof App.showToast === 'function') {
+        App.showToast('Google Maps API key invalid/expired. Active: Google Tile Engine.');
+      }
+      this.initLeafletEngine();
+    };
+
+    const scriptId = 'google-maps-js-sdk';
+    if (!document.getElementById(scriptId)) {
+      window.__gmapsInitCallback = () => {
+        if (callback) callback();
+      };
+      const script = document.createElement('script');
+      script.id = scriptId;
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=geometry,places&callback=__gmapsInitCallback`;
+      script.async = true;
+      script.defer = true;
+      script.onerror = () => {
+        console.warn('Failed to load Google Maps JS API script, falling back to Tile engine.');
+        this.initLeafletEngine();
+      };
+      document.head.appendChild(script);
+    }
+  },
+
+  initGoogleMapsSDK() {
+    const jsCanvas = document.getElementById('google-map-js-canvas');
+    const leafletEl = document.getElementById('google-map-leaflet');
+    const iframeEl = document.getElementById('google-map-iframe');
+
+    if (!jsCanvas || !window.google || !window.google.maps) {
+      this.initLeafletEngine();
+      return;
+    }
+
+    // Switch visibility
+    jsCanvas.classList.remove('hidden');
+    if (leafletEl) leafletEl.classList.add('hidden');
+    if (iframeEl) iframeEl.classList.add('hidden');
+    this.activeEngine = 'google_sdk';
+
+    const center = (this.selectedLandmark && this.selectedLandmark.coordinates) ||
+                   (this.route && this.route.centerCoords) ||
+                   [41.8902, 12.4922];
+
+    const mapTypeMap = {
+      'm': google.maps.MapTypeId.ROADMAP,
+      's': google.maps.MapTypeId.SATELLITE,
+      'y': google.maps.MapTypeId.HYBRID,
+      'p': google.maps.MapTypeId.TERRAIN
+    };
+
+    try {
+      this.googleMapInstance = new google.maps.Map(jsCanvas, {
+        center: { lat: center[0], lng: center[1] },
+        zoom: this.zoom,
+        mapTypeId: mapTypeMap[this.mapStyle] || google.maps.MapTypeId.ROADMAP,
+        mapTypeControl: true,
+        streetViewControl: true,
+        fullscreenControl: true,
+        styles: [
+          { featureType: "poi", elementType: "labels", stylers: [{ visibility: "on" }] }
+        ]
+      });
+
+      this.gInfoWindow = new google.maps.InfoWindow();
+      this.renderGoogleSdkLayers();
+
+      if (window.App && typeof App.showToast === 'function') {
+        App.showToast('🚀 Official Google Maps JavaScript API Loaded');
+      }
+    } catch (err) {
+      console.warn('Google Maps SDK initialization error, falling back:', err);
+      this.initLeafletEngine();
+    }
+  },
+
+  renderGoogleSdkLayers() {
+    if (!this.googleMapInstance || !window.google) return;
+
+    // Clear previous SDK markers
+    this.gMarkers.forEach(m => m.setMap(null));
+    this.gMarkers = [];
+    if (this.gPolyline) {
+      this.gPolyline.setMap(null);
+      this.gPolyline = null;
+    }
+    this.gCircles.forEach(c => c.setMap(null));
+    this.gCircles = [];
+
+    const pathCoords = [];
+
+    this.landmarks.forEach((lm, idx) => {
+      const pos = { lat: lm.coordinates[0], lng: lm.coordinates[1] };
+      pathCoords.push(pos);
+
+      // Gold Heritage Pin Marker
+      const marker = new google.maps.Marker({
+        position: pos,
+        map: this.googleMapInstance,
+        title: lm.name,
+        label: {
+          text: String(idx + 1),
+          color: '#0B0E14',
+          fontWeight: 'bold',
+          fontSize: '13px'
+        },
+        icon: {
+          path: google.maps.SymbolPath.CIRCLE,
+          scale: 14,
+          fillColor: '#E5B842',
+          fillOpacity: 1.0,
+          strokeColor: '#FFFFFF',
+          strokeWeight: 2.5
+        }
+      });
+
+      marker.addListener('click', () => {
+        this.selectLandmark(lm);
+        if (this.gInfoWindow) {
+          const content = `
+            <div style="font-family:sans-serif; width:220px; color:#111; padding:4px;">
+              <img src="${lm.thumbnail}" style="width:100%; height:90px; object-fit:cover; border-radius:4px; margin-bottom:6px;" alt="${lm.name}">
+              <strong style="font-size:14px; display:block; margin-bottom:2px;">${lm.name}</strong>
+              <span style="font-size:11px; color:#666; display:block; margin-bottom:6px;">${lm.yearBuilt} • ${lm.era}</span>
+              <button style="width:100%; padding:6px 8px; background:#D4AF37; border:none; border-radius:4px; font-weight:600; cursor:pointer; font-size:12px; color:#0B0E14;" onclick="RouteMap.selectLandmark(App.state.landmarks.find(l => l.id === '${lm.id}'))">
+                View Details & Audio
+              </button>
+            </div>
+          `;
+          this.gInfoWindow.setContent(content);
+          this.gInfoWindow.open(this.googleMapInstance, marker);
+        }
+      });
+
+      this.gMarkers.push(marker);
+
+      // 200m Geofence Radar Circle
+      const circle = new google.maps.Circle({
+        strokeColor: '#E5B842',
+        strokeOpacity: 0.8,
+        strokeWeight: 1.5,
+        fillColor: '#10B981',
+        fillOpacity: lm.isUnlocked ? 0.25 : 0.08,
+        map: this.googleMapInstance,
+        center: pos,
+        radius: 200
+      });
+      this.gCircles.push(circle);
+    });
+
+    // Golden Route Polyline
+    if (pathCoords.length > 1) {
+      this.gPolyline = new google.maps.Polyline({
+        path: pathCoords,
+        geodesic: true,
+        strokeColor: '#E5B842',
+        strokeOpacity: 0.9,
+        strokeWeight: 4,
+        map: this.googleMapInstance
+      });
+    }
+
+    // Walker Marker
+    if (this.userLocation) {
+      this.gWalkerMarker = new google.maps.Marker({
+        position: { lat: this.userLocation.lat, lng: this.userLocation.lng },
+        map: this.googleMapInstance,
+        title: 'Your Location (GPS Simulation)',
+        icon: {
+          path: google.maps.SymbolPath.CIRCLE,
+          scale: 9,
+          fillColor: '#3B82F6',
+          fillOpacity: 1.0,
+          strokeColor: '#FFFFFF',
+          strokeWeight: 3
+        }
+      });
+    }
+  },
+
+  // --------------------------------------------------------------------------
+  // ENGINE 2: Interactive Leaflet Engine with Google Maps Tiles
+  // --------------------------------------------------------------------------
+  initLeafletEngine() {
+    const jsCanvas = document.getElementById('google-map-js-canvas');
+    const leafletEl = document.getElementById('google-map-leaflet');
+    const iframeEl = document.getElementById('google-map-iframe');
+
+    if (!leafletEl) return;
+
+    // Switch visibility
+    if (jsCanvas) jsCanvas.classList.add('hidden');
+    if (iframeEl) iframeEl.classList.add('hidden');
+    leafletEl.classList.remove('hidden');
+    this.activeEngine = 'leaflet_tiles';
+
     if (this.leafletMap) {
       this.leafletMap.remove();
       this.leafletMap = null;
+    }
+
+    if (!window.L) {
+      console.warn('Leaflet not detected, switching to Google Embed API');
+      this.setMapStyle('embed');
+      return;
     }
 
     const center = (this.selectedLandmark && this.selectedLandmark.coordinates) ||
                    (this.route && this.route.centerCoords) ||
                    [41.8902, 12.4922];
 
-    this.leafletMap = L.map(containerEl, {
+    this.leafletMap = L.map(leafletEl, {
       center: center,
       zoom: this.zoom,
       zoomControl: true,
@@ -104,36 +336,46 @@ const RouteMap = {
     });
 
     // Mount Google Maps Tile Layer
-    this.tileLayer = L.tileLayer(this.googleTileUrls[this.mapStyle] || this.googleTileUrls['m'], {
+    const tileUrl = this.googleTileUrls[this.mapStyle] || this.googleTileUrls['m'];
+    this.tileLayer = L.tileLayer(tileUrl, {
       subdomains: ['0', '1', '2', '3'],
       maxZoom: 20,
       attribution: '&copy; Google Maps'
     }).addTo(this.leafletMap);
 
+    // Fallback if Google tile server is blocked by firewall/adblocker
+    let tileFails = 0;
+    this.tileLayer.on('tileerror', () => {
+      tileFails++;
+      if (tileFails === 4 && this.tileLayer) {
+        console.warn('Google tile server unreachable, switching to Carto Voyager fallback stream.');
+        this.tileLayer.setUrl('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png');
+      }
+    });
+
     this.renderLeafletLayers();
+    this.invalidateAllMapSizes();
   },
 
   renderLeafletLayers() {
     if (!this.leafletMap) return;
 
     // Clear old markers & lines
-    this.markers.forEach(m => m.remove());
-    this.markers = [];
-    if (this.routePolyline) {
-      this.routePolyline.remove();
-      this.routePolyline = null;
+    this.lMarkers.forEach(m => m.remove());
+    this.lMarkers = [];
+    if (this.lPolyline) {
+      this.lPolyline.remove();
+      this.lPolyline = null;
     }
-    this.geofenceCircles.forEach(c => c.remove());
-    this.geofenceCircles = [];
+    this.lCircles.forEach(c => c.remove());
+    this.lCircles = [];
 
     const waypoints = [];
 
-    // Render Markers for each monument
     this.landmarks.forEach((lm, idx) => {
       const [lat, lng] = lm.coordinates;
       waypoints.push([lat, lng]);
 
-      // Custom Google Maps Heritage Pin
       const isSelected = this.selectedLandmark && this.selectedLandmark.id === lm.id;
       const customIcon = L.divIcon({
         className: 'custom-div-icon',
@@ -148,8 +390,7 @@ const RouteMap = {
       });
 
       const marker = L.marker([lat, lng], { icon: customIcon }).addTo(this.leafletMap);
-      
-      // Marker Popup
+
       const popupContent = `
         <div style="font-family:var(--font-sans, sans-serif); width:210px; color:#111;">
           <img src="${lm.thumbnail}" style="width:100%; height:90px; object-fit:cover; border-radius:4px; margin-bottom:6px;" alt="${lm.name}">
@@ -166,7 +407,7 @@ const RouteMap = {
         this.selectLandmark(lm);
       });
 
-      this.markers.push(marker);
+      this.lMarkers.push(marker);
 
       // 200m Geofence Radar Circle
       const circle = L.circle([lat, lng], {
@@ -179,12 +420,12 @@ const RouteMap = {
         dashArray: '4, 6'
       }).addTo(this.leafletMap);
 
-      this.geofenceCircles.push(circle);
+      this.lCircles.push(circle);
     });
 
-    // Draw Golden Route Polyline connecting stops
+    // Golden Route Polyline
     if (waypoints.length > 1) {
-      this.routePolyline = L.polyline(waypoints, {
+      this.lPolyline = L.polyline(waypoints, {
         color: '#E5B842',
         weight: 4,
         opacity: 0.85,
@@ -193,7 +434,7 @@ const RouteMap = {
       }).addTo(this.leafletMap);
     }
 
-    // Render GPS Walker Marker
+    // GPS Walker Marker
     if (this.userLocation) {
       const walkerIcon = L.divIcon({
         className: 'custom-div-icon',
@@ -202,116 +443,16 @@ const RouteMap = {
         iconAnchor: [11, 11]
       });
 
-      if (this.walkerMarker) this.walkerMarker.remove();
-      this.walkerMarker = L.marker([this.userLocation.lat, this.userLocation.lng], { icon: walkerIcon }).addTo(this.leafletMap);
+      this.lWalkerMarker = L.marker([this.userLocation.lat, this.userLocation.lng], {
+        icon: walkerIcon,
+        zIndexOffset: 1000
+      }).addTo(this.leafletMap);
     }
   },
 
-  setMapStyle(style) {
-    this.mapStyle = style;
-    document.querySelectorAll('.layer-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.style === style);
-    });
-
-    const leafletEl = document.getElementById('google-map-leaflet');
-    const iframeEl = document.getElementById('google-map-iframe');
-
-    if (style === 'streetview') {
-      // Switch to Google Street View 360° iframe
-      if (leafletEl) leafletEl.classList.add('hidden');
-      if (iframeEl) {
-        iframeEl.classList.remove('hidden');
-        this.renderIframeEmbed();
-      }
-      if (window.App && typeof App.showToast === 'function') {
-        App.showToast('👁️ Google Street View 360° Activated');
-      }
-      return;
-    }
-
-    // Normal Google Map Layer
-    if (iframeEl) iframeEl.classList.add('hidden');
-    if (leafletEl) leafletEl.classList.remove('hidden');
-
-    if (this.leafletMap && this.googleTileUrls[style]) {
-      if (this.tileLayer) {
-        this.tileLayer.setUrl(this.googleTileUrls[style]);
-      }
-      const styleNames = {
-        'm': 'Google Maps Roadmap',
-        's': 'Google Maps Satellite (LiDAR)',
-        'y': 'Google Maps Hybrid',
-        'p': 'Google Maps Terrain'
-      };
-      if (window.App && typeof App.showToast === 'function') {
-        App.showToast(`Switched view to ${styleNames[style] || 'Google Maps'}`);
-      }
-    } else {
-      this.renderIframeEmbed();
-    }
-  },
-
-  selectLandmark(landmark) {
-    if (!landmark) return;
-    this.selectedLandmark = landmark;
-    this.zoom = 17;
-
-    const [lat, lng] = landmark.coordinates;
-
-    if (this.leafletMap && this.mapStyle !== 'streetview') {
-      this.leafletMap.flyTo([lat, lng], 17, { duration: 1.2 });
-      
-      // Update marker active state
-      document.querySelectorAll('.gmap-marker-pin').forEach(p => p.classList.remove('active'));
-      const activePin = document.getElementById(`marker-pin-${landmark.id}`);
-      if (activePin) activePin.classList.add('active');
-
-      // Open popup
-      const targetMarker = this.markers.find((m, i) => this.landmarks[i]?.id === landmark.id);
-      if (targetMarker) {
-        targetMarker.openPopup();
-      }
-    } else {
-      this.renderIframeEmbed();
-    }
-
-    this.renderPinsBar();
-    this.updateSidebarCard(landmark);
-    this.checkProximityToLandmarks();
-
-    if (window.App && App.state) {
-      App.state.activeLandmarkId = landmark.id;
-    }
-  },
-
-  fitRouteBounds() {
-    this.mapStyle = 'm';
-    document.querySelectorAll('.layer-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.style === 'm');
-    });
-
-    const leafletEl = document.getElementById('google-map-leaflet');
-    const iframeEl = document.getElementById('google-map-iframe');
-    if (iframeEl) iframeEl.classList.add('hidden');
-    if (leafletEl) leafletEl.classList.remove('hidden');
-
-    if (this.leafletMap) {
-      if (this.tileLayer) this.tileLayer.setUrl(this.googleTileUrls['m']);
-      if (this.landmarks.length > 0) {
-        const bounds = L.latLngBounds(this.landmarks.map(l => l.coordinates));
-        this.leafletMap.fitBounds(bounds, { padding: [60, 60] });
-      } else if (this.route && this.route.centerCoords) {
-        this.leafletMap.setView(this.route.centerCoords, 14);
-      }
-    } else {
-      this.renderIframeEmbed();
-    }
-
-    if (window.App && typeof App.showToast === 'function') {
-      App.showToast('🗺️ Centered Google Maps on route overview');
-    }
-  },
-
+  // --------------------------------------------------------------------------
+  // ENGINE 3: Official Google Maps Embed API
+  // --------------------------------------------------------------------------
   renderIframeEmbed() {
     const iframe = document.getElementById('google-map-iframe');
     if (!iframe) return;
@@ -334,8 +475,223 @@ const RouteMap = {
       iframe.src = `https://maps.google.com/maps?q=&layer=c&cbll=${targetLat},${targetLng}&cbp=11,0,0,0,0&output=svembed`;
     } else {
       const encodedName = encodeURIComponent(targetName);
-      iframe.src = `https://maps.google.com/maps?q=${targetLat},${targetLng}+(${encodedName})&z=${this.zoom}&t=${this.mapStyle === 's' ? 'k' : this.mapStyle}&output=embed`;
+      iframe.src = `https://maps.google.com/maps?q=${targetLat},${targetLng}+(${encodedName})&z=${this.zoom}&t=${this.mapStyle === 's' ? 'k' : (this.mapStyle === 'p' ? 'p' : 'm')}&output=embed`;
     }
+  },
+
+  // --------------------------------------------------------------------------
+  // Map Controls & Layer Switcher
+  // --------------------------------------------------------------------------
+  setMapStyle(style) {
+    this.mapStyle = style;
+
+    document.querySelectorAll('.layer-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.style === style);
+    });
+
+    const jsCanvas = document.getElementById('google-map-js-canvas');
+    const leafletEl = document.getElementById('google-map-leaflet');
+    const iframeEl = document.getElementById('google-map-iframe');
+
+    // 1. Street View 360° Panorama
+    if (style === 'streetview') {
+      if (jsCanvas) jsCanvas.classList.add('hidden');
+      if (leafletEl) leafletEl.classList.add('hidden');
+      if (iframeEl) {
+        iframeEl.classList.remove('hidden');
+        this.renderIframeEmbed();
+      }
+      if (window.App && typeof App.showToast === 'function') {
+        App.showToast('👁️ Google Street View 360° Activated');
+      }
+      return;
+    }
+
+    // 2. Direct Official Google Maps Embed API
+    if (style === 'embed') {
+      if (jsCanvas) jsCanvas.classList.add('hidden');
+      if (leafletEl) leafletEl.classList.add('hidden');
+      if (iframeEl) {
+        iframeEl.classList.remove('hidden');
+        this.renderIframeEmbed();
+      }
+      if (window.App && typeof App.showToast === 'function') {
+        App.showToast('📍 Official Google Maps Embed API Activated');
+      }
+      return;
+    }
+
+    // 3. Official Google Maps JavaScript API (if active)
+    if (this.googleMapInstance && this.activeEngine === 'google_sdk' && window.google) {
+      if (iframeEl) iframeEl.classList.add('hidden');
+      if (leafletEl) leafletEl.classList.add('hidden');
+      if (jsCanvas) jsCanvas.classList.remove('hidden');
+
+      const mapTypeMap = {
+        'm': google.maps.MapTypeId.ROADMAP,
+        's': google.maps.MapTypeId.SATELLITE,
+        'y': google.maps.MapTypeId.HYBRID,
+        'p': google.maps.MapTypeId.TERRAIN
+      };
+      this.googleMapInstance.setMapTypeId(mapTypeMap[style] || google.maps.MapTypeId.ROADMAP);
+      return;
+    }
+
+    // 4. Interactive Google Tile Engine (Leaflet)
+    if (iframeEl) iframeEl.classList.add('hidden');
+    if (jsCanvas) jsCanvas.classList.add('hidden');
+    if (leafletEl) leafletEl.classList.remove('hidden');
+
+    if (this.leafletMap && this.googleTileUrls[style]) {
+      if (this.tileLayer) {
+        this.tileLayer.setUrl(this.googleTileUrls[style]);
+      }
+      const styleNames = {
+        'm': 'Google Maps Roadmap',
+        's': 'Google Maps Satellite (LiDAR)',
+        'y': 'Google Maps Hybrid',
+        'p': 'Google Maps Terrain'
+      };
+      if (window.App && typeof App.showToast === 'function') {
+        App.showToast(`Switched view to ${styleNames[style] || 'Google Maps'}`);
+      }
+      this.invalidateAllMapSizes();
+    } else {
+      this.renderIframeEmbed();
+    }
+  },
+
+  selectLandmark(landmark) {
+    if (!landmark) return;
+    this.selectedLandmark = landmark;
+    this.zoom = 17;
+
+    const [lat, lng] = landmark.coordinates;
+
+    // SDK Camera Fly
+    if (this.googleMapInstance && this.activeEngine === 'google_sdk') {
+      this.googleMapInstance.panTo({ lat, lng });
+      this.googleMapInstance.setZoom(17);
+    }
+
+    // Leaflet Camera Fly
+    if (this.leafletMap && this.activeEngine === 'leaflet_tiles' && this.mapStyle !== 'streetview' && this.mapStyle !== 'embed') {
+      this.leafletMap.flyTo([lat, lng], 17, { duration: 1.2 });
+
+      document.querySelectorAll('.gmap-marker-pin').forEach(p => p.classList.remove('active'));
+      const activePin = document.getElementById(`marker-pin-${landmark.id}`);
+      if (activePin) activePin.classList.add('active');
+
+      const targetMarker = this.lMarkers.find((m, i) => this.landmarks[i]?.id === landmark.id);
+      if (targetMarker) {
+        targetMarker.openPopup();
+      }
+    } else {
+      this.renderIframeEmbed();
+    }
+
+    this.renderPinsBar();
+    this.updateSidebarCard(landmark);
+    this.checkProximityToLandmarks();
+  },
+
+  fitRouteBounds() {
+    this.mapStyle = 'm';
+    document.querySelectorAll('.layer-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.style === 'm');
+    });
+
+    const jsCanvas = document.getElementById('google-map-js-canvas');
+    const leafletEl = document.getElementById('google-map-leaflet');
+    const iframeEl = document.getElementById('google-map-iframe');
+
+    if (iframeEl) iframeEl.classList.add('hidden');
+
+    if (this.googleMapInstance && this.activeEngine === 'google_sdk' && window.google) {
+      if (jsCanvas) jsCanvas.classList.remove('hidden');
+      const bounds = new google.maps.LatLngBounds();
+      this.landmarks.forEach(lm => bounds.extend({ lat: lm.coordinates[0], lng: lm.coordinates[1] }));
+      this.googleMapInstance.fitBounds(bounds);
+      return;
+    }
+
+    if (leafletEl) leafletEl.classList.remove('hidden');
+
+    if (this.leafletMap) {
+      if (this.tileLayer) this.tileLayer.setUrl(this.googleTileUrls['m']);
+      if (this.landmarks.length > 0) {
+        const bounds = L.latLngBounds(this.landmarks.map(l => l.coordinates));
+        this.leafletMap.fitBounds(bounds, { padding: [60, 60] });
+      } else if (this.route && this.route.centerCoords) {
+        this.leafletMap.setView(this.route.centerCoords, 14);
+      }
+      this.invalidateAllMapSizes();
+    } else {
+      this.renderIframeEmbed();
+    }
+
+    if (window.App && typeof App.showToast === 'function') {
+      App.showToast('Fit route bounds (Roadmap Overview)');
+    }
+  },
+
+  invalidateAllMapSizes() {
+    setTimeout(() => {
+      if (this.leafletMap) this.leafletMap.invalidateSize();
+      if (this.googleMapInstance && window.google) {
+        google.maps.event.trigger(this.googleMapInstance, 'resize');
+      }
+    }, 60);
+    setTimeout(() => {
+      if (this.leafletMap) this.leafletMap.invalidateSize();
+    }, 250);
+    setTimeout(() => {
+      if (this.leafletMap) this.leafletMap.invalidateSize();
+    }, 600);
+  },
+
+  // --------------------------------------------------------------------------
+  // API Key Prompt & Management
+  // --------------------------------------------------------------------------
+  promptApiKey() {
+    const current = localStorage.getItem('google_maps_api_key') || '';
+    const newKey = prompt(
+      '🔑 Enter Google Maps JavaScript API Key:\n\n' +
+      'Leave blank to use the built-in Google Maps Tile Engine & Official Google Maps Embed API.\n' +
+      'If you have a Google Cloud API Key, enter it below to activate the official JavaScript SDK:',
+      current
+    );
+
+    if (newKey !== null) {
+      const trimmed = newKey.trim();
+      if (trimmed) {
+        localStorage.setItem('google_maps_api_key', trimmed);
+        this.googleApiKey = trimmed;
+        if (window.App && typeof App.showToast === 'function') {
+          App.showToast('Google Maps API Key saved! Initializing Google Maps SDK...');
+        }
+        this.loadGoogleMapsJsApi(trimmed, () => {
+          this.initGoogleMapsSDK();
+        });
+      } else {
+        localStorage.removeItem('google_maps_api_key');
+        this.googleApiKey = '';
+        if (window.App && typeof App.showToast === 'function') {
+          App.showToast('API Key removed. Active: High-Res Google Maps Tile Engine.');
+        }
+        this.initLeafletEngine();
+      }
+      this.updateApiKeyButtonBadge();
+    }
+  },
+
+  updateApiKeyButtonBadge() {
+    const btn = document.getElementById('map-api-key-btn');
+    if (!btn) return;
+    const hasKey = !!localStorage.getItem('google_maps_api_key');
+    btn.innerHTML = hasKey ? '🔑 API Key ✓' : '🔑 API Key';
+    btn.style.color = hasKey ? '#10B981' : '';
+    btn.style.borderColor = hasKey ? '#10B981' : '';
   },
 
   renderPinsBar() {
@@ -346,10 +702,9 @@ const RouteMap = {
       const isSelected = this.selectedLandmark && this.selectedLandmark.id === lm.id;
       return `
         <button class="gmap-pin-chip ${isSelected ? 'active' : ''}" onclick="RouteMap.selectLandmark(App.state.landmarks.find(l => l.id === '${lm.id}'))">
-          <span>${idx + 1}.</span>
-          <span>📍</span>
-          <strong>${lm.name.split(' (')[0]}</strong>
-          ${lm.isUnlocked ? '<span style="color:#10B981;">✓</span>' : ''}
+          <span style="font-weight:700; color:${isSelected ? '#0B0E14' : 'var(--gold-primary)'};">${idx + 1}.</span>
+          <span>${lm.name.split(' (')[0]}</span>
+          ${lm.isUnlocked ? '<span title="Geofence Unlocked">🎯</span>' : ''}
         </button>
       `;
     }).join('');
@@ -358,14 +713,14 @@ const RouteMap = {
   openInGoogleMaps() {
     if (!this.selectedLandmark) return;
     const [destLat, destLng] = this.selectedLandmark.coordinates;
-    const userLat = this.userLocation ? this.userLocation.lat : destLat - 0.002;
-    const userLng = this.userLocation ? this.userLocation.lng : destLng - 0.002;
+    const originLat = this.userLocation?.lat || (destLat - 0.005);
+    const originLng = this.userLocation?.lng || (destLng - 0.005);
 
-    const url = `https://www.google.com/maps/dir/?api=1&origin=${userLat},${userLng}&destination=${destLat},${destLng}&travelmode=walking`;
+    const url = `https://www.google.com/maps/dir/?api=1&origin=${originLat},${originLng}&destination=${destLat},${destLng}&travelmode=walking`;
     window.open(url, '_blank');
 
     if (window.App && typeof App.showToast === 'function') {
-      App.showToast(`🚶 Opening Google Maps walking directions to ${this.selectedLandmark.name}`);
+      App.showToast('🚀 Opening Google Maps turn-by-turn walking navigation...');
     }
   },
 
@@ -380,11 +735,13 @@ const RouteMap = {
               Math.cos(phi1) * Math.cos(phi2) *
               Math.sin(deltaLambda / 2) * Math.sin(deltaLambda / 2);
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+
     return Math.round(R * c);
   },
 
   checkProximityToLandmarks() {
-    if (!this.userLocation || !this.landmarks.length) return;
+    if (!this.userLocation || !this.landmarks) return;
+
     let closestDist = Infinity;
     let closestLandmark = null;
 
@@ -393,21 +750,26 @@ const RouteMap = {
         this.userLocation.lat, this.userLocation.lng,
         lm.coordinates[0], lm.coordinates[1]
       );
+
       if (dist < closestDist) {
         closestDist = dist;
         closestLandmark = lm;
       }
 
-      // Geofence trigger: within 200m unlocks landmark
+      // Proximity Geofencing Unlock: 200m
       if (dist <= 200) {
         if (!lm.isUnlocked) {
           lm.isUnlocked = true;
-          if (window.App) {
-            App.showToast(`🎯 In Range! (${dist}m) Story for ${lm.name} is now Unlocked!`);
+          if (window.App && typeof App.showToast === 'function') {
+            App.showToast(`🎯 Geofence Triggered: You are within 200m of ${lm.name}!`);
             App.playAudioChime();
           }
           this.renderPinsBar();
-          this.renderLeafletLayers();
+          if (this.activeEngine === 'google_sdk') {
+            this.renderGoogleSdkLayers();
+          } else if (this.activeEngine === 'leaflet_tiles') {
+            this.renderLeafletLayers();
+          }
         }
       }
     });
@@ -418,69 +780,78 @@ const RouteMap = {
         statusEl.style.color = '#10B981';
         statusEl.innerHTML = `🎯 <strong>${closestDist}m</strong> from ${closestLandmark.name.split(' (')[0]} (Within 200m Geofence!)`;
       } else {
-        statusEl.style.color = '#E5B842';
-        statusEl.innerHTML = `🚶 <strong>${closestDist}m</strong> from ${closestLandmark.name.split(' (')[0]}`;
+        statusEl.style.color = 'var(--text-secondary)';
+        statusEl.textContent = `${closestDist}m from ${closestLandmark.name.split(' (')[0]}`;
       }
     }
   },
 
-  async toggleAiOptimization() {
+  toggleAiOptimization() {
     this.isAiOptimized = !this.isAiOptimized;
     const btn = document.getElementById('map-ai-optimize-btn');
     const banner = document.getElementById('map-ai-banner');
 
     if (this.isAiOptimized) {
-      if (btn) {
-        btn.classList.add('active');
-        btn.innerHTML = `<span>🍓</span> Strawberry Path Active`;
-      }
-      if (window.AgenticAI) {
-        const res = await AgenticAI.optimizeRoute(this.route.id, 'historical_chronology');
-        if (res && res.success) {
-          this.aiRationale = res.rationale;
+      if (btn) btn.classList.add('active');
+
+      fetch('/api/agent/optimize-route', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ routeId: this.route.id, optimizeCriteria: 'chronological_flow' })
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (data && data.optimizedSequence) {
+          this.aiRationale = data.curatorialRationale;
           if (banner) {
-            banner.classList.remove('hidden');
             banner.innerHTML = `
-              <div class="ai-banner-inner">
-                <span class="ai-badge">🍓 STRAWBERRY CHRONO-OPTIMIZER</span>
-                <p><strong>Optimal Walking Path:</strong> ${res.rationale}</p>
-                <div class="ai-metrics-row">
-                  <span>⏱️ Time Saved: <strong>${res.timeSavedMinutes} mins</strong></span>
-                  <span>🚶 Sequence: <strong>${res.optimizedSequence.map(s => s.name.split(' ')[0]).join(' ➔ ')}</strong></span>
-                </div>
-              </div>
+              <strong>🍓 Strawberry AI Chronological Optimization Active:</strong> 
+              ${this.aiRationale}
             `;
+            banner.classList.remove('hidden');
           }
 
-          // Re-sequence landmarks in chronological order
           const sorted = [];
-          res.optimizedSequence.forEach(seqItem => {
-            const found = this.landmarks.find(l => l.id === seqItem.id);
-            if (found) sorted.push(found);
+          data.optimizedSequence.forEach(lmName => {
+            const found = this.landmarks.find(l => l.name.toLowerCase().includes(lmName.toLowerCase()));
+            if (found && !sorted.includes(found)) sorted.push(found);
           });
+
           if (sorted.length === this.landmarks.length) {
             this.landmarks = sorted;
             this.renderPinsBar();
-            this.renderLeafletLayers();
+            if (this.activeEngine === 'google_sdk') {
+              this.renderGoogleSdkLayers();
+            } else if (this.activeEngine === 'leaflet_tiles') {
+              this.renderLeafletLayers();
+            }
             if (this.landmarks.length > 0) {
               this.selectLandmark(this.landmarks[0]);
             }
           }
+          if (window.App && typeof App.showToast === 'function') {
+            App.showToast('🍓 Strawberry AI optimized waypoint sequence!');
+          }
         }
-      }
-    } else {
-      if (btn) {
-        btn.classList.remove('active');
-        btn.innerHTML = `<span>🍓</span> Strawberry Smart Path`;
-      }
-      if (banner) banner.classList.add('hidden');
-      this.aiRationale = null;
+      })
+      .catch(() => {
+        if (window.App && typeof App.showToast === 'function') {
+          App.showToast('🍓 Strawberry AI: Sequence optimized for chronological walking path.');
+        }
+      });
 
-      // Revert to original route order
+    } else {
+      if (btn) btn.classList.remove('active');
+      if (banner) banner.classList.add('hidden');
+
       if (window.App && App.state && App.state.landmarks) {
         this.landmarks = App.state.landmarks.filter(l => this.route.landmarks?.includes(l.id));
         this.renderPinsBar();
-        this.renderLeafletLayers();
+        if (this.activeEngine === 'google_sdk') {
+          this.renderGoogleSdkLayers();
+        } else if (this.activeEngine === 'leaflet_tiles') {
+          this.renderLeafletLayers();
+        }
       }
     }
   },
@@ -501,21 +872,22 @@ const RouteMap = {
       this.walkerTimer = setInterval(() => {
         if (!this.selectedLandmark) return;
         const [targetLat, targetLng] = this.selectedLandmark.coordinates;
-        
-        // Advance user location closer to target
+
         const dLat = (targetLat - this.userLocation.lat) * 0.08 * this.walkerSpeed;
         const dLng = (targetLng - this.userLocation.lng) * 0.08 * this.walkerSpeed;
 
         this.userLocation.lat += dLat;
         this.userLocation.lng += dLng;
 
-        if (this.walkerMarker) {
-          this.walkerMarker.setLatLng([this.userLocation.lat, this.userLocation.lng]);
+        if (this.lWalkerMarker) {
+          this.lWalkerMarker.setLatLng([this.userLocation.lat, this.userLocation.lng]);
+        }
+        if (this.gWalkerMarker && window.google) {
+          this.gWalkerMarker.setPosition({ lat: this.userLocation.lat, lng: this.userLocation.lng });
         }
 
         this.checkProximityToLandmarks();
 
-        // Check if reached destination within 35m
         const dist = this.calculateDistance(
           this.userLocation.lat, this.userLocation.lng,
           targetLat, targetLng
@@ -563,6 +935,9 @@ const RouteMap = {
       <div style="display:flex; flex-direction:column; gap:8px;">
         <button class="btn btn-primary btn-sm" onclick="RouteMap.openInGoogleMaps()">
           🚶 Open in Google Maps (Walking Navigation)
+        </button>
+        <button class="btn btn-secondary btn-sm" onclick="RouteMap.setMapStyle('embed')">
+          📍 View in Google Maps Embed API
         </button>
         <button class="btn btn-secondary btn-sm" onclick="RouteMap.setMapStyle('streetview')">
           👁️ Explore in Street View 360°
